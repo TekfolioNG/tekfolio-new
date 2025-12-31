@@ -2,11 +2,8 @@
     <Transition name="fade">
         <div v-if="isLoading" class="loading-screen">
             <div class="loading-content">
-                <img src="/tekfolio.svg" alt="Tekfolio Logo" class="logo-static" />
-                <div class="dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="logo-wrapper">
+                    <img src="/tekfolio.svg" alt="Tekfolio Logo" class="logo-float" />
                 </div>
             </div>
         </div>
@@ -46,51 +43,50 @@ onMounted(() => {
 
 .loading-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 }
 
-.logo-static {
+.logo-wrapper {
+    position: relative;
     width: 120px;
     height: 120px;
-    filter: drop-shadow(0 4px 12px rgba(91, 33, 182, 0.2));
 }
 
-.dots {
-    display: flex;
-    gap: 8px;
-}
-
-.dots span {
-    width: 8px;
-    height: 8px;
+.logo-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border: 3px solid transparent;
+    border-top-color: #5B21B6;
+    border-right-color: #3B82F6;
     border-radius: 50%;
-    background: #5B21B6;
-    animation: dotPulse 1.4s ease-in-out infinite;
+    animation: spin 1.5s linear infinite;
 }
 
-.dots span:nth-child(2) {
-    animation-delay: 0.2s;
+.logo-float {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    animation: float 2s ease-in-out infinite;
+    filter: drop-shadow(0 4px 12px rgba(91, 33, 182, 0.25));
 }
 
-.dots span:nth-child(3) {
-    animation-delay: 0.4s;
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-@keyframes dotPulse {
+@keyframes float {
 
     0%,
-    80%,
     100% {
-        opacity: 0.3;
-        transform: scale(0.8);
+        transform: translateY(0px);
     }
 
-    40% {
-        opacity: 1;
-        transform: scale(1.2);
+    50% {
+        transform: translateY(-8px);
     }
 }
 
@@ -106,14 +102,24 @@ onMounted(() => {
 
 /* Responsive sizing */
 @media (max-width: 640px) {
-    .logo-static {
+    .logo-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo-float {
         width: 100px;
         height: 100px;
     }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
-    .logo-static {
+    .logo-wrapper {
+        width: 110px;
+        height: 110px;
+    }
+
+    .logo-float {
         width: 110px;
         height: 110px;
     }

@@ -6,7 +6,7 @@ definePageMeta({
 </script>
 
 <template>
-    <CompanyHero />
+    <MobileappsHero />
     <LandingVision />
     <HomeValues />
     <HomeCta2></HomeCta2>

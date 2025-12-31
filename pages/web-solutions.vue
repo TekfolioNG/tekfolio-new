@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { WebsolutionsHero } from '#components';
+
 definePageMeta({
     layout: "home"
 });
@@ -6,7 +8,7 @@ definePageMeta({
 </script>
 
 <template>
-    <CompanyHero />
+    <WebsolutionsHero />
     <LandingVision />
     <HomeValues />
     <HomeCta2></HomeCta2>

@@ -2,12 +2,7 @@
     <Transition name="fade">
         <div v-if="isLoading" class="loading-screen">
             <div class="loading-content">
-                <img src="/tekfolio.svg" alt="Tekfolio Logo" class="logo-static" />
-                <div class="dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <img src="/tekfolio.svg" alt="Tekfolio Logo" class="logo-pulse" />
             </div>
         </div>
     </Transition>
@@ -46,51 +41,25 @@ onMounted(() => {
 
 .loading-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 }
 
-.logo-static {
+.logo-pulse {
     width: 120px;
     height: 120px;
-    filter: drop-shadow(0 4px 12px rgba(91, 33, 182, 0.2));
+    animation: smoothPulse 1.5s ease-in-out infinite;
+    filter: drop-shadow(0 4px 12px rgba(91, 33, 182, 0.25));
 }
 
-.dots {
-    display: flex;
-    gap: 8px;
-}
-
-.dots span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #5B21B6;
-    animation: dotPulse 1.4s ease-in-out infinite;
-}
-
-.dots span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.dots span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-@keyframes dotPulse {
-
-    0%,
-    80%,
-    100% {
-        opacity: 0.3;
-        transform: scale(0.8);
+@keyframes smoothPulse {
+    0%, 100% {
+        transform: scale(0.95);
+        opacity: 0.7;
     }
-
-    40% {
+    50% {
+        transform: scale(1.05);
         opacity: 1;
-        transform: scale(1.2);
     }
 }
 
@@ -106,14 +75,14 @@ onMounted(() => {
 
 /* Responsive sizing */
 @media (max-width: 640px) {
-    .logo-static {
+    .logo-pulse {
         width: 100px;
         height: 100px;
     }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
-    .logo-static {
+    .logo-pulse {
         width: 110px;
         height: 110px;
     }

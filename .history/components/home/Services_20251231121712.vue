@@ -7,7 +7,7 @@
                 <!-- Text Content -->
                 <div class="order-2 lg:order-1 space-y-1 px-2 lg:pr-8">
                     <h2
-                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
+                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight text-center lg:text-left">
                         Enterprise Web Solutions
                     </h2>
                     <h3 class="text-base md:text-lg font-semibold text-gradient text-center lg:text-left">
@@ -53,7 +53,7 @@
                 <!-- Text Content -->
                 <div class="order-2 space-y-1 px-2 lg:pl-8">
                     <h2
-                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
+                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight text-center lg:text-left">
                         Mobile App Development
                     </h2>
                     <h3 class="text-base md:text-lg font-semibold text-gradient text-center lg:text-left">
@@ -94,7 +94,7 @@
                 <!-- Text Content -->
                 <div class="order-2 space-y-1 px-2 lg:pl-8">
                     <h2
-                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
+                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight text-center lg:text-left">
                         Cloud & Data Engineering
                     </h2>
                     <h3 class="text-base md:text-lg font-semibold text-gradient text-center lg:text-left">
@@ -130,7 +130,7 @@
                 <!-- Text Content -->
                 <div class="order-2 lg:order-1 space-y-1 px-2 lg:pr-8">
                     <h2
-                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
+                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight text-center lg:text-left">
                         SEO & Performance Optimization
                     </h2>
                     <h3 class="text-base md:text-lg font-semibold text-gradient text-center lg:text-left">
@@ -228,7 +228,7 @@
                         ..And when your idea needs something unexpected—something with presence.
                     </p>
                     <h2
-                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
+                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight text-center lg:text-left">
                         Creative Coding & Interactive Experiences
                     </h2>
                     <h3 class="text-base md:text-lg font-semibold text-gradient text-center lg:text-left">

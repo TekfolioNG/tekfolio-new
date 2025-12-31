@@ -27,7 +27,7 @@
                 : isDarkMode
                   ? 'text-gray-100 hover:text-white hover:bg-white/10'
                   : 'text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-700 hover:to-blue-600'">
-              Web & Mobile Apps
+             Web & Mobile Apps
               <Icon name="lucide:chevron-down" class="w-4 h-4 transition-transform duration-200"
                 :class="{ 'rotate-180': nextGenDropdownOpen }" />
             </button>
@@ -45,7 +45,7 @@
                       : isDarkMode
                         ? 'text-gray-100 hover:text-white hover:bg-white/10'
                         : 'text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-700 hover:to-blue-600'">
-                    Custom Enterprise Web Apps
+                    Custom Web Apps
                   </NuxtLink>
                   <NuxtLink to="/mobile-apps"
                     class="block px-4 py-2.5 text-sm font-semibold transition-all duration-200"
