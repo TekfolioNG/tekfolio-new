@@ -136,10 +136,13 @@
         0 8px 16px rgba(91, 33, 182, 0.12),
         0 4px 8px rgba(91, 33, 182, 0.08);
     transform: translateY(-4px);
-    
+    animation: subtle-bounce 0.6s ease;
 }
 
-
+@keyframes subtle-bounce {
+    0%, 100% { transform: translateY(-4px); }
+    50% { transform: translateY(-8px); }
+}
 
 /* Row 1 */
 .logo-1 {

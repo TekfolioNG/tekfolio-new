@@ -7,7 +7,7 @@
                 <!-- Left Side - Text Content -->
                 <div class="text-center lg:text-left space-y-6 order-1 lg:col-span-2 lg:pl-8 mx-auto px-8">
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                        The Tech Stack Behind Our Work
+                        The Technology Behind Our Work
                     </h2>
                     <p
                         class="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
@@ -66,7 +66,7 @@
                             <img src="/assets/img/js.png" alt="JavaScript" class="tech-logo" />
                         </div>
 
-                        <!-- Row 4 - New Logos -->
+                        <!-- Row 4 -->
                         <div class="logo-float logo-13">
                             <img src="/assets/img/next.png" alt="Next.js" class="tech-logo" />
                         </div>
@@ -136,93 +136,92 @@
         0 8px 16px rgba(91, 33, 182, 0.12),
         0 4px 8px rgba(91, 33, 182, 0.08);
     transform: translateY(-4px);
-    
 }
 
-
+/* Individual logo positions - NO ANIMATIONS */
 
 /* Row 1 */
 .logo-1 {
-    top: 8%;
+    top: 12%;
     left: 16%;
 }
 
 .logo-2 {
-    top: 8%;
+    top: 12%;
     left: 32%;
 }
 
 .logo-3 {
-    top: 8%;
+    top: 12%;
     left: 48%;
 }
 
 .logo-4 {
-    top: 8%;
-    right: 24%;
+    top: 12%;
+    right: 23%;
 }
 
 /* Row 2 */
 .logo-5 {
-    top: 28%;
+    top: 40%;
     left: 16%;
 }
 
 .logo-6 {
-    top: 28%;
+    top: 40%;
     left: 32%;
 }
 
 .logo-7 {
-    top: 28%;
+    top: 40%;
     left: 48%;
 }
 
 .logo-8 {
-    top: 28%;
-    right: 24%;
+    top: 40%;
+    right: 23%;
 }
 
 /* Row 3 */
 .logo-9 {
-    top: 48%;
+    top: 50%;
     left: 16%;
 }
 
 .logo-10 {
-    top: 48%;
+    top: 50%;
     left: 32%;
 }
 
 .logo-11 {
-    top: 48%;
+    top: 50%;
     left: 48%;
 }
 
 .logo-12 {
-    top: 48%;
-    right: 24%;
+    top: 50%;
+    right: 23%;
 }
 
-/* Row 4 - New Logos */
+/* Row 4 */
 .logo-13 {
-    top: 68%;
+    top: 78%;
     left: 16%;
 }
 
 .logo-14 {
-    top: 68%;
+    top: 78%;
     left: 32%;
 }
 
 .logo-15 {
-    top: 68%;
+    top: 78%;
     left: 48%;
 }
 
 .logo-16 {
-    top: 68%;
-    right: 24%;
+    top: 78%;
+    right: 23%;
 }
 
 /* Responsive adjustments */
@@ -236,7 +235,7 @@
 
 @media (max-width: 768px) {
     .floating-container {
-        height: 500px;
+        height: 400px;
     }
 
     .logo-float {
@@ -247,82 +246,82 @@
 
     /* Mobile - 4 per row, tighter spacing */
     .logo-1 {
-        top: 5%;
+        top: 8%;
         left: 6%;
     }
 
     .logo-2 {
-        top: 5%;
+        top: 8%;
         left: 30%;
     }
 
     .logo-3 {
-        top: 5%;
+        top: 8%;
         left: 54%;
     }
 
     .logo-4 {
-        top: 5%;
+        top: 8%;
         right: 6%;
     }
 
     .logo-5 {
-        top: 22%;
+        top: 30%;
         left: 6%;
     }
 
     .logo-6 {
-        top: 22%;
+        top: 30%;
         left: 30%;
     }
 
     .logo-7 {
-        top: 22%;
+        top: 30%;
         left: 54%;
     }
 
     .logo-8 {
-        top: 22%;
+        top: 30%;
         right: 6%;
     }
 
     .logo-9 {
-        top: 39%;
+        top: 50%;
         left: 6%;
     }
 
     .logo-10 {
-        top: 39%;
+        top: 50%;
         left: 30%;
     }
 
     .logo-11 {
-        top: 39%;
+        top: 50%;
         left: 54%;
     }
 
     .logo-12 {
-        top: 39%;
+        top: 50%;
         right: 6%;
     }
 
     .logo-13 {
-        top: 56%;
+        top: 70%;
         left: 6%;
     }
 
     .logo-14 {
-        top: 56%;
+        top: 70%;
         left: 30%;
     }
 
     .logo-15 {
-        top: 56%;
+        top: 70%;
         left: 54%;
     }
 
     .logo-16 {
-        top: 56%;
+        top: 70%;
         right: 6%;
     }
 }

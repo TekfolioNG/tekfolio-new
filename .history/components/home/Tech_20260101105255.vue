@@ -7,7 +7,7 @@
                 <!-- Left Side - Text Content -->
                 <div class="text-center lg:text-left space-y-6 order-1 lg:col-span-2 lg:pl-8 mx-auto px-8">
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                        The Tech Stack Behind Our Work
+                        The Technology Behind Our Work
                     </h2>
                     <p
                         class="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
@@ -68,16 +68,16 @@
 
                         <!-- Row 4 - New Logos -->
                         <div class="logo-float logo-13">
-                            <img src="/assets/img/next.png" alt="Next.js" class="tech-logo" />
+                            <img src="/assets/img/next.js" alt="Next.js" class="tech-logo" />
                         </div>
                         <div class="logo-float logo-14">
-                            <img src="/assets/img/vue.png" alt="Vue.js" class="tech-logo" />
+                            <img src="/assets/img/vue.js" alt="Vue.js" class="tech-logo" />
                         </div>
                         <div class="logo-float logo-15">
-                            <img src="/assets/img/figma.png" alt="Figma" class="tech-logo" />
+                            <img src="/assets/img/figma.js" alt="Figma" class="tech-logo" />
                         </div>
                         <div class="logo-float logo-16">
-                            <img src="/assets/img/rlang.png" alt="R Language" class="tech-logo" />
+                            <img src="/assets/img/rlang.js" alt="R Language" class="tech-logo" />
                         </div>
 
                     </div>
@@ -136,10 +136,9 @@
         0 8px 16px rgba(91, 33, 182, 0.12),
         0 4px 8px rgba(91, 33, 182, 0.08);
     transform: translateY(-4px);
-    
 }
 
-
+/* Individual logo positions - NO ANIMATIONS */
 
 /* Row 1 */
 .logo-1 {
@@ -159,7 +158,7 @@
 
 .logo-4 {
     top: 8%;
-    right: 24%;
+    right: 23%;
 }
 
 /* Row 2 */
@@ -180,7 +179,7 @@
 
 .logo-8 {
     top: 28%;
-    right: 24%;
+    right: 23%;
 }
 
 /* Row 3 */
@@ -201,7 +200,7 @@
 
 .logo-12 {
     top: 48%;
-    right: 24%;
+    right: 23%;
 }
 
 /* Row 4 - New Logos */
@@ -222,7 +221,7 @@
 
 .logo-16 {
     top: 68%;
-    right: 24%;
+    right: 23%;
 }
 
 /* Responsive adjustments */

@@ -136,10 +136,9 @@
         0 8px 16px rgba(91, 33, 182, 0.12),
         0 4px 8px rgba(91, 33, 182, 0.08);
     transform: translateY(-4px);
-    
 }
 
-
+/* Individual logo positions - NO ANIMATIONS */
 
 /* Row 1 */
 .logo-1 {
@@ -180,7 +179,7 @@
 
 .logo-8 {
     top: 28%;
-    right: 24%;
+    right: 23%;
 }
 
 /* Row 3 */
@@ -201,7 +200,7 @@
 
 .logo-12 {
     top: 48%;
-    right: 24%;
+    right: 23%;
 }
 
 /* Row 4 - New Logos */
@@ -222,7 +221,7 @@
 
 .logo-16 {
     top: 68%;
-    right: 24%;
+    right: 23%;
 }
 
 /* Responsive adjustments */

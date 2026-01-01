@@ -56,19 +56,6 @@ onMounted(() => {
     width: 120px;
     height: 120px;
     filter: drop-shadow(0 4px 12px rgba(91, 33, 182, 0.2));
-    animation: gentleBounce 1.4s ease-in-out infinite;
-}
-
-@keyframes gentleBounce {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-6px);
-    }
 }
 
 .dots {
