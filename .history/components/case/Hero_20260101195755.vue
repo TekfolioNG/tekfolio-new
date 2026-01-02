@@ -7,8 +7,8 @@
             <!-- Background Image - Full Width -->
             <div class="absolute inset-0">
                 <picture>
-                    <source :srcset="caseHero" type="image/avif" />
-                    <source :srcset="caseHero.replace('.avif', '.webp')" type="image/webp" />
+                    <source :srcset="caseHero.replace('.jpeg', '.avif')" type="image/avif" />
+                    <source :srcset="caseHero.replace('.jpeg', '.webp')" type="image/webp" />
                     <img :src="caseHero" alt="CaseStudies - Tekfolio" class="w-full h-full object-cover sharp-image" />
                 </picture>
             </div>
@@ -122,7 +122,7 @@
 
 <script setup>
 // Import images from assets directory
-import caseHero from '~/assets/img/casehero.avif';
+import caseHero from '~/assets/img/casehero.jpeg';
 import ourStoryImage from '~/assets/img/our-story-literaforge.jpg';
 </script>
 

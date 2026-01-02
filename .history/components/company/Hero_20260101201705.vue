@@ -7,9 +7,11 @@
             <!-- Background Image - Full Width -->
             <div class="absolute inset-0">
                 <picture>
-                    <source :srcset="caseHero" type="image/avif" />
-                    <source :srcset="caseHero.replace('.avif', '.webp')" type="image/webp" />
-                    <img :src="caseHero" alt="CaseStudies - Tekfolio" class="w-full h-full object-cover sharp-image" />
+                    <source :srcset="companyHero" type="image/avif" />
+                    <source :srcset="companyHero.replace('.avif', '.webp')" type="image/webp" />
+                    <img :src="companyHero" alt="CaseStudies - Tekfolio"
+                        class="w-full h-full object-cover sharp-image" />
+
                 </picture>
             </div>
 
@@ -27,11 +29,11 @@
                         <div class="text-shadow-strong">
                             <h1
                                 class="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-tight drop-shadow-lg">
-                                Success Stories
+                                Your Brand Vision
                             </h1>
                             <h2
                                 class="text-xl md:text-3xl lg:text-4xl font-medium text-white leading-tight italic drop-shadow-lg">
-                                Built. Shipped. Scaled.
+                                Powered By Technology
                             </h2>
                         </div>
                     </div>
@@ -39,49 +41,61 @@
             </div>
         </section>
         <!-- Our Story Section - 2 Columns on Desktop -->
-        <section class="w-full bg-gradient-to-br from-white via-blue-50/30 to-white py-16 lg:py-24 mt-8">
+        <section class="w-full bg-gradient-to-br from-white via-blue-50/30 to-white py-16 lg:py-24 mt-4">
             <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     <!-- Text Content - Left Column -->
                     <div class="order-1 lg:order-1 text-center lg:text-left">
                         <!-- Section Title -->
-                        <div class="mb-8">
+                        <div class="mb-4">
                             <div class="inline-flex items-center gap-3 mb-4 mx-auto lg:mx-0">
                                 <div class="w-3 h-3 bg-[#4D7EFF] rounded-full"></div>
                                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 uppercase tracking-wide">
-                                    Our Story
+                                    Who We Are
                                 </h2>
                             </div>
                         </div>
 
                         <!-- Content -->
                         <div class="space-y-6 text-gray-900">
-                            <p class="text-lg md:text-xl leading-relaxed">
-                                <strong class="text-gray-900">Litera-Forge exists to help individuals and organizations
-                                    communicate with clarity, operate efficiently, and bring their ideas to
-                                    life.</strong> We blend strategy, creativity, and execution to transform ideas into
-                                work that inspires, informs, and leads.
+                            <p class="text-lg leading-relaxed">
+                                <strong class="text-gray-900">Tekfolio builds reliable, scalable digital solutions for
+                                    modern organizations. </strong> We work at the intersection of clean engineering,
+                                thoughtful design, and practical problem-solving.
+
                             </p>
 
                             <p class="text-lg leading-relaxed">
-                                <strong class="text-gray-900">Litera-Forge was built on a simple belief: every idea
-                                    deserves structure.</strong> Many leaders, founders, and authors know what they want
-                                to say but struggle to shape it into something clear and compelling. We stepped in to
-                                bridge that gap.
+                                <strong class="text-gray-900">We’re Nigeria-based, but our standards, thinking, and
+                                    delivery are global.</strong> Every product we build is designed to last, adapt, and
+                                support real business growth; not just look good at launch.
+
                             </p>
 
                             <p class="text-lg leading-relaxed">
-                                Over the years, we've supported clients across multiple industries through advisory,
-                                productivity training, ghostwriting, and publishing—helping them articulate their voice,
-                                refine their vision, and execute with confidence.
+                                As a technology partner, we focus on systems that function smoothly for the target user.
+                                From digital platforms to cloud systems and data-driven tools, our goal is to help
+                                clients and their customers work, live, and think better.
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                That’s why we build with intention from day one. We ask the right questions early. We
+                                design for people, not just screens. We engineer for reliability, not shortcuts. And we
+                                approach every engagement as a long-term partnership, not a one-off transaction.
+
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                We work with forward-thinking businesses, institutions, and organizations that value
+                                clarity, long-term thinking, and engineering discipline over shortcuts and hype.
+
                             </p>
                         </div>
 
                         <!-- Accent Element -->
                         <div class="mt-8 flex items-center gap-4 justify-center lg:justify-start">
                             <div class="w-12 h-0.5 bg-[#4D7EFF]"></div>
-                            <div class="text-sm text-[#4D7EFF] font-semibold uppercase tracking-wide">Building Stories
-                                That Last</div>
+                            <div class="text-sm text-[#4D7EFF] font-semibold uppercase tracking-wide">We’re here to help
+                                you build systems you can rely on — long after launch.
+                            </div>
                         </div>
                     </div>
 
@@ -91,12 +105,8 @@
                             <!-- Vertical Image Container -->
                             <div
                                 class="aspect-[3/4] h-[400px] lg:h-[650px] max-w-md mx-auto lg:max-w-full rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
-                                <picture>
-                                    <source :srcset="ourStoryImage.replace('.jpg', '.avif')" type="image/avif" />
-                                    <source :srcset="ourStoryImage.replace('.jpg', '.webp')" type="image/webp" />
-                                    <img :src="ourStoryImage" alt="Our Story - LiteraForge"
-                                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
-                                </picture>
+                                <img :src="ourStoryImage" alt="Our Story - LiteraForge"
+                                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
                             </div>
 
                             <!-- Decorative Elements -->
@@ -122,7 +132,7 @@
 
 <script setup>
 // Import images from assets directory
-import caseHero from '~/assets/img/casehero.avif';
+import companyHero from '~/assets/img/companyhero.avif';
 import ourStoryImage from '~/assets/img/our-story-literaforge.jpg';
 </script>
 

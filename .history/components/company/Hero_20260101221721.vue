@@ -38,7 +38,7 @@
         </section>
 
         <!-- Who We Are Section -->
-        <section class="w-full bg-white py-28 lg:py-36 relative overflow-hidden">
+        <section class="w-full bg-white py-16 lg:py-24 relative overflow-hidden">
 
             <!-- Subtle tech pattern background -->
             <div class="absolute inset-0 opacity-[0.02]"
@@ -63,7 +63,7 @@
                         </div>
 
                         <!-- Content with refined typography -->
-                        <div class="space-y-5 text-gray-900">
+                        <div class="space-y-5 text-gray-700">
                             <p class="text-lg md:text-xl leading-relaxed font-medium text-gray-900">
                                 Tekfolio builds reliable, scalable digital solutions for modern organizations.
                             </p>
@@ -97,31 +97,25 @@
                                 work with forward-thinking businesses, institutions, and organizations that value
                                 clarity, long-term thinking, and engineering discipline over shortcuts and hype.
                             </p>
+
+                            <p class="text-base md:text-lg leading-relaxed font-medium text-gray-900">
+                                We're here to help you build systems you can rely on—long after launch.
+                            </p>
                         </div>
                     </div>
 
                     <!-- Image - Right Column -->
-                    <div class="relative">
-                        <!-- Image container with hover effect -->
-                        <div
-                            class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500">
+                    <div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl">
                             <picture>
                                 <source :srcset="whoWeAre" type="image/avif" />
                                 <source :srcset="whoWeAre.replace('.avif', '.webp')" type="image/webp" />
                                 <img :src="whoWeAre" alt="Tekfolio Team"
-                                    class="w-full h-full aspect-[3/4] object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" />
+                                    class="w-full h-full aspect-[3/4] object-cover" />
                             </picture>
 
                             <!-- Subtle gradient overlay -->
                             <div class="absolute inset-0 bg-gradient-to-t from-purple-900/10 to-transparent"></div>
-                        </div>
-
-                        <!-- Floating accent card - visible on all screens -->
-                        <div
-                            class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-gradient-to-br from-purple-700 to-blue-600 text-white p-4 md:p-6 rounded-xl shadow-2xl max-w-[180px] md:max-w-[220px] z-10 animate-float">
-                            <div class="text-sm md:text-base font-bold mb-1">We Build Systems</div>
-                            <div class="text-xs md:text-sm text-white/95 leading-snug">...you can rely on long
-                                after launch.</div>
                         </div>
                     </div>
 
@@ -147,28 +141,6 @@ import whoWeAre from '~/assets/img/whoweare-tekfolio.avif';
 .sharp-image {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
-}
-
-/* Floating animation for accent card */
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.animate-float {
-    animation: float 3s ease-in-out infinite;
-}
-
-/* Image zoom on hover */
-.group:hover img {
-    transform: scale(1.05);
 }
 
 /* Custom responsive adjustments */

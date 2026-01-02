@@ -63,7 +63,7 @@
                         </div>
 
                         <!-- Content with refined typography -->
-                        <div class="space-y-5 text-gray-900">
+                        <div class="space-y-5 text-gray-700">
                             <p class="text-lg md:text-xl leading-relaxed font-medium text-gray-900">
                                 Tekfolio builds reliable, scalable digital solutions for modern organizations.
                             </p>
@@ -119,8 +119,8 @@
                         <!-- Floating accent card - visible on all screens -->
                         <div
                             class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-gradient-to-br from-purple-700 to-blue-600 text-white p-4 md:p-6 rounded-xl shadow-2xl max-w-[180px] md:max-w-[220px] z-10 animate-float">
-                            <div class="text-sm md:text-base font-bold mb-1">We Build Systems</div>
-                            <div class="text-xs md:text-sm text-white/95 leading-snug">...you can rely on long
+                            <div class="text-sm md:text-base font-bold mb-1">We Build</div>
+                            <div class="text-xs md:text-sm text-white/95 leading-snug">systems you can rely on—long
                                 after launch.</div>
                         </div>
                     </div>

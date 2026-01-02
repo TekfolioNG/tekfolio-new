@@ -7,9 +7,10 @@
             <!-- Background Image - Full Width -->
             <div class="absolute inset-0">
                 <picture>
-                    <source :srcset="caseHero" type="image/avif" />
-                    <source :srcset="caseHero.replace('.avif', '.webp')" type="image/webp" />
-                    <img :src="caseHero" alt="CaseStudies - Tekfolio" class="w-full h-full object-cover sharp-image" />
+                    <source :srcset="cloudData" type="image/avif" />
+                    <source :srcset="cloudData.replace('.avif', '.webp')" type="image/webp" />
+                    <img :src="cloudData" alt="CaseStudies - Tekfolio" class="w-full h-full object-cover sharp-image" />
+
                 </picture>
             </div>
 
@@ -27,11 +28,11 @@
                         <div class="text-shadow-strong">
                             <h1
                                 class="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-tight drop-shadow-lg">
-                                Success Stories
+                                Cloud & Data Engineering
                             </h1>
                             <h2
                                 class="text-xl md:text-3xl lg:text-4xl font-medium text-white leading-tight italic drop-shadow-lg">
-                                Built. Shipped. Scaled.
+                                Key Insights for Growth
                             </h2>
                         </div>
                     </div>
@@ -91,12 +92,8 @@
                             <!-- Vertical Image Container -->
                             <div
                                 class="aspect-[3/4] h-[400px] lg:h-[650px] max-w-md mx-auto lg:max-w-full rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
-                                <picture>
-                                    <source :srcset="ourStoryImage.replace('.jpg', '.avif')" type="image/avif" />
-                                    <source :srcset="ourStoryImage.replace('.jpg', '.webp')" type="image/webp" />
-                                    <img :src="ourStoryImage" alt="Our Story - LiteraForge"
-                                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
-                                </picture>
+                                <img :src="ourStoryImage" alt="Our Story - LiteraForge"
+                                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
                             </div>
 
                             <!-- Decorative Elements -->
@@ -122,7 +119,7 @@
 
 <script setup>
 // Import images from assets directory
-import caseHero from '~/assets/img/casehero.avif';
+import cloudData from '~/assets/img/cloudhero.avif';
 import ourStoryImage from '~/assets/img/our-story-literaforge.jpg';
 </script>
 

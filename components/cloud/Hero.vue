@@ -6,8 +6,12 @@
         <section class="relative w-full h-64 md:h-[400px] overflow-hidden">
             <!-- Background Image - Full Width -->
             <div class="absolute inset-0">
-                <img :src="cloudData" alt="CloudEngineering - Tekfolio"
-                    class="w-full h-full object-cover sharp-image" />
+                <picture>
+                    <source :srcset="cloudData" type="image/avif" />
+                    <source :srcset="cloudData.replace('.avif', '.webp')" type="image/webp" />
+                    <img :src="cloudData" alt="CaseStudies - Tekfolio" class="w-full h-full object-cover sharp-image" />
+
+                </picture>
             </div>
 
             <!-- Subtle overlay for depth -->
@@ -58,14 +62,7 @@
                                     communicate with clarity, operate efficiently, and bring their ideas to
                                     life.</strong> We blend strategy, creativity, and execution to transform ideas into
                                 work that inspires, informs, and leads.
-                            </p>
-
-                            <p class="text-lg leading-relaxed">
-                                <strong class="text-gray-900">Litera-Forge was built on a simple belief: every idea
-                                    deserves structure.</strong> Many leaders, founders, and authors know what they want
-                                to say but struggle to shape it into something clear and compelling. We stepped in to
-                                bridge that gap.
-                            </p>
+                            </p>                        
 
                             <p class="text-lg leading-relaxed">
                                 Over the years, we've supported clients across multiple industries through advisory,
@@ -115,7 +112,7 @@
 
 <script setup>
 // Import images from assets directory
-import cloudData from '~/assets/img/cloudhero.jpeg';
+import cloudData from '~/assets/img/cloudhero.avif';
 import ourStoryImage from '~/assets/img/our-story-literaforge.jpg';
 </script>
 
