@@ -91,12 +91,18 @@
 
                     <div class="w-4/5">
                         <div
-                            class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4 pt-4">
+                            class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4">
                             <img :src="prototypeImage" alt="Prototype"
                                 class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-out" />
                         </div>
                     </div>
-
+                    <div class="w-4/5">
+                        <div
+                            class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4">
+                            <img :src="processImage" alt="Process"
+                                class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-out" />
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -168,7 +174,7 @@
 import { Code, Compass, Palette, Rocket, Search } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
 import prototypeImage from '~/assets/img/appux1.png';
-
+import processImage from '~/assets/img/appux2.png';
 
 const openCards = ref([false, false, false, false, false]);
 const cardsVisible = ref(false);

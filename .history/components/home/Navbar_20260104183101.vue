@@ -277,14 +277,14 @@
                   @click="closeMobileMenu">
                   About Tekfolio
                 </NuxtLink>
-                <NuxtLink to="/careers" class="block font-semibold px-4 py-2.5 rounded-lg text-sm transition-all"
-                  :class="route.path === '/careers'
+                <NuxtLink to="/our-team" class="block font-semibold px-4 py-2.5 rounded-lg text-sm transition-all"
+                  :class="route.path === '/our-team'
                     ? 'text-white bg-gradient-to-r from-purple-700 to-blue-600'
                     : isDarkMode
                       ? 'text-gray-100 hover:text-white hover:bg-white/10'
                       : 'text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-700 hover:to-blue-600'"
                   @click="closeMobileMenu">
-                  Careers
+                  Our Team
                 </NuxtLink>
                 <NuxtLink to="/case-studies" class="block font-semibold px-4 py-2.5 rounded-lg text-sm transition-all"
                   :class="route.path === '/case-studies'

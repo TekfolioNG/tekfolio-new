@@ -22,8 +22,7 @@
 
                 <div class="space-y-5 text-gray-900 max-w-3xl mx-auto">
                     <p class="text-lg md:text-xl leading-relaxed font-regular italic text-gray-900">
-                        Our Software Development Lifecycle Cycle (SDLC) follows a clear, collaborative, and agile
-                        process designed
+                        Our Software Development Lifecycle Cycle (SDLC) follows a clear, collaborative process designed
                         to keep everyone aligned from first conversation to
                         launch and beyond. Each stage prioritises clarity, feedback, and transparency, so there are
                         no surprises.
@@ -88,15 +87,20 @@
 
                 <!-- Right Column: Images -->
                 <div class="lg:col-span-5 flex flex-col gap-8 items-center justify-center">
-
                     <div class="w-4/5">
                         <div
-                            class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4 pt-4">
+                            class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4">
+                            <img :src="ourProcessImage" alt="Our Process"
+                                class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-out" />
+                        </div>
+                    </div>
+                    <div class="w-4/5">
+                        <div
+                            class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4">
                             <img :src="prototypeImage" alt="Prototype"
                                 class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-out" />
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -153,7 +157,11 @@
 
             <!-- Mobile: Images -->
             <div class="lg:hidden space-y-6">
-
+                <div
+                    class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4 max-w-md mx-auto">
+                    <img :src="ourProcessImage" alt="Our Process"
+                        class="w-full h-auto opacity-80 transform group-hover:opacity-90 transition-all duration-700 ease-out" />
+                </div>
                 <div
                     class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4 max-w-md mx-auto">
                     <img :src="prototypeImage" alt="Prototype"
@@ -167,8 +175,8 @@
 <script setup>
 import { Code, Compass, Palette, Rocket, Search } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
-import prototypeImage from '~/assets/img/appux1.png';
-
+import ourProcessImage from '~/assets/img/ourprocess.svg';
+import prototypeImage from '~/assets/img/prototype.svg';
 
 const openCards = ref([false, false, false, false, false]);
 const cardsVisible = ref(false);

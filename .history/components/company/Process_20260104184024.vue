@@ -89,77 +89,77 @@
                 <!-- Right Column: Images -->
                 <div class="lg:col-span-5 flex flex-col gap-8 items-center justify-center">
 
-                    <div class="w-4/5">
-                        <div
-                            class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4 pt-4">
-                            <img :src="prototypeImage" alt="Prototype"
-                                class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-out" />
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-
-            <!-- Mobile: All Cards -->
-            <div class="grid grid-cols-1 gap-5 lg:hidden mb-8">
-                <div v-for="(step, index) in steps.slice(0, 5)" :key="step.id" :class="['group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-purple-200/50 hover:border-purple-400/70 card-container',
-                    { 'animate-slide-left': cardsVisible }]" :style="`animation-delay: ${index * 150}ms;`">
-
-                    <!-- Gradient Background Overlay -->
+                <div class="w-4/5">
                     <div
-                        class="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-blue-50 opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                    </div>
-
-                    <!-- Card Header - Clickable -->
-                    <button @click="toggleCard(index)"
-                        class="relative w-full p-5 flex items-center gap-4 hover:bg-white/40 transition-all duration-200 text-left">
-
-                        <!-- Icon Container -->
-                        <div
-                            class="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                            <component :is="step.icon" class="w-6 h-6 text-white" :stroke-width="2.5" />
-                        </div>
-
-                        <!-- Title -->
-                        <h3
-                            class="flex-1 text-lg font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
-                            {{ step.title }}
-                        </h3>
-
-                        <!-- Chevron -->
-                        <div
-                            class="flex-shrink-0 w-9 h-9 rounded-full bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center group-hover:from-purple-200 group-hover:to-blue-200 transition-all duration-300">
-                            <svg :class="['w-5 h-5 transition-transform duration-300 text-purple-700',
-                                { 'rotate-180': openCards[index] }]" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="2.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </div>
-                    </button>
-
-                    <!-- Card Content - Expandable -->
-                    <div :class="['relative overflow-hidden transition-all duration-300 ease-in-out',
-                        openCards[index] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0']">
-                        <div class="px-5 pb-5 pt-2">
-                            <div class="pl-16">
-                                <p class="text-sm leading-relaxed text-gray-700">
-                                    {{ step.description }}
-                                </p>
-                            </div>
-                        </div>
+                        class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4">
+                        <img :src="prototypeImage" alt="Prototype"
+                            class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-out" />
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Mobile: Images -->
-            <div class="lg:hidden space-y-6">
+        <!-- Mobile: All Cards -->
+        <div class="grid grid-cols-1 gap-5 lg:hidden mb-8">
+            <div v-for="(step, index) in steps.slice(0, 5)" :key="step.id" :class="['group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-purple-200/50 hover:border-purple-400/70 card-container',
+                { 'animate-slide-left': cardsVisible }]" :style="`animation-delay: ${index * 150}ms;`">
 
+                <!-- Gradient Background Overlay -->
                 <div
-                    class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4 max-w-md mx-auto">
-                    <img :src="prototypeImage" alt="Prototype"
-                        class="w-full h-auto opacity-80 transform group-hover:opacity-90 transition-all duration-700 ease-out" />
+                    class="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-blue-50 opacity-60 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+
+                <!-- Card Header - Clickable -->
+                <button @click="toggleCard(index)"
+                    class="relative w-full p-5 flex items-center gap-4 hover:bg-white/40 transition-all duration-200 text-left">
+
+                    <!-- Icon Container -->
+                    <div
+                        class="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <component :is="step.icon" class="w-6 h-6 text-white" :stroke-width="2.5" />
+                    </div>
+
+                    <!-- Title -->
+                    <h3
+                        class="flex-1 text-lg font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
+                        {{ step.title }}
+                    </h3>
+
+                    <!-- Chevron -->
+                    <div
+                        class="flex-shrink-0 w-9 h-9 rounded-full bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center group-hover:from-purple-200 group-hover:to-blue-200 transition-all duration-300">
+                        <svg :class="['w-5 h-5 transition-transform duration-300 text-purple-700',
+                            { 'rotate-180': openCards[index] }]" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </button>
+
+                <!-- Card Content - Expandable -->
+                <div :class="['relative overflow-hidden transition-all duration-300 ease-in-out',
+                    openCards[index] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0']">
+                    <div class="px-5 pb-5 pt-2">
+                        <div class="pl-16">
+                            <p class="text-sm leading-relaxed text-gray-700">
+                                {{ step.description }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Mobile: Images -->
+        <div class="lg:hidden space-y-6">
+
+            <div
+                class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4 max-w-md mx-auto">
+                <img :src="prototypeImage" alt="Prototype"
+                    class="w-full h-auto opacity-80 transform group-hover:opacity-90 transition-all duration-700 ease-out" />
+            </div>
+        </div>
         </div>
     </section>
 </template>
@@ -167,8 +167,7 @@
 <script setup>
 import { Code, Compass, Palette, Rocket, Search } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
-import prototypeImage from '~/assets/img/appux1.png';
-
+import prototypeImage from '~/assets/img/appux.avif';
 
 const openCards = ref([false, false, false, false, false]);
 const cardsVisible = ref(false);

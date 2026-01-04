@@ -6,7 +6,6 @@ definePageMeta({
 </script>
 
 <template>
-    <ContactHero />
-    <LandingContactCards />
-    <LandingForm />
+    <CareerHero />
+    <HomePlaceholder />
 </template>
