@@ -173,7 +173,7 @@ onUnmounted(() => {
 }
 
 .bounce-animation {
-    animation: subtleBounce 2s ease-in-out infinite;
+    animation: subtleBounce 3s ease-in-out infinite;
 }
 
 .group:hover img {

@@ -103,9 +103,9 @@
                 </div>
 
                 <!-- Right Column: Image (Order 2 on mobile, visible on all screens) -->
-                <div class="order-2 lg:mt-12 bounce-animation">
+                <div class="order-2 lg:mt-8">
                     <div
-                        class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500 bg-white p-8 md:p-12">
+                        class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500 bg-white p-8 md:p-12 bounce-animation">
                         <img :src="howWeWork" alt="Tekfolio How We Work"
                             class="w-full h-auto scale-125 transform group-hover:scale-130 transition-transform duration-700 ease-out" />
                     </div>
@@ -172,8 +172,10 @@ onUnmounted(() => {
     opacity: 0;
 }
 
-.bounce-animation {
-    animation: subtleBounce 2s ease-in-out infinite;
+@media (min-width: 1024px) {
+    .bounce-animation {
+        animation: subtleBounce 3s ease-in-out infinite;
+    }
 }
 
 .group:hover img {

@@ -32,9 +32,9 @@
             </div>
 
             <!-- Desktop: Two Column Layout with gap -->
-            <div class="hidden lg:grid gap-10" style="grid-template-columns: 55% 45%;">
+            <div class="hidden lg:grid lg:grid-cols-12 gap-10">
                 <!-- Left Column: All Cards -->
-                <div>
+                <div class="lg:col-span-7">
                     <div class="grid grid-cols-1 gap-5">
                         <div v-for="(step, index) in steps.slice(0, 5)" :key="step.id" :class="['group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-purple-200/50 hover:border-purple-400/70 hover:-translate-y-1 card-container',
                             { 'animate-slide-left': cardsVisible }]" :style="`animation-delay: ${index * 150}ms;`">
@@ -75,7 +75,7 @@
                             <div :class="['relative overflow-hidden transition-all duration-300 ease-in-out',
                                 openCards[index] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0']">
                                 <div class="px-6 pb-6 pt-2">
-                                    <div class="pl-0">
+                                    <div class="pl-19">
                                         <p class="text-base leading-relaxed text-gray-700">
                                             {{ step.description }}
                                         </p>
@@ -87,9 +87,9 @@
                 </div>
 
                 <!-- Right Column: Images -->
-                <div class="flex flex-col gap-8 items-center justify-center">
+                <div class="lg:col-span-5 flex flex-col gap-8 items-center justify-center">
 
-                    <div class="w-full">
+                    <div class="w-4/5">
                         <div
                             class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-500 bg-white p-4 pt-4">
                             <img :src="prototypeImage" alt="Prototype"
@@ -141,7 +141,7 @@
                     <div :class="['relative overflow-hidden transition-all duration-300 ease-in-out',
                         openCards[index] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0']">
                         <div class="px-5 pb-5 pt-2">
-                            <div class="pl-0">
+                            <div class="pl-16">
                                 <p class="text-sm leading-relaxed text-gray-700">
                                     {{ step.description }}
                                 </p>
@@ -167,7 +167,7 @@
 <script setup>
 import { Code, Compass, Palette, Rocket, Search } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
-import prototypeImage from '~/assets/img/teamwork.svg';
+import prototypeImage from '~/assets/img/uidesign.svg';
 
 
 const openCards = ref([false, false, false, false, false]);

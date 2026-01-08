@@ -32,7 +32,7 @@
             </div>
 
             <!-- Desktop: Two Column Layout with gap -->
-            <div class="hidden lg:grid gap-10" style="grid-template-columns: 55% 45%;">
+            <div class="hidden lg:grid lg:grid-cols-2 gap-10">
                 <!-- Left Column: All Cards -->
                 <div>
                     <div class="grid grid-cols-1 gap-5">

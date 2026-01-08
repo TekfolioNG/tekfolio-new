@@ -218,18 +218,15 @@
               </a>
             </p>
 
-            <div class="space-y-2">
+            <div class="space-y-2 md:space-y-0">
               <p class="text-gray-300">
-                <span class="text-gray-500">Enquiry:</span>
-                <a href="mailto:hello@tekfolio.ng"
-                  class="hover:text-white transition-colors block md:inline md:ml-2 mt-1 md:mt-0">
+                <span class="text-gray-500 block md:inline">Email:</span>
+                <a href="mailto:hello@tekfolio.ng" class="hover:text-white transition-colors inline ml-2">
                   hello@tekfolio.ng
                 </a>
-              </p>
-              <p class="text-gray-300">
-                <span class="text-gray-500">Help:</span>
+                <span class="hidden md:inline text-gray-600 mx-2">|</span>
                 <a href="mailto:support@tekfolio.ng"
-                  class="hover:text-white transition-colors block md:inline md:ml-2 mt-1 md:mt-0">
+                  class="hover:text-white transition-colors block md:inline mt-1 md:mt-0 md:ml-0">
                   support@tekfolio.ng
                 </a>
               </p>
