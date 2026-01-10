@@ -1,12 +1,12 @@
 <script setup lang="ts">
 definePageMeta({
-    layout: "home2"
+    layout: "home"
 });
 
 </script>
 
 <template>
     <ContactHero />
-    <ContactCard />
-    <ContactForm />
+    <ContactContact />
+    <LandingForm />
 </template>
