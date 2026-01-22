@@ -3,11 +3,12 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      sanityProjectId: process.env.NUXT_PUBLIC_SANITY_PROJECT_ID || '',
-      sanityDataset: process.env.NUXT_PUBLIC_SANITY_DATASET || 'production',
+    sanityProjectId: process.env.NUXT_PUBLIC_SANITY_PROJECT_ID || '',
+    sanityDataset: process.env.NUXT_PUBLIC_SANITY_DATASET || 'production',
+    web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY || 'fd76f0eb-7783-4a9d-a008-dd3da20c621e',
     },
     // Private keys (only available on server-side)
-    web3formsKey: process.env.WEB3FORMS_KEY,
+  
   },
 
   css: ["~/assets/css/main.css"],
@@ -53,7 +54,7 @@ export default defineNuxtConfig({
         },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Barlow:wght@400;500;600&display=swap'
+          href: 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap'
         }
       ]
     }
@@ -84,7 +85,6 @@ export default defineNuxtConfig({
       failOnError: false,
       crawlLinks: false,
       routes: ['/'],
-      ignore: ['/blog', '/blog/**']
     },
     cloudflare: {
       pages: {
