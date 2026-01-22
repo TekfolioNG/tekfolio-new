@@ -116,6 +116,7 @@ import { ref } from 'vue';
 import akorite from '../assets/img/akorite.png';
 import ecoplatinum from '../assets/img/ecoplatinum.png';
 import literaforge from '../assets/img/lliteraforge.png';
+import megafield from '../assets/img/megafield.png';
 import petabiz from '../assets/img/petabiz.png';
 import ppil from '../assets/img/ppil.png';
 import sefa from '../assets/img/sefa.png';
@@ -168,6 +169,7 @@ const clientLogos = [
     { name: "Syntanium", src: syntanium, url: "https://syntaniumenergy.com/" },
     { name: "Sefa", src: sefa, url: "https://sefaenergy.com/" },
     { name: "VeraVerde", src: veraverde, url: "https://veraverde.org/" },
+    { name: "Megafield", src: megafield, url: "https://megafieldsolicitors.com/" },
     { name: "Wilson & Samson", src: wilsonsamson, url: "https://wilsonsamson.com/" },
     { name: "Xstrato", src: xstrato, url: "https://xstratoprime.com/" }, { name: "Akorite", src: akorite, url: "https://akoritetravels.com/" }
 ];

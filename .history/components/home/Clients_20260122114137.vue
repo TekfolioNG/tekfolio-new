@@ -4,7 +4,7 @@
         <!-- Section Heading -->
         <div class="w-full py-12 md:py-16 text-center">
             <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight">
                     <span class="text-gray-900">Trusted by </span>
                     <span class="text-gradient">Forward-Thinking</span>
                     <span class="text-gray-900"> Brands & Organizations</span>
@@ -116,6 +116,7 @@ import { ref } from 'vue';
 import akorite from '../assets/img/akorite.png';
 import ecoplatinum from '../assets/img/ecoplatinum.png';
 import literaforge from '../assets/img/lliteraforge.png';
+import megafield from '../assets/img/megafield.png';
 import petabiz from '../assets/img/petabiz.png';
 import ppil from '../assets/img/ppil.png';
 import sefa from '../assets/img/sefa.png';
@@ -138,7 +139,7 @@ const testimonials = [
         name: "Wilson Samson",
         designation: "Managing Partner",
         company: "LiteraForge Ltd",
-        quote: "I love that Tekfolio always moves fast without cutting corners. Clean code, clear communication, and realistic deadlines. More importantly, their service delivery was without question swift and exceptional."
+        quote: "My experience with Tekfolio Ltd has been remarkable. I greatly commend the team for their creativity, excellence, and customer-centric approach during conversations to ensure their clients feel heard, valued, and understood."
     },
     {
         name: "Regina Obi",
@@ -150,7 +151,7 @@ const testimonials = [
         name: "Gbolahan Shelika",
         designation: "Managing Partner",
         company: "Elevation Consulting Ltd",
-        quote: "Tekfolio embodies everything a competent and professional digital partner should be. They took time to understand what we needed and made the whole process easy from start to finish. Communication was clear, they were patient with our requests, and the final result met our expectations. We would gladly recommend Tekfolio to any business looking to build a solid website.."
+        quote: "Tekfolio embodies everything a competent and professional digital partner should be. They took time to understand what we needed and made the whole process easy from start to finish. Communication was clear, they were patient with our requests, and the final result met our expectations. We would gladly recommend Tekfolio to any business looking to build a solid web or mobile app."
     },
     {
         name: "James Ladipo",
@@ -168,6 +169,7 @@ const clientLogos = [
     { name: "Syntanium", src: syntanium, url: "https://syntaniumenergy.com/" },
     { name: "Sefa", src: sefa, url: "https://sefaenergy.com/" },
     { name: "VeraVerde", src: veraverde, url: "https://veraverde.org/" },
+    { name: "Megafield", src: megafield, url: "https://megafieldsolicitors.com/" },
     { name: "Wilson & Samson", src: wilsonsamson, url: "https://wilsonsamson.com/" },
     { name: "Xstrato", src: xstrato, url: "https://xstratoprime.com/" }, { name: "Akorite", src: akorite, url: "https://akoritetravels.com/" }
 ];

@@ -4,7 +4,7 @@
         <!-- Section Heading -->
         <div class="w-full py-12 md:py-16 text-center">
             <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight">
                     <span class="text-gray-900">Trusted by </span>
                     <span class="text-gradient">Forward-Thinking</span>
                     <span class="text-gray-900"> Brands & Organizations</span>
@@ -42,7 +42,7 @@
                         <!-- Right Side - Testimonial Quote Only (9 columns on desktop) -->
                         <div class="lg:col-span-9">
                             <div class="relative">
-                                <svg class="absolute -top-4 -left-2 w-10 h-10 text-purple-300 opacity-30"
+                                <svg class="absolute -top-4 -left-2 w-10 h-10 text-purple-500 opacity-25"
                                     fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -88,13 +88,15 @@
                         <div class="logo-scroll-container">
                             <div class="logo-scroll-track">
                                 <!-- First set of logos -->
-                                <div v-for="logo in clientLogos" :key="logo.name" class="logo-item">
+                                <a v-for="logo in clientLogos" :key="logo.name" :href="logo.url" target="_blank"
+                                    rel="noopener noreferrer" class="logo-item">
                                     <img :src="logo.src" :alt="logo.name" class="client-logo" />
-                                </div>
+                                </a>
                                 <!-- Duplicate set for seamless loop -->
-                                <div v-for="logo in clientLogos" :key="`${logo.name}-dup`" class="logo-item">
+                                <a v-for="logo in clientLogos" :key="`${logo.name}-dup`" :href="logo.url"
+                                    target="_blank" rel="noopener noreferrer" class="logo-item">
                                     <img :src="logo.src" :alt="logo.name" class="client-logo" />
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -114,8 +116,10 @@ import { ref } from 'vue';
 import akorite from '../assets/img/akorite.png';
 import ecoplatinum from '../assets/img/ecoplatinum.png';
 import literaforge from '../assets/img/lliteraforge.png';
+import megafield from '../assets/img/megafield.png';
 import petabiz from '../assets/img/petabiz.png';
 import ppil from '../assets/img/ppil.png';
+import sefa from '../assets/img/sefa.png';
 import syntanium from '../assets/img/syntanium.png';
 import veraverde from '../assets/img/veraverde.png';
 import wilsonsamson from '../assets/img/wilsonsamson.png';
@@ -124,42 +128,50 @@ import xstrato from '../assets/img/xstrato.png';
 const currentTestimonial = ref(0);
 
 const testimonials = [
+
     {
-        name: "James Wilson",
-        designation: "Operations Director",
-        company: "Wilson & Samson",
-        quote: "I really love the fact they always move fast without cutting corners. Clean code, clear communication, and realistic deadlines. More importantly, their service delivery was without question swift and exceptional."
+        name: "Emeka Uchela",
+        designation: "CEO",
+        company: "Syntanium Energy Ltd",
+        quote: "Tekfolio is just an awesome company; they have handled over 4 projects for me, and they all turned out amazing 👏. I had a wonderful experience working with them. Kudos"
     },
     {
-        name: "Adebayo Ogunlade",
-        designation: "CTO",
-        company: "Syntanium Digital",
-        quote: "Tekfolio brought clarity to a complex project. The team was structured, responsive, and focused on delivering something that worked well from day one."
+        name: "Wilson Samson",
+        designation: "Managing Partner",
+        company: "LiteraForge Ltd",
+        quote: "My experience with Tekfolio Ltd has been remarkable. I greatly commend the team for their creativity, excellence, and customer-centric approach during conversations to ensure their clients feel heard, valued, and understood."
     },
     {
-        name: "Sarah Mitchell",
-        designation: "Head of Product",
-        company: "EcoPlatinum",
-        quote: "What stood out was their attention to detail and how well they understood our business goals. The final product was fast, stable, and easy to scale."
+        name: "Regina Obi",
+        designation: "Managing Director",
+        company: "Sefa Energy Global Ltd",
+        quote: "Exceptional and swift service delivery."
     },
     {
-        name: "Chidi Okeke",
-        designation: "Founder & CEO",
-        company: "LiteraForge",
+        name: "Gbolahan Shelika",
+        designation: "Managing Partner",
+        company: "Elevation Consulting Ltd",
+        quote: "Tekfolio embodies everything a competent and professional digital partner should be. They took time to understand what we needed and made the whole process easy from start to finish. Communication was clear, they were patient with our requests, and the final result met our expectations. We would gladly recommend Tekfolio to any business looking to build a solid web or mobile app."
+    },
+    {
+        name: "James Ladipo",
+        designation: "CEO",
+        company: "Petabiz Nigeria",
         quote: "Tekfolio felt more like a partner than a vendor. Communication was clear, delivery met expectations, and they actually hit their deadlines."
     }
 ];
 
 const clientLogos = [
-    { name: "EcoPlatinum", src: ecoplatinum },
-    { name: "LiteraForge", src: literaforge },
-    { name: "PetaBiz", src: petabiz },
-    { name: "PPIL", src: ppil },
-    { name: "Syntanium", src: syntanium },
-    { name: "VeraVerde", src: veraverde },
-    { name: "Wilson & Samson", src: wilsonsamson },
-    { name: "Xstrato", src: xstrato },
-    { name: "Akorite", src: akorite }
+    { name: "EcoPlatinum", src: ecoplatinum, url: "https://ecoplatinumgroup.com/" },
+    { name: "LiteraForge", src: literaforge, url: "https://www.literaforge.com/" },
+    { name: "PetaBiz", src: petabiz, url: "https://petabiz.com" },
+    { name: "PPIL", src: ppil, url: "https://ppil.com.ng/" },
+    { name: "Syntanium", src: syntanium, url: "https://syntaniumenergy.com/" },
+    { name: "Sefa", src: sefa, url: "https://sefaenergy.com/" },
+    { name: "VeraVerde", src: veraverde, url: "https://veraverde.org/" },
+    { name: "Megafield", src: megafield, url: "https://megafieldsolicitors.com/" },
+    { name: "Wilson & Samson", src: wilsonsamson, url: "https://wilsonsamson.com/" },
+    { name: "Xstrato", src: xstrato, url: "https://xstratoprime.com/" }, { name: "Akorite", src: akorite, url: "https://akoritetravels.com/" }
 ];
 
 const nextTestimonial = () => {
@@ -195,15 +207,16 @@ const goToTestimonial = (index) => {
     height: 36px;
     border-radius: 50%;
     background: rgba(124, 58, 237, 0.05);
-    color: #7C3AED;
+    color: #6B7280;
     transition: all 0.3s ease;
-    border: 1.5px solid #7C3AED;
+    border: 1.5px solid #D1D5DB;
     cursor: pointer;
 }
 
 .nav-button:hover {
-    color: #6B7280;
-    border-color: #D1D5DB;
+
+    color: #7C3AED;
+    border-color: #7C3AED;
     background: transparent;
 }
 
@@ -242,7 +255,7 @@ const goToTestimonial = (index) => {
 .logo-scroll-track {
     display: flex;
     align-items: center;
-    animation: scroll 35s linear infinite;
+    animation: scroll 30s linear infinite;
     width: fit-content;
 }
 
@@ -253,6 +266,8 @@ const goToTestimonial = (index) => {
     align-items: center;
     justify-content: center;
     min-width: 140px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .client-logo {
@@ -265,7 +280,7 @@ const goToTestimonial = (index) => {
     image-rendering: crisp-edges;
 }
 
-.client-logo:hover {
+.logo-item:hover .client-logo {
     transform: scale(1.1);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
