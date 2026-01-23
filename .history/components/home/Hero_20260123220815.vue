@@ -15,7 +15,19 @@
               <span class="relative inline-block mt-1">
                 <span class="text-gradient text-3xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold">
                   Built Differently
-                </span>           
+                </span>
+                <!-- Stylish circular accent -->
+                <svg class="accent-circle absolute -inset-2 -z-10 w-[110%] sm:w-[105%] md:w-full" viewBox="0 0 200 80"
+                  preserveAspectRatio="none">
+                  <ellipse cx="100" cy="40" rx="98" ry="38" fill="none" stroke="url(#gradient)" stroke-width="2"
+                    opacity="0.3" />
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#5B21B6;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                </svg>
                 <!-- Double underline with brand colors -->
                 <svg class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-[65%] sm:w-full h-3" viewBox="0 0 200 12"
                   fill="none">

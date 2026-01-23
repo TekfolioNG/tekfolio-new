@@ -128,7 +128,7 @@
             <!-- Service 4: SEO & Performance (Animation Left, Text Right) -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8 md:mb-12">
                 <!-- Lottie Animation -->
-                <div class="relative h-[220px] md:h-[290px] lg:h-[340px] order-2 lg:order-1">
+                <div class="relative h-[250px] md:h-[320px] lg:h-[370px] order-2 lg:order-1">
                     <div id="lottie-seo-performance" class="w-full h-full"></div>
                 </div>
 

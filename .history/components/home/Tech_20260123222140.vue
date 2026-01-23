@@ -5,7 +5,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
 
                 <!-- Left Side - Text Content -->
-                <div class="text-center lg:text-left space-y-6 order-1 lg:col-span-2 lg:pl-12 mx-auto px-8">
+                <div class="text-center lg:text-left space-y-6 order-1 lg:col-span-2 lg:pl-8 mx-auto px-8">
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                         The Tech Stack Behind Our Work
                     </h2>
@@ -136,8 +136,8 @@
         0 8px 16px rgba(91, 33, 182, 0.12),
         0 4px 8px rgba(91, 33, 182, 0.08);
     transform: translateY(-4px);
-
-
+    
+    
 }
 
 

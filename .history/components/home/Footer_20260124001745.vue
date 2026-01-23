@@ -168,7 +168,11 @@
                 About Tekfolio
               </NuxtLink>
             </li>
-
+            <li>
+              <NuxtLink to="/team" class="text-gray-400 hover:text-white hover:underline transition-colors">
+                Our Team
+              </NuxtLink>
+            </li>
             <li>
               <NuxtLink to="/case-studies" class="text-gray-400 hover:text-white hover:underline transition-colors">
                 Our Work

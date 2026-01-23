@@ -1,11 +1,11 @@
 <template>
     <section class="relative w-full bg-gradient-to-b from-white to-gray-200 overflow-hidden">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
 
                 <!-- Left Side - Text Content -->
-                <div class="text-center lg:text-left space-y-6 order-1 lg:col-span-2 lg:pl-12 mx-auto px-8">
+                <div class="text-center lg:text-left space-y-6 order-1 lg:col-span-2 lg:pl-8 mx-auto px-8">
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                         The Tech Stack Behind Our Work
                     </h2>

@@ -41,9 +41,14 @@
                                 Mobile App Development
                             </NuxtLink>
                         </li>
-
                         <li>
-                            <NuxtLink to="/cloud-data-engineering"
+                            <NuxtLink to="/cloud-security"
+                                class="text-gray-400 hover:text-white hover:underline transition-colors">
+                                Cloud Migration & Security
+                            </NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/creative-coding"
                                 class="text-gray-400 hover:text-white hover:underline transition-colors">
                                 Data Engineering & Analytics
                             </NuxtLink>
@@ -54,7 +59,7 @@
                                 SEO & Performance
                             </NuxtLink>
                         </li>
-
+                        
 
                     </ul>
                 </div>
@@ -69,7 +74,12 @@
                                 About Tekfolio
                             </NuxtLink>
                         </li>
-                        
+                        <li>
+                            <NuxtLink to="/team"
+                                class="text-gray-400 hover:text-white hover:underline transition-colors">
+                                Our Team
+                            </NuxtLink>
+                        </li>
                         <li>
                             <NuxtLink to="/case-studies"
                                 class="text-gray-400 hover:text-white hover:underline transition-colors">

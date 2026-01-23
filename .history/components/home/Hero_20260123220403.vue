@@ -1,5 +1,7 @@
 <template>
-  <main class="relative w-full min-h-screen overflow-hidden bg-white pb-16 md:pb-16">
+  <main class="relative w-full min-h-screen overflow-hidden pb-16 md:pb-16 transition-colors duration-500" :class="isDarkMode
+    ? 'bg-gradient-to-br from-gray-900 via-purple-900/20 to-blue-900/20'
+    : 'bg-white'">
     <!-- Content Container -->
     <div class="container mx-auto px-6 md:px-12 lg:px-16 min-h-screen flex items-center">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-8 lg:gap-12 items-center w-full py-8 md:py-12 lg:py-0">
@@ -9,13 +11,27 @@
           <!-- Headlines with styled "Built Differently" -->
           <div class="space-y-1">
             <h1 class="hero-headline leading-[1.1]">
-              <span class="block text-gray-900 text-3xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold">
+              <span
+                class="block text-3xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold transition-colors duration-500"
+                :class="isDarkMode ? 'text-white' : 'text-gray-900'">
                 Your Tech Advantage.
               </span>
               <span class="relative inline-block mt-1">
                 <span class="text-gradient text-3xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold">
                   Built Differently
-                </span>           
+                </span>
+                <!-- Stylish circular accent -->
+                <svg class="accent-circle absolute -inset-2 -z-10 w-[110%] sm:w-[105%] md:w-full" viewBox="0 0 200 80"
+                  preserveAspectRatio="none">
+                  <ellipse cx="100" cy="40" rx="98" ry="38" fill="none" stroke="url(#gradient)" stroke-width="2"
+                    :opacity="isDarkMode ? '0.5' : '0.3'" />
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#5B21B6;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                </svg>
                 <!-- Double underline with brand colors -->
                 <svg class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-[65%] sm:w-full h-3" viewBox="0 0 200 12"
                   fill="none">
@@ -35,13 +51,12 @@
                   </defs>
                 </svg>
               </span>
-
             </h1>
           </div>
 
           <!-- Description -->
-          <p
-            class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+          <p class="text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium transition-colors duration-500"
+            :class="isDarkMode ? 'text-gray-300' : 'text-gray-700'">
             We design and build modern web, mobile, cloud, and data systems that make work easier, decisions clearer,
             and businesses more confident. From internal tools to customer-facing platforms, Tekfolio helps
             organizations grow with reliable, scalable, smart technology built for real people.
@@ -64,7 +79,8 @@
 
             <!-- Secondary CTA - Outlined with gradient border -->
             <NuxtLink to="/case-studies"
-              class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold text-base lg:text-lg rounded-xl button-gradient-border cta-button">
+              class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold text-base lg:text-lg rounded-xl button-gradient-border cta-button transition-colors duration-500"
+              :class="isDarkMode ? 'bg-gray-800/50 text-white' : 'bg-white text-gray-900'">
               <span class="relative flex items-center gap-2 z-10">
                 See Our Work
                 <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none"
@@ -91,18 +107,25 @@
     <!-- Trust Indicators - Positioned at the bottom of the section -->
     <div class="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 w-full max-w-6xl px-4 sm:px-6">
       <!-- Desktop: Single Card -->
-      <div class="hidden md:block bg-gray-100 rounded-xl shadow-lg px-6 sm:px-8 py-4 sm:py-5 border border-gray-100"
+      <div class="hidden md:block rounded-xl shadow-lg px-6 sm:px-8 py-4 sm:py-5 transition-all duration-500" :class="isDarkMode
+        ? 'bg-gray-800/80 backdrop-blur-md border border-purple-700/30'
+        : 'bg-gray-100 border border-gray-100'"
         style="box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.55), 0 4px 6px -2px rgba(0, 0, 0, 0.35);">
         <div class="flex flex-row gap-8 lg:gap-12 items-center justify-center">
           <!-- Indicator 1 -->
           <div class="flex items-start gap-3 flex-1 text-left">
             <img src="~/assets/home/img/security.png" alt="Security"
-              class="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 brand-icon-filter" />
+              class="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 transition-all duration-500"
+              :class="isDarkMode ? 'brightness-0 invert' : 'brand-icon-filter'" />
             <div>
-              <h3 class="text-gray-900 font-bold text-sm sm:text-base md:text-lg mb-1">Trusted by Businesses in Nigeria
-                and Beyond</h3>
-              <p class="text-gray-900 text-xs sm:text-sm md:text-base">Reliable digital solutions built for
-                long-term performance.</p>
+              <h3 class="font-bold text-sm sm:text-base md:text-lg mb-1 transition-colors duration-500"
+                :class="isDarkMode ? 'text-white' : 'text-gray-900'">
+                Trusted by Businesses in Nigeria and Beyond
+              </h3>
+              <p class="text-xs sm:text-sm md:text-base transition-colors duration-500"
+                :class="isDarkMode ? 'text-gray-300' : 'text-gray-900'">
+                Reliable digital solutions built for long-term performance.
+              </p>
             </div>
           </div>
 
@@ -112,11 +135,16 @@
           <!-- Indicator 2 -->
           <div class="flex items-start gap-3 flex-1 text-left">
             <img src="~/assets/home/img/quality.png" alt="Quality"
-              class="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 brand-icon-filter" />
+              class="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 transition-all duration-500"
+              :class="isDarkMode ? 'brightness-0 invert' : 'brand-icon-filter'" />
             <div>
-              <h3 class="text-gray-900 font-bold text-sm sm:text-base md:text-lg mb-1">Quality, Delivered
-                Fast</h3>
-              <p class="text-gray-900 text-xs sm:text-sm md:text-base">Speed without compromise plus rapid development.
+              <h3 class="font-bold text-sm sm:text-base md:text-lg mb-1 transition-colors duration-500"
+                :class="isDarkMode ? 'text-white' : 'text-gray-900'">
+                Quality, Delivered Fast
+              </h3>
+              <p class="text-xs sm:text-sm md:text-base transition-colors duration-500"
+                :class="isDarkMode ? 'text-gray-300' : 'text-gray-900'">
+                Speed without compromise plus rapid development.
               </p>
             </div>
           </div>
@@ -126,23 +154,31 @@
       <!-- Mobile: Two Separate Cards Side by Side -->
       <div class="grid grid-cols-2 gap-3 md:hidden">
         <!-- Card 1 -->
-        <div class="bg-gray-100 rounded-xl shadow-lg px-4 py-4 border border-gray-100"
+        <div class="rounded-xl shadow-lg px-4 py-4 transition-all duration-500" :class="isDarkMode
+          ? 'bg-gray-800/80 backdrop-blur-md border border-purple-700/30'
+          : 'bg-gray-100 border border-gray-100'"
           style="box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.55), 0 4px 6px -2px rgba(0, 0, 0, 0.35);">
           <div class="flex flex-col items-center text-center gap-2">
             <div>
-              <h3 class="text-gray-900 font-bold text-xs mb-1">Trusted by Businesses in Nigeria</h3>
-
+              <h3 class="font-bold text-xs mb-1 transition-colors duration-500"
+                :class="isDarkMode ? 'text-white' : 'text-gray-900'">
+                Trusted by Businesses in Nigeria
+              </h3>
             </div>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-gray-100 rounded-xl shadow-lg px-4 py-4 border border-gray-100"
+        <div class="rounded-xl shadow-lg px-4 py-4 transition-all duration-500" :class="isDarkMode
+          ? 'bg-gray-800/80 backdrop-blur-md border border-purple-700/30'
+          : 'bg-gray-100 border border-gray-100'"
           style="box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.55), 0 4px 6px -2px rgba(0, 0, 0, 0.35);">
           <div class="flex flex-col items-center text-center gap-2">
             <div>
-              <h3 class="text-gray-900 font-bold text-xs mb-1">Quality, Delivered Fast. No Compromise.</h3>
-
+              <h3 class="font-bold text-xs mb-1 transition-colors duration-500"
+                :class="isDarkMode ? 'text-white' : 'text-gray-900'">
+                Quality, Delivered Fast. No Compromise.
+              </h3>
             </div>
           </div>
         </div>
@@ -150,16 +186,26 @@
     </div>
 
     <!-- Subtle gradient overlay at bottom for depth -->
-    <div
-      class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50/50 to-transparent pointer-events-none">
+    <div class="absolute bottom-0 left-0 right-0 h-32 pointer-events-none transition-opacity duration-500" :class="isDarkMode
+      ? 'bg-gradient-to-t from-gray-900/50 to-transparent'
+      : 'bg-gradient-to-t from-gray-50/50 to-transparent'">
     </div>
   </main>
 </template>
-import { onMounted } from 'vue';
+
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
+
+const isDarkMode = ref(false);
+
+const handleMouseMove = () => {
+  isDarkMode.value = true;
+};
 
 onMounted(() => {
+  // Add mouse move listener for dark mode
+  window.addEventListener('mousemove', handleMouseMove, { passive: true });
+
   // Load Lottie player script and initialize
   const loadLottie = async () => {
     // Check if script already exists
@@ -191,6 +237,10 @@ onMounted(() => {
   };
 
   loadLottie();
+});
+
+onUnmounted(() => {
+  window.removeEventListener('mousemove', handleMouseMove);
 });
 </script>
 
@@ -229,6 +279,7 @@ onMounted(() => {
 .accent-circle {
   opacity: 0;
   animation: fadeInCircle 1.2s ease-out 0.3s forwards;
+  transition: opacity 0.5s ease;
 }
 
 @keyframes fadeInCircle {
@@ -276,8 +327,6 @@ onMounted(() => {
 /* Gradient border button effect */
 .button-gradient-border {
   position: relative;
-  background: white;
-  border: 2px solid transparent;
   background-clip: padding-box;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -320,11 +369,6 @@ onMounted(() => {
   .double-underline {
     height: 20px;
   }
-}
-
-/* Smooth transitions */
-* {
-  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 /* Brand color filter for icons */

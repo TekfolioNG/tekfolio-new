@@ -3,9 +3,9 @@
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
             <!-- Service 1: Enterprise Web Solutions (Text Left, Animation Right) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 md:mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center mb-1 md:mb-2">
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4">
+                <div class="order-2 lg:order-1 space-y-1 px-2 lg:pr-8">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         Enterprise Web Solutions
@@ -21,7 +21,7 @@
                     </p>
 
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start">
+                    <div class="flex flex-col sm:flex-row gap-3 pt-1 justify-center lg:justify-start">
                         <NuxtLink to="/web-solutions"
                             class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
                             See How
@@ -38,20 +38,20 @@
                 </div>
 
                 <!-- Lottie Animation -->
-                <div class="relative h-[280px] md:h-[350px] lg:h-[400px]">
+                <div class="order-1 lg:order-2 relative h-[230px] md:h-[350px] lg:h-[400px]">
                     <div id="lottie-web-solutions" class="w-full h-full"></div>
                 </div>
             </div>
 
             <!-- Service 2: Mobile App Development (Animation Left, Text Right) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 md:mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center mb-1 md:mb-2">
                 <!-- Lottie Animation -->
-                <div class="relative h-[280px] md:h-[350px] lg:h-[400px] order-2 lg:order-1">
+                <div class="order-1 lg:order-1 relative h-[230px] md:h-[350px] lg:h-[400px]">
                     <div id="lottie-mobile-apps" class="w-full h-full"></div>
                 </div>
 
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-1 lg:order-2">
+                <div class="order-2 space-y-1 px-2 lg:pl-8">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         Mobile App Development
@@ -67,7 +67,7 @@
                     </p>
 
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start">
+                    <div class="flex flex-col sm:flex-row gap-3 pt-1 justify-center lg:justify-start">
                         <NuxtLink to="/mobile-apps"
                             class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
                             See How
@@ -84,10 +84,10 @@
                 </div>
             </div>
 
-            <!-- Service 3: Cloud Migration & Security (Text Left, Animation Right) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 md:mb-16">
+            <!-- Service 3: Cloud Migration & Security (Animation Left, Text Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center mb-4 md:mb-5">
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4">
+                <div class="order-2 space-y-1 px-2 lg:pl-8">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         Cloud & Data Engineering
@@ -103,8 +103,8 @@
                     </p>
 
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start">
-                        <NuxtLink to="/cloud-data-engineering"
+                    <div class="flex flex-col sm:flex-row gap-3 pt-1 justify-center lg:justify-start">
+                        <NuxtLink to="/cloud-security"
                             class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
                             See How
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,22 +118,16 @@
                         </NuxtLink>
                     </div>
                 </div>
-
                 <!-- Lottie Animation -->
-                <div class="relative h-[280px] md:h-[350px] lg:h-[400px]">
+                <div class="order-1 lg:order-1 relative h-[220px] md:h-[340px] lg:h-[390px]">
                     <div id="lottie-cloud" class="w-full h-full"></div>
                 </div>
             </div>
 
-            <!-- Service 4: SEO & Performance (Animation Left, Text Right) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8 md:mb-12">
-                <!-- Lottie Animation -->
-                <div class="relative h-[220px] md:h-[290px] lg:h-[340px] order-2 lg:order-1">
-                    <div id="lottie-seo-performance" class="w-full h-full"></div>
-                </div>
-
+            <!-- Service 4: SEO & Performance (Text Left, Animation Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center mb-3 md:mb-4">
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-1 lg:order-2">
+                <div class="order-2 lg:order-1 space-y-1 px-2 lg:pr-8">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         SEO & Performance Optimization
@@ -148,7 +142,7 @@
                     </p>
 
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start">
+                    <div class="flex flex-col sm:flex-row gap-3 pt-1 justify-center lg:justify-start">
                         <NuxtLink to="/seo-performance"
                             class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
                             See How
@@ -163,6 +157,11 @@
                         </NuxtLink>
                     </div>
                 </div>
+
+                <!-- Lottie Animation -->
+                <div class="order-1 lg:order-2 relative h-[170px] md:h-[220px] lg:h-[280px]">
+                    <div id="lottie-seo-performance" class="w-full h-full mb-3 md:mb-4"></div>
+                </div>
             </div>
 
         </div>
@@ -170,7 +169,24 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
+
+const creativeSampleVideo = ref(null);
+const isVideoPlaying = ref(false);
+
+const playVideo = () => {
+    if (creativeSampleVideo.value) {
+        creativeSampleVideo.value.play();
+        isVideoPlaying.value = true;
+    }
+};
+
+const pauseVideo = () => {
+    if (creativeSampleVideo.value) {
+        creativeSampleVideo.value.pause();
+        isVideoPlaying.value = false;
+    }
+};
 
 onMounted(() => {
     // Load Lottie player script
@@ -227,6 +243,19 @@ onMounted(() => {
     };
 
     initLottieAnimations();
+
+    // Add video event listeners
+    if (creativeSampleVideo.value) {
+        creativeSampleVideo.value.addEventListener('play', () => {
+            isVideoPlaying.value = true;
+        });
+        creativeSampleVideo.value.addEventListener('pause', () => {
+            isVideoPlaying.value = false;
+        });
+        creativeSampleVideo.value.addEventListener('ended', () => {
+            isVideoPlaying.value = false;
+        });
+    }
 });
 </script>
 
@@ -237,5 +266,12 @@ onMounted(() => {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 1024px) {
+    .grid>div:first-child {
+        margin-bottom: 0.5rem;
+    }
 }
 </style>
