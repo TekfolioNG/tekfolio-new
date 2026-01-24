@@ -15,7 +15,7 @@
               <span class="relative inline-block mt-1">
                 <span class="text-gradient text-3xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold">
                   Built Differently
-                </span>
+                </span>           
                 <!-- Double underline with brand colors -->
                 <svg class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-[65%] sm:w-full h-3" viewBox="0 0 200 12"
                   fill="none">
@@ -42,9 +42,8 @@
           <!-- Description -->
           <p
             class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
-            We design and build smart, modern, and secure web, mobile, cloud, and data systems that make work easier and
-            faster, decisions clearer and more strategic,
-            and businesses more efficient and profitable.
+            We design and build smart, modern, and secure web, mobile, cloud, and data systems that make work easier, decisions clearer,
+            and businesses more efficient and profitable. 
           </p>
 
           <!-- CTA Buttons -->
