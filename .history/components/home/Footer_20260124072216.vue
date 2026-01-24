@@ -146,7 +146,7 @@
 
             <li>
               <NuxtLink to="/data-engineering" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Data & Business Intelligence
+                Data Engineering & Analytics
               </NuxtLink>
             </li>
             <li>

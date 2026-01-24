@@ -160,7 +160,7 @@ const route = useRoute()
 const mainNavItems = [
   { path: '/web-solutions', label: 'Custom Web Apps' },
   { path: '/mobile-apps', label: 'Mobile Apps' },
-  { path: '/data-engineering', label: 'Data & Business Intelligence' },
+  { path: '/data-engineering', label: 'Cloud & Data Engineering' },
   { path: '/seo-performance', label: 'SEO & Performance' }
 ]
 

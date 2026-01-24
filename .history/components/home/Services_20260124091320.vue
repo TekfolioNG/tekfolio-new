@@ -1,11 +1,11 @@
 <template>
-    <section class="w-full bg-white py-2">
+    <section class="w-full bg-white py-2 md:py-4">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
-            <!-- Service 1: Enterprise Web Solutions (Animation first on mobile, Text left on desktop) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-2 md:mb-3">
+            <!-- Service 1: Enterprise Web Solutions (Text Left, Animation Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-8 md:mb-10">
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-2 lg:order-1">
+                <div class="space-y-3 lg:space-y-4">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         Enterprise Web Solutions
@@ -17,7 +17,7 @@
                         class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium text-center lg:text-left">
                         Enterprise-grade web applications that function as real business tools, supporting workflows,
                         data, integrations, and customer interactions. Each
-                        solution is custom-engineered to scale with your operations, improve efficiency, and deliver
+                        solution is custom-built to scale with your operations, improve efficiency, and deliver
                         measurable business value over time.
                     </p>
 
@@ -39,20 +39,20 @@
                 </div>
 
                 <!-- Lottie Animation -->
-                <div class="relative h-[330px] md:h-[400px] lg:h-[450px] order-1 lg:order-2">
+                <div class="relative h-[330px] md:h-[400px] lg:h-[450px]">
                     <div id="lottie-web-solutions" class="w-full h-full"></div>
                 </div>
             </div>
 
-            <!-- Service 2: Mobile App Development (Animation first on mobile, Animation left on desktop) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-2 md:mb-3">
+            <!-- Service 2: Mobile App Development (Animation Left, Text Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-8 md:mb-10">
                 <!-- Lottie Animation -->
-                <div class="relative h-[380px] md:h-[410px] lg:h-[460px] order-1">
+                <div class="relative h-[350px] md:h-[410px] lg:h-[460px] order-1 lg:order-1">
                     <div id="lottie-mobile-apps" class="w-full h-full"></div>
                 </div>
 
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-2">
+                <div class="space-y-3 lg:space-y-4 order-2 lg:order-2">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         Mobile App Development
@@ -85,10 +85,10 @@
                 </div>
             </div>
 
-            <!-- Service 3: Data & Business Intelligence (Animation first on mobile, Text left on desktop) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-12 md:mb-14">
+            <!-- Service 3: Cloud Migration & Security (Text Left, Animation Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-8 md:mb-10">
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-2 lg:order-1">
+                <div class="space-y-3 lg:space-y-4">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         Data & Business Intelligence
@@ -121,20 +121,20 @@
                 </div>
 
                 <!-- Lottie Animation -->
-                <div class="relative h-[280px] md:h-[350px] lg:h-[400px] order-1 lg:order-2">
+                <div class="relative h-[280px] md:h-[350px] lg:h-[400px]">
                     <div id="lottie-cloud" class="w-full h-full"></div>
                 </div>
             </div>
 
-            <!-- Service 4: SEO & Performance (Animation first on mobile, Animation left on desktop) -->
+            <!-- Service 4: SEO & Performance (Animation Left, Text Right) -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-8 md:mb-12">
                 <!-- Lottie Animation -->
-                <div class="relative h-[220px] md:h-[290px] lg:h-[340px] order-1">
+                <div class="relative h-[220px] md:h-[290px] lg:h-[340px] order-1 lg:order-1">
                     <div id="lottie-seo-performance" class="w-full h-full"></div>
                 </div>
 
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-2">
+                <div class="space-y-3 lg:space-y-4 order-2 lg:order-2">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         SEO & Performance Optimization

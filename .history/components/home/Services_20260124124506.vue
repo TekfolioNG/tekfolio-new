@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
             <!-- Service 1: Enterprise Web Solutions (Animation first on mobile, Text left on desktop) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-2 md:mb-3">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-2 md:mb-4">
                 <!-- Text Content -->
                 <div class="space-y-3 lg:space-y-4 order-2 lg:order-1">
                     <h2
@@ -45,7 +45,7 @@
             </div>
 
             <!-- Service 2: Mobile App Development (Animation first on mobile, Animation left on desktop) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-2 md:mb-3">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-4 md:mb-6">
                 <!-- Lottie Animation -->
                 <div class="relative h-[380px] md:h-[410px] lg:h-[460px] order-1">
                     <div id="lottie-mobile-apps" class="w-full h-full"></div>
