@@ -228,10 +228,6 @@ select {
     animation: subtleBounce 2s ease-in-out infinite;
 }
 
-.group:hover img {
-    transform: scale(1.05);
-}
-
 /* Sticky image */
 .sticky {
     position: sticky;
