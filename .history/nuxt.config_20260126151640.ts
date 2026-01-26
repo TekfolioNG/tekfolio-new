@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   ],
 
   ui: {
-   // Only import components you use for better performance
+    global: false, // Only import components you use for better performance
     fonts: true
   },
 

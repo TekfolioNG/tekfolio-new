@@ -130,7 +130,7 @@
 
                 <!-- Right Column: Image (40% on desktop) - Shows after form on mobile -->
                 <div class="order-2 lg:col-span-2">
-                    <div class="bounce-animation lg:sticky lg:top-32 lg:mt-72">
+                    <div class="bounce-animation lg:sticky lg:top-32 lg:mt-56">
                         <div
                             class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500 bg-white p-6 md:p-8">
                             <img :src="contactForm" alt="Contact Tekfolio"
