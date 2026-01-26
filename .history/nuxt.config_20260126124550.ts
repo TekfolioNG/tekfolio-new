@@ -81,11 +81,41 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: "cloudflare-pages",
-    output: {
-      publicDir: ".output/public",
-      serverDir: '.output/server'
-    },
+  preset: "cloudflare-pages",
+  output: {
+    publicDir: ".output/public",
+    serverDir: '.output/server'
+  },
+  prerender: {
+    failOnError: false,
+    crawlLinks: true, // Changed to true
+    routes: [
+      '/',
+      '/about-us',
+      '/careers',
+      '/case-studies',
+      '/blog',
+      '/web-solutions',
+      '/mobile-apps',
+      '/data-engineering',
+      '/seo-performance',
+      '/contact'
+    ],
+  },
+  cloudflare: {
+    pages: {
+      routes: {
+        include: ['/*'],
+        exclude: [
+          '/favicon.ico',
+          '/assets/*',
+          '/_nuxt/*',
+          '/_ipx/*' // Add this for image optimization
+        ]
+      }
+    }
+  }
+},
   prerender: {
   failOnError: false,
   crawlLinks: true, // Enable this
@@ -110,7 +140,6 @@ export default defineNuxtConfig({
             '/favicon.ico',
             '/assets/*',
             '/_nuxt/*',
-            '/_ipx/*',
             '/api/*'
           ]
         }

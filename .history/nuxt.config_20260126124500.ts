@@ -110,7 +110,6 @@ export default defineNuxtConfig({
             '/favicon.ico',
             '/assets/*',
             '/_nuxt/*',
-            '/_ipx/*',
             '/api/*'
           ]
         }

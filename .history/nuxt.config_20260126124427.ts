@@ -86,22 +86,11 @@ export default defineNuxtConfig({
       publicDir: ".output/public",
       serverDir: '.output/server'
     },
-  prerender: {
-  failOnError: false,
-  crawlLinks: true, // Enable this
-  routes: [
-    '/',
-    '/about-us',
-    '/careers',
-    '/case-studies',
-    '/blog',
-    '/web-solutions',
-    '/mobile-apps',
-    '/data-engineering',
-    '/seo-performance',
-    '/contact'
-  ],
-},
+    prerender: {
+      failOnError: false,
+      crawlLinks: true,
+      routes: ['/'],
+    },
     cloudflare: {
       pages: {
         routes: {
@@ -110,7 +99,6 @@ export default defineNuxtConfig({
             '/favicon.ico',
             '/assets/*',
             '/_nuxt/*',
-            '/_ipx/*',
             '/api/*'
           ]
         }
