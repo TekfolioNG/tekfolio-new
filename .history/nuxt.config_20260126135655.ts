@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     // Move @nuxt/ui to the end - it's slow and should load last
-    //"@nuxt/ui", 
+    "@nuxt/ui", 
   ],
 
   image: {

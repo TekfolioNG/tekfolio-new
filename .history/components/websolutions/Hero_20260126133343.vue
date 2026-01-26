@@ -11,7 +11,7 @@
                     class="absolute inset-0 bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse">
                 </div>
 
-                <img :src="creativeHero" alt="CreativeHero - Tekfolio"
+                <img :src="webHero" alt="WebHero - Tekfolio"
                     class="w-full h-full object-cover sharp-image transition-opacity duration-500"
                     :class="{ 'opacity-0': !heroImageLoaded, 'opacity-100': heroImageLoaded }"
                     @load="handleHeroImageLoad" loading="eager" fetchpriority="high" />
@@ -31,11 +31,11 @@
                         <div class="text-shadow-strong">
                             <h1
                                 class="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-tight drop-shadow-lg">
-                                Creative Coding
+                                Web App Solutions
                             </h1>
                             <h2
                                 class="text-xl md:text-3xl lg:text-4xl font-medium text-white leading-tight italic drop-shadow-lg">
-                                Interactive By Design
+                                More Value. Better Business
                             </h2>
                         </div>
                     </div>
@@ -49,17 +49,12 @@
 <script setup>
 import { ref } from 'vue';
 // Import images from assets directory
-import creativeHero from '~/assets/img/creativehero.avif';
+import webHero from '~/assets/img/webhero.avif';
 
-const heroImageLoaded = ref(false);
-const sectionImageLoaded = ref(false);
+const imageLoaded = ref(false);
 
-const handleHeroImageLoad = () => {
-    heroImageLoaded.value = true;
-};
-
-const handleSectionImageLoad = () => {
-    sectionImageLoaded.value = true;
+const handleImageLoad = () => {
+    imageLoaded.value = true;
 };
 </script>
 

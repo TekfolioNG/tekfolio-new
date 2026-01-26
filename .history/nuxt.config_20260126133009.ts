@@ -1,15 +1,6 @@
 export default defineNuxtConfig({
   ssr: true,
 
-  // Development optimizations
-  devtools: { enabled: false }, // Disable devtools in dev for speed
-  
-  // Speed up type checking
-  typescript: {
-    typeCheck: false, // Disable type checking during dev
-    shim: false
-  },
-
   runtimeConfig: {
     public: {
       sanityProjectId: process.env.NUXT_PUBLIC_SANITY_PROJECT_ID || '',
@@ -28,14 +19,13 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/icon",
+    "@nuxt/ui", 
     "@nuxt/image",
-    // Move @nuxt/ui to the end - it's slow and should load last
-    //"@nuxt/ui", 
   ],
 
   image: {
     provider: 'ipx',
-    format: ['webp', 'avif', 'jpg', 'png'],
+    format: ['svg', 'webp', 'avif', 'jpg', 'png'],
     quality: 85,
     densities: [1, 2],
     screens: {
@@ -84,8 +74,11 @@ export default defineNuxtConfig({
       hmr: {
         timeout: 30000,
       },
+      // REMOVE usePolling for faster dev server
+      // Only use polling if you're on WSL or Docker
       watch: {
-        ignored: ['**/.nuxt/**', '**/node_modules/**', '**/.output/**']
+        // usePolling: true, // Comment this out
+        // interval: 1000    // Comment this out
       }
     },
     build: {
@@ -98,9 +91,9 @@ export default defineNuxtConfig({
         }
       }
     },
+    // Optimize dependencies
     optimizeDeps: {
-      include: ['vue', 'vue-router'],
-      exclude: ['@nuxt/ui-templates']
+      include: ['vue', 'vue-router']
     }
   },
 
