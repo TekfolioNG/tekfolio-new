@@ -37,7 +37,11 @@ export default defineNuxtConfig({
       xxl: 1536,
     },
     ipx: {
-      maxAge: 60 * 60 * 24 * 365
+      maxAge: 60 * 60 * 24 * 365,
+      // Add these for better compatibility
+      sharp: {
+        failOnError: false
+      }
     }
   },
 

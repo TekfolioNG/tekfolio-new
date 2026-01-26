@@ -11,7 +11,7 @@
                     class="absolute inset-0 bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse">
                 </div>
 
-                <img :src="mobileApps" alt="MobileApps - Tekfolio"
+                <img :src="careerHero" alt="CompayHero - Tekfolio"
                     class="w-full h-full object-cover sharp-image transition-opacity duration-500"
                     :class="{ 'opacity-0': !heroImageLoaded, 'opacity-100': heroImageLoaded }"
                     @load="handleHeroImageLoad" loading="eager" fetchpriority="high" />
@@ -31,11 +31,11 @@
                         <div class="text-shadow-strong">
                             <h1
                                 class="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-tight drop-shadow-lg">
-                                Mobile App Solutions
+                                Join Us
                             </h1>
                             <h2
                                 class="text-xl md:text-3xl lg:text-4xl font-medium text-white leading-tight italic drop-shadow-lg">
-                                Cross-Platform. User-Focused
+                                Shape Tomorrow
                             </h2>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
 <script setup>
 import { ref } from 'vue';
 // Import images from assets directory
-import mobileApps from '~/assets/img/mobilehero.avif';
+import careerHero from '~/assets/img/careerhero.avif';
 
 const imageLoaded = ref(false);
 

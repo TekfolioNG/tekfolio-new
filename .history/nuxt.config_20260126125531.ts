@@ -3,10 +3,12 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      sanityProjectId: process.env.NUXT_PUBLIC_SANITY_PROJECT_ID || '',
-      sanityDataset: process.env.NUXT_PUBLIC_SANITY_DATASET || 'production',
-      web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY || 'fd76f0eb-7783-4a9d-a008-dd3da20c621e',
+    sanityProjectId: process.env.NUXT_PUBLIC_SANITY_PROJECT_ID || '',
+    sanityDataset: process.env.NUXT_PUBLIC_SANITY_DATASET || 'production',
+    web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY || 'fd76f0eb-7783-4a9d-a008-dd3da20c621e',
     },
+    // Private keys (only available on server-side)
+  
   },
 
   css: ["~/assets/css/main.css"],
@@ -23,23 +25,17 @@ export default defineNuxtConfig({
     "@nuxt/image",
   ],
 
-  image: {
-    provider: 'ipx',
-    format: ['webp', 'avif', 'jpg', 'png'],
-    quality: 85,
-    densities: [1, 2],
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      xxl: 1536,
-    },
-    ipx: {
-      maxAge: 60 * 60 * 24 * 365
-    }
-  },
+ image: {
+  provider: 'ipx', // Use ipx provider for Cloudflare Pages
+  format: ['webp', 'avif', 'jpg', 'png', 'svg'],
+  quality: 85,
+  densities: [1, 2],
+  domains: [],
+  ipx: {
+    // Ensure images work on all routes
+    maxAge: 60 * 60 * 24 * 365 // Cache for 1 year
+  }
+},
 
   app: {
     baseURL: "/",
@@ -74,26 +70,13 @@ export default defineNuxtConfig({
       hmr: {
         timeout: 30000,
       },
-      // REMOVE usePolling for faster dev server
-      // Only use polling if you're on WSL or Docker
       watch: {
-        // usePolling: true, // Comment this out
-        // interval: 1000    // Comment this out
+        usePolling: true,
+        interval: 1000
       }
     },
     build: {
-      chunkSizeWarningLimit: 1000,
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            vendor: ['vue', 'vue-router'],
-          }
-        }
-      }
-    },
-    // Optimize dependencies
-    optimizeDeps: {
-      include: ['vue', 'vue-router']
+      chunkSizeWarningLimit: 1000
     }
   },
 
@@ -103,22 +86,22 @@ export default defineNuxtConfig({
       publicDir: ".output/public",
       serverDir: '.output/server'
     },
-    prerender: {
-      failOnError: false,
-      crawlLinks: true, // Changed to true
-      routes: [
-        '/',
-        '/about-us',
-        '/careers',
-        '/case-studies',
-        '/blog',
-        '/web-solutions',
-        '/mobile-apps',
-        '/data-engineering',
-        '/seo-performance',
-        '/contact'
-      ],
-    },
+  prerender: {
+  failOnError: false,
+  crawlLinks: false, // Enable this
+  routes: [
+    '/',
+    '/about-us',
+    '/careers',
+    '/case-studies',
+    '/blog',
+    '/web-solutions',
+    '/mobile-apps',
+    '/data-engineering',
+    '/seo-performance',
+    '/contact'
+  ],
+},
     cloudflare: {
       pages: {
         routes: {
@@ -132,15 +115,7 @@ export default defineNuxtConfig({
           ]
         }
       }
-    },
-    // Add this to handle static assets better
-    publicAssets: [
-      {
-        baseURL: 'assets',
-        dir: 'public/assets',
-        maxAge: 60 * 60 * 24 * 365 // 1 year
-      }
-    ]
+    }
   },
 
   experimental: {
