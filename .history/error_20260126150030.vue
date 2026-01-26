@@ -24,7 +24,7 @@
             <div class="relative z-10 max-w-6xl mx-auto px-8 md:px-16 lg:px-24 w-full">
                 <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <!-- Left Column - Text Content -->
-                    <div class="space-y-6">
+                    <div class="space-y-6 order-2 lg:order-1">
                         <!-- Heading -->
                         <h1
                             class="text-3xl md:text-5xl lg:text-5xl font-black text-gray-900 leading-tight barlow-condensed">
@@ -47,7 +47,7 @@
                                 class="bg-gradient-to-r from-purple-700 to-blue-600 hover:from-purple-800 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 text-center text-sm">
                                 Go Home
                             </NuxtLink>
-                            <NuxtLink to="/work"
+                            <NuxtLink to="/case-studies"
                                 class="bg-gray-100 hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-center text-sm shadow-md hover:shadow-lg border border-gray-200">
                                 View Our Work
                             </NuxtLink>
@@ -58,15 +58,14 @@
                         </div>
                     </div>
 
-                    <!-- Right Column - Image -->
-                    <div class="flex justify-center lg:justify-end relative">
-                        <!-- Image Container -->
+                    <!-- Right Column - Lottie Animation -->
+                    <div class="flex justify-center lg:justify-end relative order-1 lg:order-2">
+                        <!-- Animation Container -->
                         <div class="relative w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
 
-                            <!-- 404 Image -->
+                            <!-- Lottie Animation -->
                             <div class="relative z-10 w-full h-full flex items-center justify-center">
-                                <img src="/404.png" alt="404 Illustration - Lost in digital space"
-                                    class="w-full h-full object-contain animate-float" />
+                                <div id="lottie-404" class="w-full h-full"></div>
                                 <!-- Subtle gradient overlay for depth -->
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent pointer-events-none">
@@ -96,6 +95,8 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
+
 // Set page meta for SEO and proper 404 handling
 useHead({
     title: '404 - Page Not Found | Tekfolio',
@@ -107,29 +108,48 @@ useHead({
 
 // Set proper HTTP status code
 setResponseStatus(404)
+
+onMounted(() => {
+    // Load Lottie player script
+    const loadLottieScript = async () => {
+        if (!document.querySelector('script[src*="dotlottie-player"]')) {
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs';
+            script.type = 'module';
+            document.head.appendChild(script);
+
+            await new Promise((resolve) => {
+                script.onload = resolve;
+            });
+        }
+    };
+
+    // Initialize Lottie animation
+    const initLottieAnimation = async () => {
+        await loadLottieScript();
+
+        const container = document.getElementById('lottie-404');
+        if (container && !container.querySelector('dotlottie-player')) {
+            const player = document.createElement('dotlottie-player');
+            player.setAttribute('src', 'https://lottie.host/28181fa6-0905-4ad0-9be7-45d9d1910108/8fnZk1UH83.lottie');
+            player.setAttribute('background', 'transparent');
+            player.setAttribute('speed', '1');
+            player.setAttribute('loop', '');
+            player.setAttribute('autoplay', '');
+            player.style.width = '100%';
+            player.style.height = '100%';
+            container.appendChild(player);
+        }
+    };
+
+    initLottieAnimation();
+});
 </script>
 
 <style scoped>
 /* Import Barlow Condensed font */
 .barlow-condensed {
     font-family: 'Barlow Condensed', sans-serif;
-}
-
-/* Custom float animation for the image */
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-20px) rotate(1deg);
-    }
-}
-
-.animate-float {
-    animation: float 6s ease-in-out infinite;
 }
 
 /* Subtle float animation for background 404 */
@@ -200,7 +220,7 @@ a {
     }
 }
 
-/* Ensure image doesn't get too small on very small screens */
+/* Ensure container doesn't get too small on very small screens */
 @media (max-width: 640px) {
     .relative.w-80 {
         width: 280px;

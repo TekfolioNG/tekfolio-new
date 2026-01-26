@@ -47,7 +47,7 @@
                                 class="bg-gradient-to-r from-purple-700 to-blue-600 hover:from-purple-800 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 text-center text-sm">
                                 Go Home
                             </NuxtLink>
-                            <NuxtLink to="/work"
+                            <NuxtLink to="/case-studies"
                                 class="bg-gray-100 hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-center text-sm shadow-md hover:shadow-lg border border-gray-200">
                                 View Our Work
                             </NuxtLink>
