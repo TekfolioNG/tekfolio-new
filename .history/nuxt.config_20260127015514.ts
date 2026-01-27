@@ -1,4 +1,10 @@
 export default defineNuxtConfig({
+   postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
     ssr: true,
 
   runtimeConfig: {

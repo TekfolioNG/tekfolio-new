@@ -35,6 +35,7 @@
                   </defs>
                 </svg>
               </span>
+
             </h1>
           </div>
 
@@ -95,7 +96,8 @@
         <div class="flex flex-row gap-8 lg:gap-12 items-center justify-center">
           <!-- Indicator 1 -->
           <div class="flex items-start gap-3 flex-1 text-left">
-            <img :src="securityImg" alt="Security" class="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 brand-icon-filter" />
+            <img src="~/assets/img/security.png" alt="Security"
+              class="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 brand-icon-filter" />
             <div>
               <h3 class="text-gray-900 font-bold text-sm sm:text-base md:text-lg mb-1">Trusted by Businesses in Nigeria
                 and Beyond</h3>
@@ -109,7 +111,8 @@
 
           <!-- Indicator 2 -->
           <div class="flex items-start gap-3 flex-1 text-left">
-            <img :src="qualityImg" alt="Quality" class="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 brand-icon-filter" />
+            <img src="~/assets/home/img/quality.png" alt="Quality"
+              class="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 brand-icon-filter" />
             <div>
               <h3 class="text-gray-900 font-bold text-sm sm:text-base md:text-lg mb-1">Quality, Delivered
                 Fast</h3>
@@ -128,6 +131,7 @@
           <div class="flex flex-col items-center text-center gap-2">
             <div>
               <h3 class="text-gray-900 font-bold text-xs mb-1">Trusted by Businesses in Nigeria</h3>
+
             </div>
           </div>
         </div>
@@ -138,6 +142,7 @@
           <div class="flex flex-col items-center text-center gap-2">
             <div>
               <h3 class="text-gray-900 font-bold text-xs mb-1">Quality, Delivered Fast. No Compromise.</h3>
+
             </div>
           </div>
         </div>
@@ -150,11 +155,9 @@
     </div>
   </main>
 </template>
-
+import { onMounted } from 'vue';
 <script setup>
 import { onMounted } from 'vue';
-import qualityImg from '~/assets/home/img/quality.png';
-import securityImg from '~/assets/img/security.png';
 
 onMounted(() => {
   // Load Lottie player script and initialize
@@ -192,5 +195,140 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* ... rest of your styles remain the same ... */
+/* Brand gradient colors from logo - Deeper gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #4C1D95 0%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero headline animation */
+.hero-headline {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lottie container styling with gradient glow */
+.lottie-container {
+  filter: drop-shadow(0 10px 40px rgba(91, 33, 182, 0.15));
+}
+
+/* Circular accent animation */
+.accent-circle {
+  opacity: 0;
+  animation: fadeInCircle 1.2s ease-out 0.3s forwards;
+}
+
+@keyframes fadeInCircle {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Double underline with draw animation */
+.double-underline {
+  opacity: 0;
+  animation: drawLines 1.2s ease-out 0.6s forwards;
+}
+
+@keyframes drawLines {
+  from {
+    opacity: 0;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+  }
+
+  to {
+    opacity: 1;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Smooth button hover transitions */
+.cta-button {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px -10px rgba(91, 33, 182, 0.4);
+}
+
+/* Gradient border button effect */
+.button-gradient-border {
+  position: relative;
+  background: white;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.button-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  padding: 2px;
+  background: linear-gradient(135deg, #5B21B6, #3B82F6);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .hero-headline span {
+    font-size: 1.75rem;
+  }
+
+  .double-underline {
+    height: 20px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero-headline span {
+    font-size: 2rem;
+  }
+
+  .double-underline {
+    height: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .double-underline {
+    height: 20px;
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Brand color filter for icons */
+.brand-icon-filter {
+  filter: brightness(0) saturate(100%) invert(21%) sepia(89%) saturate(2686%) hue-rotate(251deg) brightness(91%) contrast(93%);
+}
 </style>

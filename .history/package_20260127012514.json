@@ -16,14 +16,12 @@
     "devDependencies": {
         "@nuxtjs/tailwindcss": "^6.14.0",
         "@tailwindcss/typography": "^0.5.10",
-        "@tailwindcss/vite": "^4.1.18",
         "autoprefixer": "^10.4.17",
         "concurrently": "^9.2.1",
         "esbuild": "^0.25.5",
-        "nuxi": "^3.32.0",
         "nuxt-icon": "^0.6.8",
         "postcss": "^8.4.0",
-        "tailwindcss": "^4.1.18",
+        "tailwindcss": "^3.4.0",
         "typescript": "5.8.3",
         "unimported": "^1.31.1",
         "vue": "^3.4.3",
@@ -47,14 +45,6 @@
         "lucide-vue-next": "^0.474.0",
         "nodemailer": "^6.10.0",
         "nuxt": "3.16.0"
-    },
-    "pnpm": {
-        "onlyBuiltDependencies": [
-            "@parcel/watcher",
-            "esbuild",
-            "sharp",
-            "vue-demi"
-        ]
     },
     "engines": {
         "node": "^18.0.0 || >=20.0.0"

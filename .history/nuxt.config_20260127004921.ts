@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    ssr: true,
+  ssr: true,
 
   runtimeConfig: {
     public: {
@@ -10,7 +10,11 @@ export default defineNuxtConfig({
   },
 
   css: ["~/assets/css/main.css"],
-
+  postcss: {
+    plugins: {
+      autoprefixer: {},
+    },
+  },
 
  modules: [
     "@nuxt/ui", 
@@ -65,6 +69,9 @@ app: {
     build: {
       chunkSizeWarningLimit: 1000
     },
+    optimizeDeps: {
+      include: ['@nuxt/ui']
+    }
   },
 
   nitro: {

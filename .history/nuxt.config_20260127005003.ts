@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    ssr: true,
+  ssr: true,
 
   runtimeConfig: {
     public: {
@@ -65,6 +65,9 @@ app: {
     build: {
       chunkSizeWarningLimit: 1000
     },
+    optimizeDeps: {
+      include: ['@nuxt/ui']
+    }
   },
 
   nitro: {

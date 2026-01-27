@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    ssr: true,
+  ssr: true,
 
   runtimeConfig: {
     public: {
@@ -12,10 +12,17 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
 
 
- modules: [
+  modules: [
+    "@nuxtjs/tailwindcss",  // ← Add this
+    "@nuxt/icon",
     "@nuxt/ui", 
-    "@nuxt/image"
+    "@nuxt/image",
   ],
+
+  ui: {
+   // Only import components you use for better performance
+    fonts: true
+  },
 
   image: {
     format: ['webp', 'avif', 'jpg', 'png', 'svg'],
@@ -65,6 +72,9 @@ app: {
     build: {
       chunkSizeWarningLimit: 1000
     },
+    optimizeDeps: {
+      include: ['@nuxt/ui']
+    }
   },
 
   nitro: {

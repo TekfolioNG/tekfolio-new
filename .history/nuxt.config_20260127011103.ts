@@ -1,4 +1,10 @@
 export default defineNuxtConfig({
+   postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
     ssr: true,
 
   runtimeConfig: {
@@ -65,6 +71,9 @@ app: {
     build: {
       chunkSizeWarningLimit: 1000
     },
+    optimizeDeps: {
+      include: ['@nuxt/ui']
+    }
   },
 
   nitro: {
