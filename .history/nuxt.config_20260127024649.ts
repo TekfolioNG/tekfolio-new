@@ -1,5 +1,8 @@
 export default defineNuxtConfig({
-     ssr: true,
+  experimental: {
+    appManifest: false
+  }
+    ssr: true,
 
   runtimeConfig: {
     public: {
@@ -129,9 +132,9 @@ app: {
       }
     }
   },
+
   experimental: {
     payloadExtraction: false,
-    appManifest: false
   },
 
   compatibilityDate: "2025-01-25",
