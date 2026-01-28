@@ -1,6 +1,6 @@
 <template>
     <section class="w-full">
-        <div class="max-w-4xl mx-auto px-8 sm:px-12 lg:px-16 text-center mt-32 md:mt-36">
+        <div class="max-w-4xl mx-auto px-8 sm:px-12 lg:px-16 text-center mt-4 md:mt-6">
             <!-- Icon -->
             <div class="mb-8">
                 <div class="inline-flex items-center justify-center w-20 h-20 rounded-full tekfolio-gradient">
