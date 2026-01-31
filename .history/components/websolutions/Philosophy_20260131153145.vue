@@ -50,7 +50,8 @@
 
                             <p class="text-sm sm:text-base leading-relaxed">
                                 <strong>The result?</strong> Software that feels like it was made for you ...And well,
-                                that's because it was.
+                                that's because it
+                                was.
                                 Every project combines technical precision with business insight, ensuring your web app
                                 not only works beautifully but also delivers measurable value from day one.
                             </p>
@@ -77,11 +78,11 @@
                                 class="absolute inset-0 bg-linear-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse aspect-3/4">
                             </div>
 
-                            <img :src="webSolution3"
+                            <img :src="webSolution3.replace('.avif', '.jpg')"
                                 alt="Custom web application interface showcasing performance and usability"
                                 class="w-full h-full aspect-3/4 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                                 :class="{ 'opacity-0': !imageLoaded, 'opacity-100': imageLoaded }"
-                                @load="handleImageLoad" @error="handleImageLoad" loading="eager" />
+                                @load="handleImageLoad" />
 
                             <!-- Subtle gradient overlay -->
                             <div
@@ -107,21 +108,14 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
-import webSolution3 from '~/assets/img/websolutions3.webp';
+import { ref } from 'vue';
+import webSolution3 from '~/assets/img/websolutions3.avif';
 
 const imageLoaded = ref(false);
 
 const handleImageLoad = () => {
     imageLoaded.value = true;
 };
-
-// Fallback: if image is already cached, it might not trigger @load
-onMounted(() => {
-    setTimeout(() => {
-        imageLoaded.value = true;
-    }, 100);
-});
 </script>
 
 <style scoped>

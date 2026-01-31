@@ -77,11 +77,11 @@
                                 class="absolute inset-0 bg-linear-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse aspect-3/4">
                             </div>
 
-                            <img :src="webSolution3"
+                            <NuxtImg src="/img/companyhero.avif"
                                 alt="Custom web application interface showcasing performance and usability"
                                 class="w-full h-full aspect-3/4 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                                 :class="{ 'opacity-0': !imageLoaded, 'opacity-100': imageLoaded }"
-                                @load="handleImageLoad" @error="handleImageLoad" loading="eager" />
+                                @load="handleImageLoad" loading="lazy" format="avif,webp" quality="85" />
 
                             <!-- Subtle gradient overlay -->
                             <div
@@ -107,21 +107,13 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
-import webSolution3 from '~/assets/img/websolutions3.webp';
+import { ref } from 'vue';
 
 const imageLoaded = ref(false);
 
 const handleImageLoad = () => {
     imageLoaded.value = true;
 };
-
-// Fallback: if image is already cached, it might not trigger @load
-onMounted(() => {
-    setTimeout(() => {
-        imageLoaded.value = true;
-    }, 100);
-});
 </script>
 
 <style scoped>
