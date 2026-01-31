@@ -29,7 +29,7 @@
 
                         <!-- Content with refined typography -->
                         <div class="space-y-6 text-gray-900">
-                            <p class="text-base sm:text-lg leading-relaxed font-medium text-gray-900">
+                            <p class="text-base sm:text-lg leading-relaxed font-medium text-black">
                                 Your business doesn't run on generic playbooks—and your software shouldn't either.
                             </p>
 

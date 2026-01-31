@@ -35,8 +35,8 @@
 
                             <p class="text-sm sm:text-base leading-relaxed">
                                 At Tekfolio, we design and develop custom web applications built around your exact
-                                workflows, users, and business goals. From an internal tool that reclaims hours
-                                of your team's time each week to a customer-facing platform that directly drives
+                                workflows, users, and business goals. Whether it's an internal tool that reclaims hours
+                                of your team's time each week or a customer-facing platform that directly drives
                                 revenue, we engineer web apps that become mission-critical to your operations.
                             </p>
 
@@ -49,8 +49,7 @@
                             </div>
 
                             <p class="text-sm sm:text-base leading-relaxed">
-                                <strong>The result?</strong> Software that feels like it was made for you ...And well,
-                                that's because it
+                                <strong>The result?</strong> Software that feels like it was made for you—because it
                                 was.
                                 Every project combines technical precision with business insight, ensuring your web app
                                 not only works beautifully but also delivers measurable value from day one.
@@ -75,7 +74,7 @@
                             class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                             <!-- Skeleton/Placeholder -->
                             <div v-if="!imageLoaded"
-                                class="absolute inset-0 bg-linear-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse aspect-3/4">
+                                class="absolute inset-0 bg-linear-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse aspect-[3/4]">
                             </div>
 
                             <picture>
@@ -83,7 +82,7 @@
                                 <source :srcset="webSolution3.replace('.avif', '.webp')" type="image/webp" />
                                 <img :src="webSolution3.replace('.avif', '.jpg')"
                                     alt="Custom web application interface showcasing performance and usability"
-                                    class="w-full h-full aspect-3/4 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                                    class="w-full h-full aspect-[3/4] object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                                     :class="{ 'opacity-0': !imageLoaded, 'opacity-100': imageLoaded }"
                                     @load="handleImageLoad" loading="lazy" />
                             </picture>
@@ -96,7 +95,7 @@
 
                         <!-- Floating accent card -->
                         <div
-                            class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-linear-to-br from-purple-700 to-blue-600 text-white p-4 sm:p-6 rounded-xl shadow-2xl max-w-50 sm:max-w-60 z-10 animate-float">
+                            class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-linear-to-br from-purple-700 to-blue-600 text-white p-4 sm:p-6 rounded-xl shadow-2xl max-w-[200px] sm:max-w-[240px] z-10 animate-float">
                             <div class="text-sm sm:text-base font-bold mb-1">Purpose-Built Solutions</div>
                             <div class="text-xs sm:text-sm text-white/95 leading-snug">
                                 That scale with your ambitions.

@@ -20,7 +20,7 @@
                                     From Prototype Design to Web App
                                 </span>
                             </div>
-                            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic"
+                            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight italic"
                                 style="line-height: 1.2;">
                                 Experiences Engineered<br class="hidden sm:block">
                                 for Performance & Usability
@@ -29,14 +29,14 @@
 
                         <!-- Content with refined typography -->
                         <div class="space-y-6 text-gray-900">
-                            <p class="text-base sm:text-lg leading-relaxed font-medium text-gray-900">
+                            <p class="text-lg sm:text-xl leading-relaxed font-medium text-gray-900">
                                 Your business doesn't run on generic playbooks—and your software shouldn't either.
                             </p>
 
-                            <p class="text-sm sm:text-base leading-relaxed">
+                            <p class="text-base sm:text-lg leading-relaxed">
                                 At Tekfolio, we design and develop custom web applications built around your exact
-                                workflows, users, and business goals. From an internal tool that reclaims hours
-                                of your team's time each week to a customer-facing platform that directly drives
+                                workflows, users, and business goals. Whether it's an internal tool that reclaims hours
+                                of your team's time each week or a customer-facing platform that directly drives
                                 revenue, we engineer web apps that become mission-critical to your operations.
                             </p>
 
@@ -48,44 +48,42 @@
                                 </p>
                             </div>
 
-                            <p class="text-sm sm:text-base leading-relaxed">
-                                <strong>The result?</strong> Software that feels like it was made for you ...And well,
-                                that's because it
+                            <p class="text-base sm:text-lg leading-relaxed">
+                                <strong>The result?</strong> Software that feels like it was made for you—because it
                                 was.
                                 Every project combines technical precision with business insight, ensuring your web app
                                 not only works beautifully but also delivers measurable value from day one.
                             </p>
 
-                            <p class="text-sm sm:text-base leading-relaxed">
+                            <p class="text-base sm:text-lg leading-relaxed">
                                 No cookie-cutter templates. No bloated features you'll never use. Just purpose-built
                                 applications that solve real problems and scale with your business.
                             </p>
 
-                            <p class="text-sm sm:text-base leading-relaxed pt-2">
+                            <p class="text-base sm:text-lg leading-relaxed pt-2">
                                 <strong class="text-purple-700">Ready to build something that actually fits?</strong>
                                 Let's talk about your next web app project.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Image - Right Column -->
-                    <div class="relative order-1 lg:order-2">
-                        <!-- Single Vertical Image -->
+                    <!-- Images - Right Column (Stacked Horizontally) -->
+                    <div class="relative order-1 lg:order-2 space-y-6">
+                        <!-- Top Image -->
                         <div
                             class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                             <!-- Skeleton/Placeholder -->
-                            <div v-if="!imageLoaded"
-                                class="absolute inset-0 bg-linear-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse aspect-3/4">
+                            <div v-if="!topImageLoaded"
+                                class="absolute inset-0 bg-linear-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse aspect-16/10">
                             </div>
 
                             <picture>
-                                <source :srcset="webSolution3" type="image/avif" />
-                                <source :srcset="webSolution3.replace('.avif', '.webp')" type="image/webp" />
-                                <img :src="webSolution3.replace('.avif', '.jpg')"
-                                    alt="Custom web application interface showcasing performance and usability"
-                                    class="w-full h-full aspect-3/4 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                                    :class="{ 'opacity-0': !imageLoaded, 'opacity-100': imageLoaded }"
-                                    @load="handleImageLoad" loading="lazy" />
+                                <source :srcset="webSolution1" type="image/avif" />
+                                <source :srcset="webSolution1.replace('.avif', '.webp')" type="image/webp" />
+                                <img :src="webSolution1" alt="Custom web application dashboard interface"
+                                    class="w-full h-full aspect-16/10 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                                    :class="{ 'opacity-0': !topImageLoaded, 'opacity-100': topImageLoaded }"
+                                    @load="handleTopImageLoad" loading="lazy" />
                             </picture>
 
                             <!-- Subtle gradient overlay -->
@@ -94,12 +92,38 @@
                             </div>
                         </div>
 
-                        <!-- Floating accent card -->
-                        <div
-                            class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-linear-to-br from-purple-700 to-blue-600 text-white p-4 sm:p-6 rounded-xl shadow-2xl max-w-50 sm:max-w-60 z-10 animate-float">
-                            <div class="text-sm sm:text-base font-bold mb-1">Purpose-Built Solutions</div>
-                            <div class="text-xs sm:text-sm text-white/95 leading-snug">
-                                That scale with your ambitions.
+                        <!-- Bottom Image with Floating Card -->
+                        <div class="relative">
+                            <div
+                                class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                                <!-- Skeleton/Placeholder -->
+                                <div v-if="!bottomImageLoaded"
+                                    class="absolute inset-0 bg-linear-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse aspect-16/10">
+                                </div>
+
+                                <picture>
+                                    <source :srcset="webSolution2" type="image/avif" />
+                                    <source :srcset="webSolution2.replace('.avif', '.webp')" type="image/webp" />
+                                    <img :src="webSolution2"
+                                        alt="Web application user interface with seamless experience"
+                                        class="w-full h-full aspect-16/10 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                                        :class="{ 'opacity-0': !bottomImageLoaded, 'opacity-100': bottomImageLoaded }"
+                                        @load="handleBottomImageLoad" loading="lazy" />
+                                </picture>
+
+                                <!-- Subtle gradient overlay -->
+                                <div
+                                    class="absolute inset-0 bg-linear-to-t from-purple-900/10 to-transparent pointer-events-none">
+                                </div>
+                            </div>
+
+                            <!-- Floating accent card -->
+                            <div
+                                class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-linear-to-br from-purple-700 to-blue-600 text-white p-4 sm:p-6 rounded-xl shadow-2xl max-w-50 sm:max-w-60 z-10 animate-float">
+                                <div class="text-sm sm:text-base font-bold mb-1">Purpose-Built Solutions</div>
+                                <div class="text-xs sm:text-sm text-white/95 leading-snug">
+                                    That scale with your ambitions.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -108,17 +132,22 @@
             </div>
         </div>
     </section>
-
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import webSolution3 from '~/assets/img/websolutions3.avif';
+import webSolution1 from '~/assets/img/websolutions1.avif';
+import webSolution2 from '~/assets/img/websolutions2.avif';
 
-const imageLoaded = ref(false);
+const topImageLoaded = ref(false);
+const bottomImageLoaded = ref(false);
 
-const handleImageLoad = () => {
-    imageLoaded.value = true;
+const handleTopImageLoad = () => {
+    topImageLoaded.value = true;
+};
+
+const handleBottomImageLoad = () => {
+    bottomImageLoaded.value = true;
 };
 </script>
 
@@ -157,9 +186,9 @@ img {
 }
 
 /* Ensure gradient classes work */
-.bg-linear-to-r,
-.bg-linear-to-br,
-.bg-linear-to-t {
+.bg-gradient-to-r,
+.bg-gradient-to-br,
+.bg-gradient-to-t {
     background-image: linear-gradient(var(--tw-gradient-stops));
 }
 

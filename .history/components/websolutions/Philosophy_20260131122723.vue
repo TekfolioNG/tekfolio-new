@@ -1,51 +1,6 @@
 <template>
-    <div class="min-h-screen bg-white">
-
-        <!-- Hero Section -->
-        <section class="relative w-full h-64 md:h-100 overflow-hidden">
-            <!-- Background Image - Full Width -->
-            <div class="absolute inset-0">
-                <!-- Skeleton/Placeholder Background -->
-                <div v-if="!heroImageLoaded"
-                    class="absolute inset-0 bg-linear-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse">
-                </div>
-
-                <picture>
-                    <source :srcset="companyHero" type="image/avif" />
-                    <source :srcset="companyHero.replace('.avif', '.webp')" type="image/webp" />
-                    <img :src="companyHero" alt="CompayHero - Tekfolio"
-                        class="w-full h-full object-cover sharp-image transition-opacity duration-500"
-                        :class="{ 'opacity-0': !heroImageLoaded, 'opacity-100': heroImageLoaded }"
-                        @load="handleHeroImageLoad" loading="eager" fetchpriority="high" />
-                </picture>
-            </div>
-
-            <!-- Enhanced overlay for better text contrast -->
-            <div
-                class="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent md:bg-linear-to-r md:from-black/70 md:via-black/40 md:to-transparent">
-            </div>
-
-            <!-- Content Overlay - Bottom Left -->
-            <div class="relative z-10 h-full flex items-end">
-                <div class="container mx-auto px-6 md:px-12 pb-8 md:pb-12">
-                    <div class="max-w-70 md:max-w-xl">
-                        <div class="text-shadow-strong">
-                            <h1
-                                class="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-tight drop-shadow-lg">
-                                Your Brand Vision
-                            </h1>
-                            <h2
-                                class="text-xl md:text-3xl lg:text-4xl font-medium text-white leading-tight italic drop-shadow-lg">
-                                Powered By Technology
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Who We Are Section -->
-        <section class="w-full bg-white py-28 lg:py-36 relative overflow-hidden">
+    <section class="py-32 lg:py-36 px-8 sm:px-12 lg:px-16 bg-white">
+        <div class="max-w-7xl mx-auto">
 
             <!-- Subtle tech pattern background -->
             <div class="absolute inset-0 opacity-[0.02]"
@@ -53,19 +8,21 @@
             </div>
 
             <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
                     <!-- Text Content - Left Column -->
                     <div>
                         <!-- Section Title with accent -->
-                        <div class="mb-8">
+                        <div class="mb-6">
                             <div class="flex items-center gap-3 mb-2">
                                 <div class="h-px w-12 bg-linear-to-r from-purple-700 to-blue-600"></div>
-                                <span class="text-sm font-semibold text-purple-700 uppercase tracking-wider">About
-                                    Tekfolio</span>
+                                <span class="text-sm font-semibold text-purple-700 uppercase tracking-wider">From
+                                    Prototype Design to Web App</span>
                             </div>
-                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                                Who We Are
+                            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic"
+                                style="line-height: 1.2;">
+                                Experiences Engineered
+                                <br>for Performance & Usability
                             </h2>
                         </div>
 
@@ -83,8 +40,7 @@
 
                             <p class="text-base md:text-lg leading-relaxed">
                                 Every product we build is designed to last, adapt, and support real business growth—not
-                                just look good at launch. As a technology partner, we focus on systems that function
-                                smoothly for the target user.
+                                just look.
                             </p>
 
                             <p class="text-base md:text-lg leading-relaxed">
@@ -141,19 +97,17 @@
 
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import companyHero from '~/assets/img/companyhero.avif';
 import whoWeAre from '~/assets/img/whoweare-tekfolio.avif';
 
-// Start as true on server, false on client until loaded
-const heroImageLoaded = ref(!import.meta.client);
-const sectionImageLoaded = ref(!import.meta.client);
+const heroImageLoaded = ref(false);
+const sectionImageLoaded = ref(false);
 
 const handleHeroImageLoad = () => {
     heroImageLoaded.value = true;
@@ -162,20 +116,6 @@ const handleHeroImageLoad = () => {
 const handleSectionImageLoad = () => {
     sectionImageLoaded.value = true;
 };
-
-// Force check if images are already cached
-onMounted(() => {
-    // Check if images are already in browser cache
-    const checkImageCache = (src, callback) => {
-        const img = new Image();
-        img.onload = callback;
-        img.src = src;
-        if (img.complete) callback();
-    };
-
-    checkImageCache(companyHero, () => heroImageLoaded.value = true);
-    checkImageCache(whoWeAre, () => sectionImageLoaded.value = true);
-});
 </script>
 
 <style scoped>

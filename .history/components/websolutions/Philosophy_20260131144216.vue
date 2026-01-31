@@ -35,8 +35,8 @@
 
                             <p class="text-sm sm:text-base leading-relaxed">
                                 At Tekfolio, we design and develop custom web applications built around your exact
-                                workflows, users, and business goals. From an internal tool that reclaims hours
-                                of your team's time each week to a customer-facing platform that directly drives
+                                workflows, users, and business goals. Whether it's an internal tool that reclaims hours
+                                of your team's time each week or a customer-facing platform that directly drives
                                 revenue, we engineer web apps that become mission-critical to your operations.
                             </p>
 
@@ -49,8 +49,7 @@
                             </div>
 
                             <p class="text-sm sm:text-base leading-relaxed">
-                                <strong>The result?</strong> Software that feels like it was made for you ...And well,
-                                that's because it
+                                <strong>The result?</strong> Software that feels like it was made for you—because it
                                 was.
                                 Every project combines technical precision with business insight, ensuring your web app
                                 not only works beautifully but also delivers measurable value from day one.
