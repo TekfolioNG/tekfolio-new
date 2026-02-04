@@ -172,7 +172,7 @@ const clientLogos = [
     { name: "VeraVerde", src: veraverde, url: "https://veraverde.org/" },
     { name: "Megafield", src: megafield, url: "https://megafieldsolicitors.com/" },
     { name: "Wilson & Samson", src: wilsonsamson, url: "https://wilsonsamson.com/" },
-    { name: "BotIntegrated", src: botintegrated, url: "https://botintegrated.com/" },
+    { name: "BotIntegrated", src: botintegrated, url: "https://botintegratedservices.com/" },
     { name: "Xstrato", src: xstrato, url: "https://xstratoprime.com/" }, { name: "Akorite", src: akorite, url: "https://akoritetravels.com/" }
 ];
 
