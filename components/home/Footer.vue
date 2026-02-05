@@ -167,20 +167,9 @@
                 About Tekfolio
               </NuxtLink>
             </li>
-
-            <li>
-              <NuxtLink to="/case-studies" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Our Work
-              </NuxtLink>
-            </li>
             <li>
               <NuxtLink to="/blog" class="text-gray-400 hover:text-white hover:underline transition-colors">
                 Blog & Insights
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/careers" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Careers & Culture
               </NuxtLink>
             </li>
           </ul>

@@ -38,7 +38,7 @@
         <div class="flex items-center space-x-3 lg:space-x-4">
           <NuxtLink to="/contact"
             class="hidden lg:inline-flex items-center px-5 py-2.5 bg-linear-to-r from-purple-700 to-blue-600 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 text-white font-bold text-sm xl:text-base rounded-lg transition-all duration-200">
-            Contact Us
+            Ready to Start?
           </NuxtLink>
 
           <button @click="toggleMobileMenu" class="lg:hidden p-2 rounded-lg transition-colors duration-200"

@@ -143,24 +143,15 @@
                 Mobile App Development
               </NuxtLink>
             </li>
+
             <li>
-              <NuxtLink to="/cloud-security" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Cloud Migration & Security
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/creative-coding" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Data Engineering & Analytics
+              <NuxtLink to="/data-engineering" class="text-gray-400 hover:text-white hover:underline transition-colors">
+                Data & Business Intelligence
               </NuxtLink>
             </li>
             <li>
               <NuxtLink to="/seo-performance" class="text-gray-400 hover:text-white hover:underline transition-colors">
                 SEO & Performance
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/creative-coding" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Creative Coding
               </NuxtLink>
             </li>
 
@@ -177,23 +168,8 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/team" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Our Team
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/case-studies" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Our Work
-              </NuxtLink>
-            </li>
-            <li>
               <NuxtLink to="/blog" class="text-gray-400 hover:text-white hover:underline transition-colors">
                 Blog & Insights
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/careers" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Careers & Culture
               </NuxtLink>
             </li>
           </ul>
@@ -218,21 +194,22 @@
               </a>
             </p>
 
-            <!-- Email -->
-            <p class="text-gray-300">
-              <span class="text-gray-500">Email:
+            <div class="space-y-2">
+              <p class="text-gray-300">
+                <span class="text-gray-500">Enquiry:</span>
                 <a href="mailto:hello@tekfolio.ng"
                   class="hover:text-white transition-colors block md:inline md:ml-2 mt-1 md:mt-0">
                   hello@tekfolio.ng
                 </a>
-                <br>
+              </p>
+              <p class="text-gray-300">
+                <span class="text-gray-500">Help:</span>
                 <a href="mailto:support@tekfolio.ng"
                   class="hover:text-white transition-colors block md:inline md:ml-2 mt-1 md:mt-0">
                   support@tekfolio.ng
                 </a>
-                </br>
-              </span>
-            </p>
+              </p>
+            </div>
           </div>
         </div>
 
