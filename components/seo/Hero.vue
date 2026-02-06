@@ -52,7 +52,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import seoHero from '~/assets/img/seohero.avif';
+import seoHero from '~/assets/img/careerhero.avif';
 
 // Start as true on server, false on client until loaded
 const heroImageLoaded = ref(!import.meta.client);

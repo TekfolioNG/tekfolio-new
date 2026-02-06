@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-white">
+    <div class="bg-white">
 
         <!-- Hero Section - 2 Columns on Desktop -->
 
@@ -7,7 +7,7 @@
             <!-- Background Image - Full Width -->
             <div class="absolute inset-0">
                 <!-- Skeleton/Placeholder Background -->
-                <div v-if="!imageLoaded"
+                <div v-if="!heroImageLoaded"
                     class="absolute inset-0 bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse">
                 </div>
 
@@ -16,8 +16,8 @@
                     <source :srcset="seoHero.replace('.avif', '.webp')" type="image/webp" />
                     <img :src="seoHero" alt="CaseStudies - Tekfolio"
                         class="w-full h-full object-cover sharp-image transition-opacity duration-500"
-                        :class="{ 'opacity-0': !imageLoaded, 'opacity-100': imageLoaded }" @load="handleImageLoad"
-                        loading="eager" fetchpriority="high" />
+                        :class="{ 'opacity-0': !heroImageLoaded, 'opacity-100': heroImageLoaded }"
+                        @load="handleHeroImageLoad" loading="eager" fetchpriority="high" />
                 </picture>
             </div>
 
@@ -52,14 +52,26 @@
 
 <script setup>
 import { ref } from 'vue';
-// Import images from assets directory
-import seoHero from '~/assets/img/seohero.avif';
+import seoHero from '~/assets/img/casehero.avif';
 
-const imageLoaded = ref(false);
+// Start as true on server, false on client until loaded
+const heroImageLoaded = ref(!import.meta.client);
 
-const handleImageLoad = () => {
-    imageLoaded.value = true;
+const handleHeroImageLoad = () => {
+    heroImageLoaded.value = true;
 };
+
+// Force check if image is already cached
+onMounted(() => {
+    const checkImageCache = (src, callback) => {
+        const img = new Image();
+        img.onload = callback;
+        img.src = src;
+        if (img.complete) callback();
+    };
+
+    checkImageCache(seoHero, () => heroImageLoaded.value = true);
+});
 </script>
 
 <style scoped>
