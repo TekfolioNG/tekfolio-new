@@ -68,7 +68,7 @@
                     </div>
 
                     <!-- Image - Right Column -->
-                    <div class="relative order-2 lg:order-2 mt:0 md:mt-12">
+                    <div class="relative order-2 lg:order-2 pt:4">
                         <!-- Single Vertical Image -->
                         <div
                             class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">

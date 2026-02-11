@@ -29,7 +29,7 @@
             </div>
             <div>
               <h4 class="text-white font-semibold mb-2">Get Free Consultation</h4>
-              <p class="text-gray-300 text-sm mb-3">
+              <p class="text-gray-200 text-sm mb-3">
                 Have an idea or early requirements, but not sure where to start? Schedule a focused call to review
                 scope and next steps.
               </p>
@@ -58,7 +58,7 @@
             </div>
             <div>
               <h4 class="text-white font-semibold mb-2">Need Help Choosing?</h4>
-              <p class="text-gray-300 text-sm mb-3">
+              <p class="text-gray-200 text-sm mb-3">
                 We can help you explore your options, answer your questions, and even create a
                 quick prototype to visualize your idea.
               </p>
@@ -88,7 +88,7 @@
             </div>
             <div>
               <h4 class="text-white font-semibold mb-2">Start Your Project Today</h4>
-              <p class="text-gray-300 text-sm mb-3">
+              <p class="text-gray-200 text-sm mb-3">
                 Ready to move forward? Share your requirements and receive a detailed proposal tailored to your specific
                 needs and timeline.
               </p>
