@@ -11,5 +11,5 @@ definePageMeta({
     <WebsolutionsHero />
     <WebsolutionsPhilosophy />
     <WebsolutionsValue />
-    <HomePlaceholder />
+    <WebsolutionsNextSteps />
 </template>

@@ -9,6 +9,7 @@ definePageMeta({
 
 <template>
     <WebsolutionsHero />
-    <WebsolutionsPhilophy />
-    <HomePlaceholder />
+    <WebsolutionsPhilosophy />
+    <WebsolutionsValue />
+    <WebsolutionsNextSteps />
 </template>
