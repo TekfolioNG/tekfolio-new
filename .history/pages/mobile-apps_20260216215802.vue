@@ -7,7 +7,7 @@ definePageMeta({
 
 <template>
     <MobileappsHero />
-    <LandingVision />
-    <HomeValues />
-    <HomeCta2></HomeCta2>
+    <MobileappsPhilosophy />
+    <MobileappsValue />
+    <MobileappsNextSteps />
 </template>

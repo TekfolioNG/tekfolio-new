@@ -7,5 +7,7 @@ definePageMeta({
 
 <template>
     <MobileappsHero />
-    <HomePlaceholder />
+    <MobileappsPhilosophy />
+    <MobileappsValue />
+    <MobileappsNextSteps />
 </template>
