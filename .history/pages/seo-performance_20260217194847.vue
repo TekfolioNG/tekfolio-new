@@ -7,7 +7,4 @@ definePageMeta({
 
 <template>
     <SeoHero />
-    <LandingVision />
-    <HomeValues />
-    <HomeCta2></HomeCta2>
 </template>

@@ -7,5 +7,7 @@ definePageMeta({
 
 <template>
     <SeoHero />
-    <HomePlaceholder />
+    <SeoPhilosophy />
+    <SeoValue />
+    <SeoNextSteps />
 </template>

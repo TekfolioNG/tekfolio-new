@@ -12,15 +12,15 @@
                 <div class="order-1 lg:order-1">
                     <h2
                         class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight mb-4 text-center md:text-left">
-                        What Clients Get When They Build Data Solutions With Us
+                        What Clients Get When They Build Mobile Apps with Us
                     </h2>
                     <h3 class="text-xl md:text-2xl font-medium tekfolio-text mb-5 text-center md:text-left">
-                        The Tekfolio Edge for Data & Business Intelligence
+                        The Tekfolio Edge for Your Mobile App
                     </h3>
                     <p class="text-base md:text-lg leading-relaxed text-gray-700 text-center md:text-left">
-                        We build data solutions that go beyond pretty dashboards—combining robust data engineering,
-                        rigorous analysis, and business-context-aware reporting that empowers every layer of your
-                        organization to act with confidence.
+                        We build mobile applications that combine native-like performance, cross-platform efficiency,
+                        and exceptional user experiences—delivering real value to your customers and measurable results
+                        for your business.
 
                     </p>
                 </div>
@@ -181,9 +181,9 @@
 </template>
 
 <script setup>
-import { BrushCleaning, ChartPie, ChartScatter, CloudBackup, Database, LayoutDashboard, SearchCode, SmilePlus } from 'lucide-vue-next';
+import { BugPlay, DatabaseZap, Rocket, Server, Sparkles, TabletSmartphone, UserCheck, Wifi } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
-import webDesignImage from '~/assets/img/dataengineeringimg.png';
+import webDesignImage from '~/assets/img/mobileappimg.png';
 
 const openCards = ref([false, false, false, false, false, false, false, false]);
 const cardsVisible = ref(false);
@@ -192,51 +192,51 @@ const tekfolioEdgeSection = ref(null);
 const features = [
     {
         id: 1,
-        title: "Data Pipeline Engineering ",
-        icon: Database,
-        description: "We design and build reliable pipelines that collect, clean, transform, and deliver data from multiple sources into a single, structured, and trustworthy system. No more manually reconciling reports from five different tools."
+        title: "Cross-Platform Excellence",
+        icon: TabletSmartphone,
+        description: "One codebase, two platforms. Your app runs smoothly on iOS and Android with native performance, reducing development time and maintenance costs without compromising quality."
     },
     {
         id: 2,
-        title: "Business Intelligence Dashboards",
-        icon: LayoutDashboard,
-        description: "Interactive, real-time dashboards tailored to your business metrics; designed for decision-makers, not data scientists. Your team sees what matters, when it matters, in a format they can act on immediately."
+        title: "User-Centered Design",
+        icon: UserCheck,
+        description: "We design interfaces that feel intuitive from the first tap. Every screen, interaction, and flow is crafted around how your users actually work—ensuring adoption and engagement from day one."
     },
     {
         id: 3,
-        title: "Data Cleaning & Preparation",
-        icon: BrushCleaning,
-        description: "Raw data is rarely ready to use. We handle the messy, time-consuming work of identifying errors, removing duplicates, standardizing formats, and structuring datasets so your analysis is built on solid foundations."
+        title: "Smooth Backend Integration",
+        icon: Server,
+        description: "Whether connecting to your existing APIs, cloud services, or building custom backends with Firebase, we ensure your app integrates smoothly with your tech ecosystem."
     },
     {
         id: 4,
-        title: "Exploratory Data Analysis (EDA)",
-        icon: ChartScatter,
-        description: "Before drawing conclusions, we dig deep into your data to surface patterns, anomalies, and relationships you may not have known existed—often revealing insights that reframe how you understand your business."
+        title: "Offline-First Functionality",
+        icon: Wifi,
+        description: "Your app works even when connectivity is unreliable. We build offline capabilities and smart data syncing so users never lose productivity."
     },
     {
         id: 5,
-        title: "Predictive Analytics & Forecasting",
-        icon: SearchCode,
-        description: "Using statistical models and introductory machine learning techniques, we help you move from understanding what happened to anticipating what's coming—whether that's demand forecasting, churn prediction, or revenue projections."
+        title: "Performance Optimization",
+        icon: Sparkles,
+        description: "Fast load times, smooth animations, and minimal battery drain. We optimize every aspect of your app to deliver the performance users expect from native applications."
     },
     {
         id: 6,
-        title: "Custom Reporting Systems",
-        icon: ChartPie,
-        description: "Automated, scheduled reports delivered to the right people at the right time. We replace manual, error-prone reporting workflows with reliable systems that save your team hours every week."
+        title: "Secure & Scalable Architecture",
+        icon: DatabaseZap,
+        description: "Built-in authentication, encrypted data transmission, and secure storage. Your app is architected to handle growth while protecting user data and meeting compliance standards."
     },
     {
         id: 7,
-        title: "Cloud-Based Data Infrastructure",
-        icon: CloudBackup,
-        description: "We build and manage data solutions on Google Cloud, AWS, and other leading platforms—scalable, secure, and cost-optimized for your current size and future growth."
+        title: "Rigorous Testing Across Devices",
+        icon: BugPlay,
+        description: "We test on real iOS and Android devices across different screen sizes, OS versions, and network conditions—ensuring consistent performance for all your users."
     },
     {
         id: 8,
-        title: "Actionable Recommendations, Not Just Numbers",
-        icon: SmilePlus,
-        description: "Data without context is just noise. We don't just deliver reports; we interpret them, highlight what's important, and provide clear recommendations your team can act on immediately."
+        title: "Post-Launch Support & Updates",
+        icon: Rocket,
+        description: "Ongoing monitoring, bug fixes, feature enhancements, and OS compatibility updates. We're invested in your app's long-term success, not just the launch."
     }
 ];
 
