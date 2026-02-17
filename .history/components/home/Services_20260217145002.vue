@@ -32,14 +32,14 @@
                             </svg>
                         </NuxtLink>
                         <NuxtLink to="/contact"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
                             Start Project
                         </NuxtLink>
                     </div>
                 </div>
 
                 <!-- Lottie Animation -->
-                <div class="relative h-82.5 md:h-100 lg:h-112.5 order-1 lg:order-2">
+                <div class="relative h-[330px] md:h-[400px] lg:h-[450px] order-1 lg:order-2">
                     <div id="lottie-web-solutions" class="w-full h-full"></div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
             <!-- Service 2: Mobile App Development (Animation first on mobile, Animation left on desktop) -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-2 md:mb-3">
                 <!-- Lottie Animation -->
-                <div class="relative h-95 md:h-102.5 lg:h-115 order-1">
+                <div class="relative h-[380px] md:h-[410px] lg:h-[460px] order-1">
                     <div id="lottie-mobile-apps" class="w-full h-full"></div>
                 </div>
 
@@ -78,7 +78,7 @@
                             </svg>
                         </NuxtLink>
                         <NuxtLink to="/contact"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
                             Start Project
                         </NuxtLink>
                     </div>
@@ -114,14 +114,14 @@
                             </svg>
                         </NuxtLink>
                         <NuxtLink to="/contact"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
                             Start Project
                         </NuxtLink>
                     </div>
                 </div>
 
                 <!-- Lottie Animation -->
-                <div class="relative h-70 md:h-87.5 lg:h-100 order-1 lg:order-2">
+                <div class="relative h-[280px] md:h-[350px] lg:h-[400px] order-1 lg:order-2">
                     <div id="lottie-cloud" class="w-full h-full"></div>
                 </div>
             </div>
@@ -129,7 +129,7 @@
             <!-- Service 4: SEO & Performance (Animation first on mobile, Animation left on desktop) -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-8 md:mb-12">
                 <!-- Lottie Animation -->
-                <div class="relative h-55 md:h-72.5 lg:h-85 order-1">
+                <div class="relative h-[220px] md:h-[290px] lg:h-[340px] order-1">
                     <div id="lottie-seo-performance" class="w-full h-full"></div>
                 </div>
 
@@ -159,7 +159,7 @@
                             </svg>
                         </NuxtLink>
                         <NuxtLink to="/contact"
-                            class="inline-flex items-center justify-center px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                            class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
                             Start Project
                         </NuxtLink>
                     </div>

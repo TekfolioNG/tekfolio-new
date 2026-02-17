@@ -23,7 +23,7 @@
                             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic"
                                 style="line-height: 1.2;">
                                 iOS & Android-Native Apps.<br class="hidden sm:block">
-                                Programmed to Perform
+                                Programmed to Perform.
                             </h2>
                         </div>
 
@@ -114,7 +114,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import webSolution3 from '~/assets/img/mobileappsolutions3.webp';
+import webSolution3 from '~/assets/img/bizanalysis3.webp';
 
 const imageLoaded = ref(false);
 

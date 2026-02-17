@@ -17,57 +17,65 @@
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="h-px w-12 bg-linear-to-r from-purple-700 to-blue-600"></div>
                                 <span class="text-sm font-semibold text-purple-700 uppercase tracking-wider">
-                                    From Concept to Mobile App
+                                    Success Powered by Data
                                 </span>
                             </div>
                             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic"
                                 style="line-height: 1.2;">
-                                iOS & Android-Native Apps.<br class="hidden sm:block">
-                                Programmed to Perform
+                                Your Business Blueprint,<br class="hidden sm:block">
+                                Visualized for Clarity & Edge
                             </h2>
                         </div>
 
                         <!-- Content with refined typography -->
                         <div class="space-y-6 text-gray-900">
                             <p class="text-base md:text-lg leading-relaxed font-medium text-gray-900">
-                                Your customers live on mobile—and expectations are unforgiving.
+                                Most organizations are sitting on a goldmine of untapped data...
 
                             </p>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                                Slow apps get deleted. Confusing apps get ignored. Generic apps don’t survive.
+                                ...operational records, customer behaviour, sales patterns, financial transactions—that
+                                could be transforming how they operate and compete. Instead, that data sits fragmented
+                                across systems, misunderstood in spreadsheets, or simply ignored because making sense of
+                                it feels too complex.
+
 
                             </p>
                             <p class="text-base md:text-lg leading-relaxed">
-                                At Tekfolio, we build native-quality mobile applications that deliver on iOS and Android
-                                from a single codebase, ensuring consistent performance without the cost and complexity
-                                of maintaining separate apps.
-
+                                At Tekfolio, we change that. We design and implement data engineering pipelines,
+                                analytics systems, and business intelligence solutions that turn your raw data into
+                                clear, actionable insights your team can actually use—without needing a data science
+                                degree to understand them.
                             </p>
 
                             <div class="pt-2 border-l-4 border-purple-700 pl-6 my-6">
                                 <p class="text-base md:text-lg leading-relaxed font-medium text-gray-800">
-                                    We start with user research and workflow mapping—understanding not just
-                                    <b><i class="text-purple-700">what</i></b> your app needs to do, but
-                                    <b><i class="text-purple-700">why</i></b> it matters to your users.
+                                    We start with your questions, not your data.
+                                    <b><i class="text-purple-700">what</i></b> decisions are you trying to make better?
+                                    <b><i class="text-purple-700">What</i></b> processes are costing you more than they
+                                    should?
+                                    <b><i class="text-purple-700">What</i></b> opportunities are you missing because you
+                                    can't see the full picture?
                                 </p>
                             </div>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                                <strong>The result is</strong> a mobile app that feels intuitive, performs reliably, and
-                                aligns with the real needs of your target users. No shortcuts. No bloated features. Just
-                                focused, purpose-built mobile solutions.
+                                <strong>What you get is</strong> a data infrastructure that works quietly in the
+                                background—cleaning, organizing, and surfacing the right information at the right time,
+                                so your leadership team can make faster, more confident decisions.
+
 
                             </p>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                                No clunky hybrid apps. No one-size-fits-all templates. Just purpose-built mobile
-                                solutions that solve real problems and scale with your business.
+                                No vanity dashboards. No data for data's sake. Just clear, purposeful intelligence that
+                                drives real business outcomes.
                             </p>
 
                             <p class="text-base md:text-lg leading-relaxed pt-2">
-                                <strong class="text-purple-700">Ready to bring your app idea to life?</strong>
-                                Let's talk about your next mobile app project.
+                                <strong class="text-purple-700">Ready to make your data work for you?</strong>
+                                Let's talk about your data strategy.
 
                             </p>
                         </div>
@@ -114,7 +122,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import webSolution3 from '~/assets/img/mobileappsolutions3.webp';
+import webSolution3 from '~/assets/img/bizanalysis3.webp';
 
 const imageLoaded = ref(false);
 

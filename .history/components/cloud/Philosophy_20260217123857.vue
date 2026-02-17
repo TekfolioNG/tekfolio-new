@@ -17,13 +17,13 @@
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="h-px w-12 bg-linear-to-r from-purple-700 to-blue-600"></div>
                                 <span class="text-sm font-semibold text-purple-700 uppercase tracking-wider">
-                                    From Concept to Mobile App
+                                    Success Powered by Data
                                 </span>
                             </div>
                             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic"
                                 style="line-height: 1.2;">
-                                iOS & Android-Native Apps.<br class="hidden sm:block">
-                                Programmed to Perform
+                                Your Business Blueprint,<br class="hidden sm:block">
+                                Visualized for Clarity & Edge
                             </h2>
                         </div>
 
@@ -114,7 +114,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import webSolution3 from '~/assets/img/mobileappsolutions3.webp';
+import webSolution3 from '~/assets/img/bizanalysis3.webp';
 
 const imageLoaded = ref(false);
 

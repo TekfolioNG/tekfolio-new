@@ -78,7 +78,7 @@
                             </svg>
                         </NuxtLink>
                         <NuxtLink to="/contact"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
                             Start Project
                         </NuxtLink>
                     </div>
