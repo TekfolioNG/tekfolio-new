@@ -181,7 +181,7 @@
 </template>
 
 <script setup>
-import { DatabaseSearch, ChartPie, ChartScatter, CloudBackup, Database, LayoutDashboard, SearchCode, SmilePlus } from 'lucide-vue-next';
+import { ChartPie, ChartScatter, CloudBackup, Database, LayoutDashboard, SearchCode, SmilePlus } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
 import webDesignImage from '~/assets/img/dataengineeringimg.png';
 
@@ -205,7 +205,7 @@ const features = [
     {
         id: 3,
         title: "Data Cleaning & Preparation",
-        icon: DatabaseSearch,
+        icon: Database,
         description: "Raw data is rarely ready to use. We handle the messy, time-consuming work of identifying errors, removing duplicates, standardizing formats, and structuring datasets so your analysis is built on solid foundations."
     },
     {
