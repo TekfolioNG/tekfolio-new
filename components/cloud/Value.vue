@@ -181,7 +181,7 @@
 </template>
 
 <script setup>
-import { ChartPie, ChartScatter, MonitorCloud, Database, LayoutDashboard, SearchCode, SmilePlus } from 'lucide-vue-next';
+import { ChartPie, ChartScatter, Globe, Database, LayoutDashboard, SearchCode, SmilePlus } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
 import webDesignImage from '~/assets/img/dataengineeringimg.png';
 
@@ -229,7 +229,7 @@ const features = [
     {
         id: 7,
         title: "Cloud-Based Data Infrastructure",
-        icon: MonitorCloud,
+        icon: Globe,
         description: "We build and manage data solutions on Google Cloud, AWS, and other leading platforms—scalable, secure, and cost-optimized for your current size and future growth."
     },
     {
