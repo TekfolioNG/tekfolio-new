@@ -234,7 +234,7 @@ const features = [
     },
     {
         id: 8,
-        title: "Actionable Recommendations, Not Just Numbers",
+        title: "Actionable Recommendations",
         icon: SmilePlus,
         description: "Data without context is just noise. We don't just deliver reports; we interpret them, highlight what's important, and provide clear recommendations your team can act on immediately."
     }

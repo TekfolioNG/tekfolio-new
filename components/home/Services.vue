@@ -105,7 +105,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-                        <NuxtLink to="/data-business-intelligence"
+                        <NuxtLink to="/data-engineering"
                             class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
                             See How
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

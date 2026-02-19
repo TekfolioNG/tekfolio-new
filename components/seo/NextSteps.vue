@@ -11,16 +11,13 @@
             <div class="max-w-4xl mx-auto text-center mb-16">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic mb-8"
                     style="line-height: 1.2;">
-                    How We Build Your Mobile App: <br class="hidden sm:block">
+                   How We Improve Your Search Performance: <br class="hidden sm:block">
                     <span class="bg-linear-to-r from-purple-700 to-blue-600 bg-clip-text text-transparent">
                         Our 4-Step Process
                     </span>
                 </h2>
                 <p class="text-lg sm:text-xl text-gray-900 leading-relaxed mb-6">
-                    If you're ready to build, here's what happens next to get you from concept to launch
-                    efficiently—with full transparency, regular updates, and zero surprises along the way. This is the
-                    same process that powers mobile apps for businesses across multiple industries. Clean,
-                    reliable, and built to last.
+                    If you're ready to dominate search rankings, here's what happens next—a proven, transparent process that takes you from invisible to unavoidable in your market.
                 </p>
             </div>
 
@@ -47,11 +44,9 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Discovery & User Research</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Audit & Diagnostic Analysis</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We start by understanding your business goals, target users, and technical requirements. Through
-                        user research and workflow analysis, we define features, user flows, and success
-                        metrics—ensuring we're building exactly what your users need and your business requires.
+                       We conduct a deep technical and strategic audit of your website, content, keyword signals, competitors, and digital footprint to identify exactly what’s limiting your visibility.
                     </p>
                 </div>
 
@@ -74,11 +69,9 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Design & Prototyping</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Strategy & Opportunity Mapping</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        You'll see your mobile app come to life through interactive prototypes you can tap through on
-                        actual devices. This phase ensures alignment on user experience, navigation, visual design, and
-                        feature functionality before development begins.
+                        Using insights from the audit, we design a tailored SEO roadmap—prioritizing high-impact fixes, realistic ranking opportunities, and quick wins alongside long-term growth.
                     </p>
                 </div>
 
@@ -101,11 +94,9 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Development & Testing</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Optimization & Content Execution</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We build your app in agile sprints with weekly progress updates. You'll have access to
-                        TestFlight (iOS) and internal testing (Android) to review features as they're completed. Our QA
-                        process ensures flawless performance across devices and OS versions.
+                        We implement technical fixes, optimize existing pages, and develop search-aligned content that strengthens authority, relevance, and ranking signals.
                     </p>
                 </div>
 
@@ -128,11 +119,9 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Launch & Ongoing Support</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Measurement, Refinement & Growth</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We handle App Store and Google Play submissions, server deployment, and post-launch monitoring.
-                        Beyond launch, we provide ongoing maintenance, feature updates, OS compatibility updates, and
-                        technical support to ensure your app continues to deliver value as mobile platforms evolve.
+                        We track performance continuously, refine strategies based on data, and adapt to algorithm changes—ensuring sustained visibility and compounding results over time.
                     </p>
                 </div>
 

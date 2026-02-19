@@ -99,7 +99,7 @@ const route = useRoute()
 const baseNavItems = [
   { path: '/web-solutions', label: 'Custom Web Apps' },
   { path: '/mobile-apps', label: 'Mobile Apps' },
-  { path: '/data-business-intelligence', label: 'Data & Business Intelligence' },
+  { path: '/data-engineering', label: 'Data & Business Intelligence' },
   { path: '/seo-performance', label: 'SEO & Performance' },
   { path: '/about-us', label: 'Company' }
 ]

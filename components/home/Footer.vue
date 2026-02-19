@@ -145,7 +145,7 @@
             </li>
 
             <li>
-              <NuxtLink to="/data-business-intelligence"
+              <NuxtLink to="/data-engineering"
                 class="text-gray-400 hover:text-white hover:underline transition-colors">
                 Data & Business Intelligence
               </NuxtLink>
@@ -233,13 +233,23 @@
 
           <!-- Legal Links (Center on Desktop) -->
           <div class="flex items-center justify-center space-x-6">
-            <NuxtLink to="/privacy-policy" class="text-gray-400 hover:text-white transition-colors text-sm">
+            <button 
+              @click="openPrivacyModal" 
+              class="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
               Privacy Policy
-            </NuxtLink>
+            </button>
             <span class="text-gray-600">•</span>
-            <NuxtLink to="/terms-of-service" class="text-gray-400 hover:text-white transition-colors text-sm">
+            <button 
+              @click="openTermsModal" 
+              class="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
               Terms of Service
-            </NuxtLink>
+            </button>
+            <span class="text-gray-600">•</span>
+            <button 
+              @click="openCookiesModal" 
+              class="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
+              Cookie Policy
+            </button>
           </div>
 
           <!-- Social Links -->
@@ -285,20 +295,42 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
       </svg>
     </button>
+
+    <!-- Policy Modals -->
+    <HomePrivacyPolicyModal v-model="showPrivacyModal" />
+    <HomeTermsOfServiceModal v-model="showTermsModal" />
+    <HomeCookiePolicyModal v-model="showCookiesModal" />
   </footer>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const currentYear = ref(new Date().getFullYear());
+const currentYear = ref(new Date().getFullYear())
+
+// Modal states
+const showPrivacyModal = ref(false)
+const showTermsModal = ref(false)
+const showCookiesModal = ref(false)
 
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
-  });
-};
+  })
+}
+
+const openPrivacyModal = () => {
+  showPrivacyModal.value = true
+}
+
+const openTermsModal = () => {
+  showTermsModal.value = true
+}
+
+const openCookiesModal = () => {
+  showCookiesModal.value = true
+}
 </script>
 
 <style scoped>

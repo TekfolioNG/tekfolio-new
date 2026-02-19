@@ -17,48 +17,57 @@
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="h-px w-12 bg-linear-to-r from-purple-700 to-blue-600"></div>
                                 <span class="text-sm font-semibold text-purple-700 uppercase tracking-wider">
-                                    From Search Page 5 to Page 1
+                                    From Concept to Mobile App
                                 </span>
                             </div>
                             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic"
                                 style="line-height: 1.2;">
-                               Technical + Creative Strategy<br class="hidden sm:block">
-                                for Business Visibility
+                                iOS & Android-Native Apps.<br class="hidden sm:block">
+                                Programmed to Perform
                             </h2>
                         </div>
 
                         <!-- Content with refined typography -->
                         <div class="space-y-6 text-gray-900">
                             <p class="text-base md:text-lg leading-relaxed font-medium text-gray-900">
-                              Fact is you can’t fix your business or product visibility issues without understanding what’s holding it back.
-
+                                Your customers live on mobile—and expectations are unforgiving.
 
                             </p>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                               ...And that's the clear truth we start with when you engage us at Tekfolio for your SEO & Performance solution. 
+                                Slow apps get deleted. Confusing apps get ignored. Generic apps don’t survive.
 
                             </p>
                             <p class="text-base md:text-lg leading-relaxed">
-                               Before we recommend a single keyword or publish any content, we conduct a full diagnostic analysis of your digital footprint. This includes your website structure, technical health, current ranking signals, content quality, keyword positioning, competitive landscape, and even how your social presence reinforces—or weakens—your search authority.
-
+                                At Tekfolio, we build native-quality mobile applications that deliver on iOS and Android
+                                from a single codebase, ensuring consistent performance without the cost and complexity
+                                of maintaining separate apps.
 
                             </p>
 
                             <div class="pt-2 border-l-4 border-purple-700 pl-6 my-6">
                                 <p class="text-base md:text-lg leading-relaxed font-medium text-gray-800">
-                                  We identify exactly 
-                                    <b><i class="text-purple-700">why</i></b>  your brand is stuck on page 3, 4, or 5 of the Search Engine Results page (SERPs), and
-                                    <b><i class="text-purple-700">what's</i></b> preventing Google, Bing and other major search engines (and your target customers) from seeing your brand and its USP.
+                                    We start with user research and workflow mapping—understanding not just
+                                    <b><i class="text-purple-700">what</i></b> your app needs to do, but
+                                    <b><i class="text-purple-700">why</i></b> it matters to your users.
                                 </p>
                             </div>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                                We focus on earning your business or product <strong>visibility with the right audience</strong>, so the clicks you receive are from people who are actually ready to engage or buy.
-                            </p>                 
+                                <strong>The result is</strong> a mobile app that feels intuitive, performs reliably, and
+                                aligns with the real needs of your target users. No shortcuts. No bloated features. Just
+                                focused, purpose-built mobile solutions.
+
+                            </p>
+
+                            <p class="text-base md:text-lg leading-relaxed">
+                                No clunky hybrid apps. No one-size-fits-all templates. Just purpose-built mobile
+                                solutions that solve real problems and scale with your business.
+                            </p>
+
                             <p class="text-base md:text-lg leading-relaxed pt-2">
-                                <strong class="text-purple-700">Ready to move from page 5 to page 1 on Google Search Results?</strong>
-                                Let's map out and implement the right strategy for you. 
+                                <strong class="text-purple-700">Ready to bring your app idea to life?</strong>
+                                Let's talk about your next mobile app project.
 
                             </p>
                         </div>
@@ -105,7 +114,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import webSolution3 from '~/assets/img/seoclick.webp';
+import webSolution3 from '~/assets/img/seoherosection.webp';
 
 const imageLoaded = ref(false);
 
