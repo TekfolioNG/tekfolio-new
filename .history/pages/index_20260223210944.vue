@@ -44,7 +44,7 @@ useHead({
       content:
         'Custom Software, Cloud & Data Engineering in Nigeria',
     },
-    { name: 'twitter:image', content: '/tekfolio-og.avif' },
+    { name: 'twitter:image', content: '/tekfoliong-og.webp' },
   ],
 });
 
