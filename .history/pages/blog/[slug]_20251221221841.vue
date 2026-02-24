@@ -1,7 +1,7 @@
 <template>
     <article v-if="post" class="min-h-screen bg-gray-50">
         <!-- Hero Section -->
-        <div class="bg-linear-to-b from-[#7B3AC5] to-[#4527A0] text-white py-12">
+        <div class="bg-gradient-to-b from-[#7B3AC5] to-[#4527A0] text-white py-12">
             <div class="container mx-auto px-4 max-w-4xl">
                 <NuxtLink to="/blog"
                     class="inline-flex items-center text-purple-100 hover:text-white mb-6 transition-colors">
@@ -47,7 +47,7 @@
             <!-- Back Link -->
             <div class="mt-12 text-center">
                 <NuxtLink to="/blog"
-                    class="inline-flex items-center gap-2 bg-linear-to-r from-[#7B3AC5] to-[#4527A0] text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
+                    class="inline-flex items-center gap-2 bg-gradient-to-r from-[#7B3AC5] to-[#4527A0] text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
                     ← Back to All Posts
                 </NuxtLink>
             </div>
@@ -64,7 +64,7 @@
         <h1 class="text-4xl font-bold mb-4 text-gray-900">Post Not Found</h1>
         <p class="text-gray-600 mb-8">The post you're looking for doesn't exist.</p>
         <NuxtLink to="/blog"
-            class="inline-flex items-center gap-2 bg-linear-to-r from-[#7B3AC5] to-[#4527A0] text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-[#7B3AC5] to-[#4527A0] text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
             ← Back to Blog
         </NuxtLink>
     </div>
