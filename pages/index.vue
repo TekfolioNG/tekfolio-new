@@ -23,11 +23,11 @@ useHead({
     {
       property: 'og:description',
       content:
-        'Custom Software, Cloud & Data Engineering in Nigeria',
+         '...Your Tech Advantage',
     },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://tekfolio.ng' },
-    { property: 'og:image', content: '/tekfolio-og.avif' },
+    { property: 'og:image', content: '/tekfoliong-og.png' },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:height', content: '630' },
     {
@@ -42,9 +42,9 @@ useHead({
     {
       name: 'twitter:description',
       content:
-        'Custom Software, Cloud & Data Engineering in Nigeria',
+         '...Your Tech Advantage',
     },
-    { name: 'twitter:image', content: '/tekfoliong-og.avif' },
+    { name: 'twitter:image', content: '/tekfoliong-og.png' },
   ],
 });
 
