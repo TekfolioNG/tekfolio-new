@@ -48,31 +48,25 @@
 
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2 md:pt-4">
-            <!-- Primary CTA - Gradient Button -->
-            <NuxtLink to="/about-us"
-              class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-700 to-blue-600 text-white font-bold text-base lg:text-lg rounded-xl overflow-hidden shadow-lg cta-button">
-              <span class="relative flex items-center gap-2 z-10">
-                Why We're Different
-                <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
-                  </path>
-                </svg>
-              </span>
-            </NuxtLink>
+           <HomeButton to="/about-us" variant="gradient">
+  <span class="relative flex items-center gap-2 z-10">
+    How We're Different
+    <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+    </svg>
+  </span>
+</HomeButton>
+            <HomeButton to="/contact">
+  <span class="relative flex items-center gap-2 z-10">
+    Get in Touch
+    <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+    </svg>
+  </span>
+</HomeButton>
 
-            <!-- Secondary CTA - Outlined with gradient border -->
-            <NuxtLink to="/case-studies"
-              class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold text-base lg:text-lg rounded-xl button-gradient-border cta-button">
-              <span class="relative flex items-center gap-2 z-10">
-                Client Success Stories
-                <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
-                  </path>
-                </svg>
-              </span>
-            </NuxtLink>
+
+
           </div>
         </div>
 
