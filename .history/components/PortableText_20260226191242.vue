@@ -1,11 +1,5 @@
-<template>
-    <div class="portable-text">
-        <component v-for="(block, index) in processedBlocks" :key="index" :is="block.component" />
-    </div>
-</template>
-
 <script setup>
-import { computed, h } from 'vue'
+import { h, computed } from 'vue'
 
 const props = defineProps({
     value: {
@@ -156,55 +150,3 @@ const renderChildren = (children, markDefs = []) => {
     })
 }
 </script>
-
-<style scoped>
-.portable-text :deep(a) {
-    color: #7C3AED;
-    text-decoration: underline;
-    text-decoration-color: rgba(124, 58, 237, 0.3);
-    transition: all 0.3s ease;
-}
-
-.portable-text :deep(a:hover) {
-    color: #5B21B6;
-    text-decoration-color: rgba(91, 33, 182, 0.7);
-}
-
-.portable-text :deep(ul) {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.portable-text :deep(ol) {
-    list-style-type: decimal;
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.portable-text :deep(li) {
-    margin-bottom: 0.5rem;
-    color: #374151;
-}
-
-.portable-text :deep(li strong) {
-    color: #1F2937;
-}
-
-.portable-text :deep(code) {
-    background: #F3F4F6;
-    padding: 0.125rem 0.5rem;
-    border-radius: 0.25rem;
-    font-size: 0.875rem;
-    font-family: 'Courier New', monospace;
-    color: #7C3AED;
-}
-
-.portable-text :deep(strong) {
-    font-weight: 700;
-}
-
-.portable-text :deep(em) {
-    font-style: italic;
-}
-</style>

@@ -4,7 +4,7 @@
       <!-- Section Header -->
       <div class="text-center md:text-left mb-12">
         <h2 class="text-4xl md:text-5xl font-semibold mb-4">
-          <span class="bg-gradient-to-r from-[#7B3AC5] to-[#4527A0] bg-clip-text text-transparent">
+          <span class="bg-linear-to-r from-[#7B3AC5] to-[#4527A0] bg-clip-text text-transparent">
             Blog & Insights
           </span>
         </h2>

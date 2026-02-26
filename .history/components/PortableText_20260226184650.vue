@@ -1,11 +1,18 @@
 <template>
     <div class="portable-text">
-        <component v-for="(block, index) in processedBlocks" :key="index" :is="block.component" />
+        <template v-for="(block, index) in processedBlocks" :key="index">
+            <component :is="block.component" v-bind="block.props">
+                <template v-if="block.children">
+                    <component v-for="(child, childIndex) in block.children" :key="childIndex" :is="child.component"
+                        v-bind="child.props" />
+                </template>
+            </component>
+        </template>
     </div>
 </template>
 
 <script setup>
-import { computed, h } from 'vue'
+import { h, computed } from 'vue'
 
 const props = defineProps({
     value: {
@@ -31,23 +38,26 @@ const processedBlocks = computed(() => {
                 currentList = {
                     type: listType,
                     items: [],
-                    component: () => {
-                        const listTag = listType === 'bullet' ? 'ul' : 'ol'
-                        const listClass = listType === 'bullet'
+                    component: listType === 'bullet' ? 'ul' : 'ol',
+                    props: {
+                        class: listType === 'bullet'
                             ? 'list-disc list-outside pl-6 mb-4 space-y-2 text-gray-700'
                             : 'list-decimal list-outside pl-6 mb-4 space-y-2 text-gray-700'
-
-                        return h(listTag, { class: listClass }, currentList.items.map(item => item()))
                     }
                 }
                 result.push(currentList)
             }
 
             // Add item to current list
-            const itemChildren = renderChildren(block.children || [], block.markDefs || [])
-            currentList.items.push(() =>
-                h('li', { class: 'leading-relaxed' }, itemChildren)
-            )
+            currentList.items.push({
+                component: 'li',
+                props: {
+                    class: 'leading-relaxed'
+                },
+                children: renderChildren(block.children || [], block.markDefs || [])
+            })
+
+            currentList.children = currentList.items
         } else {
             // Not a list item, close current list
             currentList = null
