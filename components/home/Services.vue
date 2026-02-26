@@ -23,18 +23,22 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-                        <NuxtLink to="/web-solutions"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
-                            See How
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
+                         <HomeButton to="/web-solutions">
+                          <span class="relative flex items-center gap-2 z-10">
+                           See How
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                             </svg>
-                        </NuxtLink>
-                        <NuxtLink to="/contact"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                          </span>
+                        </HomeButton>
+                        <HomeButton to="/contact" variant="gradient">
+                          <span class="relative flex items-center gap-2 z-10">
                             Start Project
-                        </NuxtLink>
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                          </span>
+                        </HomeButton>                
                     </div>
                 </div>
 
@@ -69,19 +73,23 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-                        <NuxtLink to="/mobile-apps"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
-                            See How
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
+                        <HomeButton to="/mobile-apps">
+                          <span class="relative flex items-center gap-2 z-10">
+                           See How
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                             </svg>
-                        </NuxtLink>
-                        <NuxtLink to="/contact"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                          </span>
+                        </HomeButton>
+                        <HomeButton to="/contact" variant="gradient">
+                          <span class="relative flex items-center gap-2 z-10">
                             Start Project
-                        </NuxtLink>
-                    </div>
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                          </span>
+                        </HomeButton> 
+                        </div>
                 </div>
             </div>
 
@@ -105,18 +113,22 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-                        <NuxtLink to="/data-engineering"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
-                            See How
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
+                        <HomeButton to="/data-engineering">
+                          <span class="relative flex items-center gap-2 z-10">
+                           See How
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                             </svg>
-                        </NuxtLink>
-                        <NuxtLink to="/contact"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                          </span>
+                        </HomeButton>
+                        <HomeButton to="/contact" variant="gradient">
+                          <span class="relative flex items-center gap-2 z-10">
                             Start Project
-                        </NuxtLink>
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                          </span>
+                        </HomeButton> 
                     </div>
                 </div>
 
@@ -150,18 +162,22 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-                        <NuxtLink to="/seo-performance"
-                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
-                            See How
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
+                        <HomeButton to="/seo-performance">
+                          <span class="relative flex items-center gap-2 z-10">
+                           See How
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                             </svg>
-                        </NuxtLink>
-                        <NuxtLink to="/contact"
-                            class="inline-flex items-center justify-center px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                          </span>
+                        </HomeButton>
+                        <HomeButton to="/contact" variant="gradient">
+                          <span class="relative flex items-center gap-2 z-10">
                             Start Project
-                        </NuxtLink>
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                          </span>
+                        </HomeButton> 
                     </div>
                 </div>
             </div>

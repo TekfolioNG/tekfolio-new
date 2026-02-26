@@ -11,36 +11,17 @@
             <div class="max-w-4xl mx-auto text-center mb-16">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic mb-8"
                     style="line-height: 1.2;">
-                    How We Build Your Web App: <br class="hidden sm:block">
+                    How We Deliver Your Data Solution: <br class="hidden sm:block">
                     <span class="bg-linear-to-r from-purple-700 to-blue-600 bg-clip-text text-transparent">
                         Our 4-Step Process
                     </span>
                 </h2>
                 <p class="text-lg sm:text-xl text-gray-900 leading-relaxed mb-6">
-                    If you're ready to build, here's what happens next to get you from concept to launch
-                    efficiently—with full transparency, regular updates, and zero surprises along the way. This is the
-                    same process that delivered production-ready websites for
-                    <a href="https://syntaniumenergy.com/" target="_blank" rel="noopener"
-                        class="text-purple-600 to-blue-600 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
-                        Syntanium Energy
-                    </a>,
-                    <a href="https://pebblesuites.com/" target="_blank" rel="noopener"
-                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
-                        Pebble Suites
-                    </a>,
-                    <a href="https://wilsonsamson.com/" target="_blank" rel="noopener"
-                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
-                        Wilson Samson
-                    </a>,
-                    <a href="https://www.oaktreeinitiative.org/" target="_blank" rel="noopener"
-                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
-                        Oaktree Initiative
-                    </a>, and
-                    <a href="https://megafieldsolicitors.com/" target="_blank" rel="noopener"
-                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
-                        Megafield Solicitors
-                    </a>.
-                    See for yourself what quality standards we deliver.
+                    If you're ready to make smarter decisions, here's what happens next: a structured, transparent
+                    process that takes you from data chaos to business clarity. This is the same approach that has
+                    helped organizations across multiple sectors unearth insights,
+                    reduce operational inefficiencies, and build data cultures that compound in value over time.
+
                 </p>
             </div>
 
@@ -67,11 +48,13 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Discovery & Planning</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Discovery & Data Audit</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We start by understanding your business goals, user needs, and technical requirements.
-                        Through collaborative interfaces, we map your workflows and define success metrics—ensuring
-                        we're building exactly what moves your business forward.
+                        We start by understanding your business objectives, the decisions you need to make, and the data
+                        you currently have. We audit your existing data sources, assess data quality, identify gaps, and
+                        map the full picture of what's available and what's needed. This ensures we build solutions that
+                        answer the questions that actually matter to your business.
+
                     </p>
                 </div>
 
@@ -94,11 +77,12 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Design & Prototype</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Architecture & Pipeline Design</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        You'll see your web app come to life through interactive prototypes you can click through
-                        and test. This phase ensures alignment on user experience, functionality, and visual design
-                        before we write a single line of code.
+                        Based on your audit, we design a data architecture that fits your scale, budget, and technical
+                        environment. This includes selecting the right tools and platforms, designing data models, and
+                        engineering pipelines that reliably collect, clean, and transform data from all relevant sources
+                        into a unified, structured system.
                     </p>
                 </div>
 
@@ -121,11 +105,12 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Development & Testing</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Analysis, Modelling & Visualization</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        Using agile methodology, we build your app in sprints with weekly progress updates.
-                        You'll have access to staging environments to review features as they're completed, and
-                        our QA process ensures everything works flawlessly before launch.
+                        With clean, structured data in place, we conduct exploratory analysis, build statistical models,
+                        and develop dashboards and reports tailored to your team's specific needs. Every visualization
+                        is designed for clarity, showing the right metrics to the right stakeholders without unnecessary
+                        complexity.
                     </p>
                 </div>
 
@@ -148,11 +133,11 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Launch & Ongoing Support</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Deployment, Training & Ongoing Support</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We handle deployment, performance optimization, and post-launch monitoring. Beyond launch,
-                        we provide ongoing maintenance, feature enhancements, and technical support to ensure your
-                        web app continues to deliver value as your business grows.
+                        We deploy your data infrastructure, train your team on using dashboards and interpreting
+                        insights, and provide ongoing support to maintain pipelines, add new data sources, refine
+                        models, and evolve your system as your business grows and data needs change.
                     </p>
                 </div>
 
@@ -161,15 +146,13 @@
             <!-- CTA Button -->
             <div class="text-center">
                 <HomeButton to="/contact" variant="gradient">
-                    <span class="relative flex items-center gap-2 z-10">
-                        Start Project
-                        <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                        </svg>
-                    </span>
-                </HomeButton>
+                          <span class="relative flex items-center gap-2 z-10">
+                            Start Project
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                          </span>
+                        </HomeButton> 
             </div>
 
         </div>

@@ -105,7 +105,7 @@
                         <!-- Submit Button -->
                         <div>
                             <button type="submit" :disabled="isSubmitting"
-                                class="w-full px-8 py-4 bg-gradient-to-r from-purple-700 to-blue-600 hover:from-purple-800 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg">
+                                class="w-full px-8 py-4 bg-linear-to-r from-purple-700 to-blue-600 hover:from-purple-800 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg">
                                 <span v-if="!isSubmitting">Send Message</span>
                                 <span v-else class="flex items-center justify-center">
                                     <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"

@@ -1,11 +1,11 @@
 <template>
-    <section class="w-full bg-white py-2 md:py-4">
+    <section class="w-full bg-white py-2">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
-            <!-- Service 1: Enterprise Web Solutions (Text Left, Animation Right) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-8 md:mb-10">
+            <!-- Service 1: Enterprise Web Solutions (Animation first on mobile, Text left on desktop) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-2 md:mb-3">
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-1">
+                <div class="space-y-3 lg:space-y-4 order-2 lg:order-1">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         Enterprise Web Solutions
@@ -17,37 +17,46 @@
                         class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium text-center lg:text-left">
                         Enterprise-grade web applications that function as real business tools, supporting workflows,
                         data, integrations, and customer interactions. Each
-                        solution is custom-built to scale with your operations, improve efficiency, and deliver
+                        solution is custom-engineered to scale with your operations, improve efficiency, and deliver
                         measurable business value over time.
                     </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
+                         <HomeButton to="/web-solutions">
+                          <span class="relative flex items-center gap-2 z-10">
+                           See How
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                          </span>
+                        </HomeButton>
+                        <HomeButton to="/contact" variant="gradient">
+                          <span class="relative flex items-center gap-2 z-10">
+                            Start Project
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                          </span>
+                        </HomeButton>                
+                    </div>
                 </div>
 
                 <!-- Lottie Animation -->
-                <div class="relative h-[320px] md:h-[390px] lg:h-[440px] order-2">
+                <div class="relative h-82.5 md:h-100 lg:h-112.5 order-1 lg:order-2">
                     <div id="lottie-web-solutions" class="w-full h-full"></div>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start order-3 lg:order-3">
-                    <NuxtLink to="/web-solutions"
-                        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
-                        See How
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
-                        </svg>
-                    </NuxtLink>
-                    <NuxtLink to="/contact"
-                        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
-                        Start Project
-                    </NuxtLink>
                 </div>
             </div>
 
-            <!-- Service 2: Mobile App Development (Animation Left, Text Right) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-8 md:mb-10">
+            <!-- Service 2: Mobile App Development (Animation first on mobile, Animation left on desktop) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-2 md:mb-3">
+                <!-- Lottie Animation -->
+                <div class="relative h-95 md:h-102.5 lg:h-115 order-1">
+                    <div id="lottie-mobile-apps" class="w-full h-full"></div>
+                </div>
+
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-1 lg:order-2">
+                <div class="space-y-3 lg:space-y-4 order-2">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         Mobile App Development
@@ -61,34 +70,29 @@
                         user experiences. We build mobile products that feel natural, work reliably, and deliver the
                         features your users value most.
                     </p>
-                </div>
 
-                <!-- Lottie Animation -->
-                <div class="relative h-[320px] md:h-[390px] lg:h-[440px] order-2 lg:order-1">
-                    <div id="lottie-mobile-apps" class="w-full h-full"></div>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start order-3 lg:order-3">
-                    <NuxtLink to="/mobile-apps"
-                        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
-                        See How
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
-                        </svg>
-                    </NuxtLink>
-                    <NuxtLink to="/contact"
-                        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
-                        Start Project
-                    </NuxtLink>
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
+                        <NuxtLink to="/mobile-apps"
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
+                            See How
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </NuxtLink>
+                        <NuxtLink to="/contact"
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                            Start Project
+                        </NuxtLink>
+                    </div>
                 </div>
             </div>
 
-            <!-- Service 3: Cloud Migration & Security (Text Left, Animation Right) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-8 md:mb-10">
+            <!-- Service 3: Data & Business Intelligence (Animation first on mobile, Text left on desktop) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-12 md:mb-14">
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-1">
+                <div class="space-y-3 lg:space-y-4 order-2 lg:order-1">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         Data & Business Intelligence
@@ -102,34 +106,39 @@
                         analytics, and intelligent models, we support better planning, smarter operations, and confident
                         decision making.
                     </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
+                        <NuxtLink to="/data-engineering"
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
+                            See How
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </NuxtLink>
+                        <NuxtLink to="/contact"
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                            Start Project
+                        </NuxtLink>
+                    </div>
                 </div>
 
                 <!-- Lottie Animation -->
-                <div class="relative h-[280px] md:h-[350px] lg:h-[400px] order-2">
+                <div class="relative h-70 md:h-87.5 lg:h-100 order-1 lg:order-2">
                     <div id="lottie-cloud" class="w-full h-full"></div>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start order-3 lg:order-3">
-                    <NuxtLink to="/cloud-data-engineering"
-                        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
-                        See How
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
-                        </svg>
-                    </NuxtLink>
-                    <NuxtLink to="/contact"
-                        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
-                        Start Project
-                    </NuxtLink>
                 </div>
             </div>
 
-            <!-- Service 4: SEO & Performance (Animation Left, Text Right) -->
+            <!-- Service 4: SEO & Performance (Animation first on mobile, Animation left on desktop) -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-8 md:mb-12">
+                <!-- Lottie Animation -->
+                <div class="relative h-55 md:h-72.5 lg:h-85 order-1">
+                    <div id="lottie-seo-performance" class="w-full h-full"></div>
+                </div>
+
                 <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-1 lg:order-2">
+                <div class="space-y-3 lg:space-y-4 order-2">
                     <h2
                         class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
                         SEO & Performance Optimization
@@ -142,27 +151,22 @@
                         We optimize your digital assets for speed, search visibility, and real results. Make your pages
                         load faster, rank better, and convert more effectively.
                     </p>
-                </div>
 
-                <!-- Lottie Animation -->
-                <div class="relative h-[220px] md:h-[290px] lg:h-[340px] order-2 lg:order-1">
-                    <div id="lottie-seo-performance" class="w-full h-full"></div>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start order-3 lg:order-3">
-                    <NuxtLink to="/seo-performance"
-                        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
-                        See How
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
-                        </svg>
-                    </NuxtLink>
-                    <NuxtLink to="/contact"
-                        class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
-                        Start Project
-                    </NuxtLink>
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
+                        <NuxtLink to="/seo-performance"
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg border-2 border-gray-300 hover:border-purple-700 hover:text-purple-700 transition-all duration-200">
+                            See How
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </NuxtLink>
+                        <NuxtLink to="/contact"
+                            class="inline-flex items-center justify-center px-6 py-3 bg-linear-to-r from-purple-700 to-blue-600 text-white font-bold text-base rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+                            Start Project
+                        </NuxtLink>
+                    </div>
                 </div>
             </div>
 

@@ -1,5 +1,5 @@
 <template>
-    <section class="py-20 lg:py-28 px-8 sm:px-12 lg:px-16 bg-white">
+    <section class="py-16 lg:py-20 px-8 sm:px-12 lg:px-16 bg-white">
         <div class="max-w-7xl mx-auto">
             <!-- OR Divider - Centered at top -->
             <div class="flex items-center justify-center mb-12 lg:mb-16">
@@ -10,8 +10,8 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
 
-                <!-- Left Column: Contact Form (60% - 3/5 columns) -->
-                <div class="lg:col-span-3 order-1 lg:order-1">
+                <!-- Left Column: Content + Form (60% on desktop) -->
+                <div class="order-1 lg:col-span-3">
                     <!-- Form Header -->
                     <div class="mb-8">
                         <div class="flex items-center gap-3 mb-4">
@@ -30,7 +30,7 @@
 
                     <!-- Contact Form -->
                     <form @submit.prevent="submitForm"
-                        class="bg-gray-50 rounded-2xl shadow-lg p-8 md:p-10 border border-gray-200">
+                        class="bg-gray-800 rounded-2xl shadow-lg p-8 md:p-10 border border-gray-300">
                         <!-- Hidden inputs for Web3Forms -->
                         <input type="hidden" name="access_key" :value="config.public.web3formsKey">
                         <input type="hidden" name="subject" value="New Contact Form Submission from Tekfolio Website">
@@ -41,17 +41,17 @@
                         <div class="grid md:grid-cols-2 gap-6 mb-6">
                             <!-- Name Field -->
                             <div>
-                                <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">
+                                <label for="name" class="block text-sm font-semibold text-gray-100 mb-2">
                                     Full Name *
                                 </label>
                                 <input type="text" id="name" name="name" v-model="formData.name" required
-                                    class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300"
+                                    class="w-full px-4 py-3 bg-white border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300"
                                     placeholder="Your full name">
                             </div>
 
                             <!-- Email Field -->
                             <div>
-                                <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">
+                                <label for="email" class="block text-sm font-semibold text-gray-100 mb-2">
                                     Email Address *
                                 </label>
                                 <input type="email" id="email" name="email" v-model="formData.email" required
@@ -62,7 +62,7 @@
 
                         <!-- Company Field -->
                         <div class="mb-6">
-                            <label for="company" class="block text-sm font-semibold text-gray-900 mb-2">
+                            <label for="company" class="block text-sm font-semibold text-gray-100 mb-2">
                                 Company / Organization
                             </label>
                             <input type="text" id="company" name="company" v-model="formData.company"
@@ -72,7 +72,7 @@
 
                         <!-- Project Type Field -->
                         <div class="mb-6">
-                            <label for="projectType" class="block text-sm font-semibold text-gray-900 mb-2">
+                            <label for="projectType" class="block text-sm font-semibold text-gray-100 mb-2">
                                 What are you looking to build? *
                             </label>
                             <select id="projectType" name="projectType" v-model="formData.projectType" required
@@ -94,7 +94,7 @@
 
                         <!-- Message Field -->
                         <div class="mb-8">
-                            <label for="message" class="block text-sm font-semibold text-gray-900 mb-2">
+                            <label for="message" class="block text-sm font-semibold text-gray-100 mb-2">
                                 Tell us about your project *
                             </label>
                             <textarea id="message" name="message" v-model="formData.message" required rows="5"
@@ -105,7 +105,7 @@
                         <!-- Submit Button -->
                         <div>
                             <button type="submit" :disabled="isSubmitting"
-                                class="w-full px-8 py-4 bg-gradient-to-r from-purple-700 to-blue-600 hover:from-purple-800 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg">
+                                class="w-full px-8 py-4 bg-linear-to-r from-purple-700 to-blue-600 hover:from-purple-800 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg">
                                 <span v-if="!isSubmitting">Send Message</span>
                                 <span v-else class="flex items-center justify-center">
                                     <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
@@ -128,10 +128,14 @@
                     </form>
                 </div>
 
-                <!-- Right Column: Image (40% - 2/5 columns) -->
-                <div class="lg:col-span-2 order-2 lg:order-2">
-                    <div class="sticky lg:pt-48">
-                        <img :src="contactForm" alt="Contact Tekfolio" class="w-full h-auto" />
+                <!-- Right Column: Image (40% on desktop) - Shows after form on mobile -->
+                <div class="order-2 lg:col-span-2">
+                    <div class="bounce-animation lg:sticky lg:top-32 lg:mt-72">
+                        <div
+                            class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500 bg-white p-6 md:p-8">
+                            <img :src="contactForm" alt="Contact Tekfolio"
+                                class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-out" />
+                        </div>
                     </div>
                 </div>
 
@@ -142,7 +146,7 @@
 
 <script setup>
 import { reactive, ref } from 'vue';
-import contactForm from '../assets/img/contactform.svg';
+import contactForm from '../assets/img/customer-support.png';
 
 const config = useRuntimeConfig();
 
@@ -184,7 +188,7 @@ const submitForm = async () => {
         const result = await response.json();
 
         if (result.success) {
-            submitMessage.value = 'Thank you for reaching out. We\'ll review your project details and get back to you within 24 hours.';
+            submitMessage.value = 'Thank you for reaching out. We\'ll review your project details and get back to you soon.';
             submitMessageClass.value = 'bg-green-50 text-green-700 border border-green-200';
 
             // Reset form
@@ -223,8 +227,24 @@ select {
     transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Sticky image */
-.sticky {
-    position: sticky;
+/* Subtle bounce animation */
+@keyframes subtleBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce-animation {
+    animation: subtleBounce 3s ease-in-out infinite;
+}
+
+.group:hover img {
+    transform: scale(1.05);
 }
 </style>
