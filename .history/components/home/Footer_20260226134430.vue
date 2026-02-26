@@ -18,7 +18,7 @@
           <!-- Free Consultation Card -->
           <div
             class="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 text-center md:text-left">
-            <div class="flex-shrink-0">
+            <div class="shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-400" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
@@ -29,14 +29,15 @@
             </div>
             <div>
               <h4 class="text-white font-semibold mb-2">Get Free Consultation</h4>
-              <p class="text-gray-400 text-sm mb-3">
+              <p class="text-gray-300 text-sm mb-3">
                 Have an idea or early requirements, but not sure where to start? Schedule a focused call to review
                 scope and next steps.
               </p>
               <NuxtLink to="/contact"
                 class="text-purple-400 hover:text-purple-300 text-sm font-medium inline-flex items-center gap-1">
                 Talk to Us
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 transition-transform duration-300 hover:translate-x-1" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
@@ -48,7 +49,7 @@
           <!-- Need Help Card -->
           <div
             class="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 text-center md:text-left">
-            <div class="flex-shrink-0">
+            <div class="shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-400" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10" />
@@ -58,14 +59,15 @@
             </div>
             <div>
               <h4 class="text-white font-semibold mb-2">Need Help Choosing?</h4>
-              <p class="text-gray-400 text-sm mb-3">
+              <p class="text-gray-300 text-sm mb-3">
                 We can help you explore your options, answer your questions, and even create a
                 quick prototype to visualize your idea.
               </p>
               <NuxtLink to="/contact"
                 class="text-purple-400 hover:text-purple-300 text-sm font-medium inline-flex items-center gap-1">
                 Get Recommendation
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 transition-transform duration-300 hover:translate-x-1" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
@@ -77,7 +79,7 @@
           <!-- Start Project Card -->
           <div
             class="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 text-center md:text-left">
-            <div class="flex-shrink-0">
+            <div class="shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-400" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path
@@ -88,14 +90,15 @@
             </div>
             <div>
               <h4 class="text-white font-semibold mb-2">Start Your Project Today</h4>
-              <p class="text-gray-400 text-sm mb-3">
+              <p class="text-gray-300 text-sm mb-3">
                 Ready to move forward? Share your requirements and receive a detailed proposal tailored to your specific
                 needs and timeline.
               </p>
               <NuxtLink to="/contact"
                 class="text-purple-400 hover:text-purple-300 text-sm font-medium inline-flex items-center gap-1">
                 Get Started
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 transition-transform duration-300 hover:translate-x-1" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
@@ -145,9 +148,8 @@
             </li>
 
             <li>
-              <NuxtLink to="/cloud-data-engineering"
-                class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Data Engineering & Analytics
+              <NuxtLink to="/data-engineering" class="text-gray-400 hover:text-white hover:underline transition-colors">
+                Data & Business Intelligence
               </NuxtLink>
             </li>
             <li>
@@ -169,23 +171,8 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/team" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Our Team
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/case-studies" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Our Work
-              </NuxtLink>
-            </li>
-            <li>
               <NuxtLink to="/blog" class="text-gray-400 hover:text-white hover:underline transition-colors">
                 Blog & Insights
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/careers" class="text-gray-400 hover:text-white hover:underline transition-colors">
-                Careers & Culture
               </NuxtLink>
             </li>
           </ul>
@@ -248,13 +235,20 @@
 
           <!-- Legal Links (Center on Desktop) -->
           <div class="flex items-center justify-center space-x-6">
-            <NuxtLink to="/privacy-policy" class="text-gray-400 hover:text-white transition-colors text-sm">
+            <button @click="openPrivacyModal"
+              class="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
               Privacy Policy
-            </NuxtLink>
+            </button>
             <span class="text-gray-600">•</span>
-            <NuxtLink to="/terms-of-service" class="text-gray-400 hover:text-white transition-colors text-sm">
+            <button @click="openTermsModal"
+              class="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
               Terms of Service
-            </NuxtLink>
+            </button>
+            <span class="text-gray-600">•</span>
+            <button @click="openCookiesModal"
+              class="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
+              Cookie Policy
+            </button>
           </div>
 
           <!-- Social Links -->
@@ -294,26 +288,48 @@
 
     <!-- Back to Top Button -->
     <button @click="scrollToTop"
-      class="fixed bottom-6 right-6 p-3 bg-gradient-to-r from-purple-900/95 to-blue-900/95 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-40"
+      class="fixed bottom-6 right-6 p-3 bg-linear-to-r from-purple-900/95 to-blue-900/95 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-40"
       aria-label="Scroll to top">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
       </svg>
     </button>
+
+    <!-- Policy Modals -->
+    <HomePrivacyPolicyModal v-model="showPrivacyModal" />
+    <HomeTermsOfServiceModal v-model="showTermsModal" />
+    <HomeCookiePolicyModal v-model="showCookiesModal" />
   </footer>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const currentYear = ref(new Date().getFullYear());
+const currentYear = ref(new Date().getFullYear())
+
+// Modal states
+const showPrivacyModal = ref(false)
+const showTermsModal = ref(false)
+const showCookiesModal = ref(false)
 
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
-  });
-};
+  })
+}
+
+const openPrivacyModal = () => {
+  showPrivacyModal.value = true
+}
+
+const openTermsModal = () => {
+  showTermsModal.value = true
+}
+
+const openCookiesModal = () => {
+  showCookiesModal.value = true
+}
 </script>
 
 <style scoped>

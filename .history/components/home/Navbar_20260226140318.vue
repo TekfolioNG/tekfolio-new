@@ -10,7 +10,6 @@
         <!-- Logo -->
         <div class="shrink-0 flex items-center">
           <NuxtLink to="/" class="inline-block rounded-lg px-2 py-1 hover:opacity-80 transition-opacity duration-200">
-            <!-- Preload both logos and toggle visibility -->
             <img src="/tekfolio-full.png" alt="Tekfolio Logo"
               class="h-8 md:h-8 lg:h-12 absolute transition-opacity duration-300"
               :class="isDarkMode ? 'opacity-0' : 'opacity-100'" />
@@ -22,14 +21,13 @@
 
         <!-- Desktop Navigation - Centered -->
         <div class="hidden lg:flex lg:items-center lg:space-x-0.5 xl:space-x-0.5">
-          <!-- Main Nav Items -->
           <NuxtLink v-for="item in desktopNavItems" :key="item.path" :to="item.path"
-            class="text-sm xl:text-base font-semibold transition-all duration-200 px-4 py-2 rounded-lg whitespace-nowrap"
+            class="text-sm xl:text-base font-semibold transition-colors duration-200 px-4 py-2 rounded-lg whitespace-nowrap"
             :class="route.path === item.path
               ? 'text-white bg-linear-to-r from-purple-700 to-blue-600'
               : isDarkMode
-                ? 'text-gray-100 hover:text-white hover:bg-white/10'
-                : 'text-gray-700 hover:text-white hover:bg-linear-to-r hover:from-purple-700 hover:to-blue-600'">
+                ? 'text-gray-100 nav-wave'
+                : 'text-gray-700 nav-wave'">
             {{ item.label }}
           </NuxtLink>
         </div>
@@ -41,12 +39,12 @@
             Contact Us
           </NuxtLink>
 
-         <button @click="toggleMobileMenu" class="lg:hidden p-2 rounded-lg transition-colors duration-200"
-  :class="isDarkMode ? 'text-gray-100 hover:bg-white/10' : 'text-gray-700 hover:bg-gray-100'"
-  aria-label="Toggle mobile menu">
-  <Menu v-if="!mobileMenuOpen" class="w-6 h-6" :stroke-width="2" />
-  <X v-else class="w-6 h-6" :stroke-width="2" />
-</button>
+          <button @click="toggleMobileMenu" class="lg:hidden p-2 rounded-lg transition-colors duration-200"
+            :class="isDarkMode ? 'text-gray-100 hover:bg-white/10' : 'text-gray-700 hover:bg-gray-100'"
+            aria-label="Toggle mobile menu">
+            <Menu v-if="!mobileMenuOpen" class="w-6 h-6" :stroke-width="2" />
+            <X v-else class="w-6 h-6" :stroke-width="2" />
+          </button>
         </div>
       </div>
     </div>
@@ -66,14 +64,12 @@
           ? 'bg-linear-to-b from-purple-900/98 to-blue-900/98 border-purple-700/40'
           : 'bg-white/98 border-gray-200/60'">
         <div class="px-4 py-6 space-y-2">
-          <!-- Mobile Nav Items (includes Home) -->
           <NuxtLink v-for="item in mobileNavItems" :key="item.path" :to="item.path"
-            class="block font-semibold px-4 py-3 rounded-lg transition-all" :class="route.path === item.path
+            class="block font-semibold px-4 py-3 rounded-lg transition-colors duration-200" :class="route.path === item.path
               ? 'text-white bg-linear-to-r from-purple-700 to-blue-600'
               : isDarkMode
-                ? 'text-gray-100 hover:text-white hover:bg-white/10'
-                : 'text-gray-700 hover:text-white hover:bg-linear-to-r hover:from-purple-700 hover:to-blue-600'"
-            @click="closeMobileMenu">
+                ? 'text-gray-100 nav-wave'
+                : 'text-gray-700 nav-wave'" @click="closeMobileMenu">
             {{ item.label }}
           </NuxtLink>
 
@@ -95,7 +91,6 @@ import { onMounted, onUnmounted, ref } from 'vue';
 
 const route = useRoute()
 
-// Base navigation items
 const baseNavItems = [
   { path: '/web-solutions', label: 'Custom Web Apps' },
   { path: '/mobile-apps', label: 'Mobile Apps' },
@@ -104,16 +99,12 @@ const baseNavItems = [
   { path: '/about-us', label: 'Company' }
 ]
 
-// Desktop navigation (no Home)
 const desktopNavItems = baseNavItems
-
-// Mobile navigation (with Home prepended)
 const mobileNavItems = [
   { path: '/', label: 'Home' },
   ...baseNavItems
 ]
 
-// Reactive state
 const mobileMenuOpen = ref(false)
 const navVisible = ref(true)
 const lastScrollY = ref(0)
@@ -122,7 +113,6 @@ const isDarkMode = ref(false)
 
 const handleScroll = () => {
   const currentScrollY = window.scrollY
-
   if (currentScrollY < 100) {
     navVisible.value = true
   } else if (currentScrollY > lastScrollY.value && currentScrollY > 100) {
@@ -131,7 +121,6 @@ const handleScroll = () => {
   } else if (currentScrollY < lastScrollY.value) {
     navVisible.value = true
   }
-
   lastScrollY.value = currentScrollY
 }
 
@@ -149,9 +138,7 @@ const closeMobileMenu = () => {
 
 const updateNavHeight = () => {
   const nav = document.querySelector('nav')
-  if (nav) {
-    navHeight.value = nav.offsetHeight
-  }
+  if (nav) navHeight.value = nav.offsetHeight
 }
 
 onMounted(() => {
@@ -170,6 +157,59 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* ─── Wave Rise Effect ─────────────────────────────────────── */
+
+.nav-wave {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* The rising wave pseudo-element */
+.nav-wave::before {
+  content: '';
+  position: absolute;
+  /* Sits below the button, out of view */
+  bottom: -120%;
+  /* Wider than the element so the curved edges don't show */
+  left: -10%;
+  width: 120%;
+  /* Tall enough to fully fill the button when it rises */
+  height: 220%;
+  background: linear-gradient(to right, #7e22ce, #2563eb);
+  /* purple-700 → blue-600 */
+  /* Curved top edge — the "water surface" */
+  border-radius: 45% 45% 0 0 / 18px 18px 0 0;
+  transition: bottom 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: -1;
+}
+
+/* On hover: slide the wave upward into view */
+.nav-wave:hover::before {
+  bottom: -15%;
+  animation: wave-sway 1.8s ease-in-out infinite;
+}
+
+/* Gentle side-to-side sway while risen, mimics liquid settling */
+@keyframes wave-sway {
+
+  0%,
+  100% {
+    transform: rotate(-1.5deg) scaleX(1.02);
+  }
+
+  50% {
+    transform: rotate(1.5deg) scaleX(0.98);
+  }
+}
+
+/* Ensure text stays above the pseudo-element and turns white */
+.nav-wave:hover {
+  color: white;
+}
+
+/* ─── Mobile & Slide Transitions ──────────────────────────── */
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;
@@ -185,10 +225,7 @@ onUnmounted(() => {
   transition: transform 0.3s ease;
 }
 
-.slide-enter-from {
-  transform: translateX(100%);
-}
-
+.slide-enter-from,
 .slide-leave-to {
   transform: translateX(100%);
 }

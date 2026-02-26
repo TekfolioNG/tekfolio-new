@@ -41,12 +41,12 @@
             Contact Us
           </NuxtLink>
 
-         <button @click="toggleMobileMenu" class="lg:hidden p-2 rounded-lg transition-colors duration-200"
-  :class="isDarkMode ? 'text-gray-100 hover:bg-white/10' : 'text-gray-700 hover:bg-gray-100'"
-  aria-label="Toggle mobile menu">
-  <Menu v-if="!mobileMenuOpen" class="w-6 h-6" :stroke-width="2" />
-  <X v-else class="w-6 h-6" :stroke-width="2" />
-</button>
+          <button @click="toggleMobileMenu" class="lg:hidden p-2 rounded-lg transition-colors duration-200"
+            :class="isDarkMode ? 'text-gray-100 hover:bg-white/10' : 'text-gray-700 hover:bg-gray-100'"
+            aria-label="Toggle mobile menu">
+            <Menu v-if="!mobileMenuOpen" class="w-6 h-6" :stroke-width="2" />
+            <X v-else class="w-6 h-6" :stroke-width="2" />
+          </button>
         </div>
       </div>
     </div>

@@ -11,14 +11,36 @@
             <div class="max-w-4xl mx-auto text-center mb-16">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic mb-8"
                     style="line-height: 1.2;">
-                    How We Improve Your Search Performance: <br class="hidden sm:block">
+                    How We Build Your Web App: <br class="hidden sm:block">
                     <span class="bg-linear-to-r from-purple-700 to-blue-600 bg-clip-text text-transparent">
                         Our 4-Step Process
                     </span>
                 </h2>
                 <p class="text-lg sm:text-xl text-gray-900 leading-relaxed mb-6">
-                    If you're ready to dominate search rankings, here's what happens next—a proven, transparent process
-                    that takes you from invisible to unavoidable in your market.
+                    If you're ready to build, here's what happens next to get you from concept to launch
+                    efficiently—with full transparency, regular updates, and zero surprises along the way. This is the
+                    same process that delivered production-ready websites for
+                    <a href="https://syntaniumenergy.com/" target="_blank" rel="noopener"
+                        class="text-purple-600 to-blue-600 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
+                        Syntanium Energy
+                    </a>,
+                    <a href="https://pebblesuites.com/" target="_blank" rel="noopener"
+                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
+                        Pebble Suites
+                    </a>,
+                    <a href="https://wilsonsamson.com/" target="_blank" rel="noopener"
+                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
+                        Wilson Samson
+                    </a>,
+                    <a href="https://www.oaktreeinitiative.org/" target="_blank" rel="noopener"
+                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
+                        Oaktree Initiative
+                    </a>, and
+                    <a href="https://megafieldsolicitors.com/" target="_blank" rel="noopener"
+                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
+                        Megafield Solicitors
+                    </a>.
+                    See for yourself what quality standards we deliver.
                 </p>
             </div>
 
@@ -45,10 +67,11 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Audit & Diagnostic Analysis</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Discovery & Planning</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We conduct a deep technical and strategic audit of your website, content, keyword signals,
-                        competitors, and digital footprint to identify exactly what’s limiting your visibility.
+                        We start by understanding your business goals, user needs, and technical requirements.
+                        Through collaborative interfaces, we map your workflows and define success metrics—ensuring
+                        we're building exactly what moves your business forward.
                     </p>
                 </div>
 
@@ -71,10 +94,11 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Strategy & Opportunity Mapping</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Design & Prototype</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        Using insights from the audit, we design a tailored SEO roadmap—prioritizing high-impact fixes,
-                        realistic ranking opportunities, and quick wins alongside long-term growth.
+                        You'll see your web app come to life through interactive prototypes you can click through
+                        and test. This phase ensures alignment on user experience, functionality, and visual design
+                        before we write a single line of code.
                     </p>
                 </div>
 
@@ -97,10 +121,11 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Optimization & Content Execution</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Development & Testing</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We implement technical fixes, optimize existing pages, and develop search-aligned content that
-                        strengthens authority, relevance, and ranking signals.
+                        Using agile methodology, we build your app in sprints with weekly progress updates.
+                        You'll have access to staging environments to review features as they're completed, and
+                        our QA process ensures everything works flawlessly before launch.
                     </p>
                 </div>
 
@@ -123,10 +148,11 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Measurement, Refinement & Growth</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Launch & Ongoing Support</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We track performance continuously, refine strategies based on data, and adapt to algorithm
-                        changes—ensuring sustained visibility and compounding results over time.
+                        We handle deployment, performance optimization, and post-launch monitoring. Beyond launch,
+                        we provide ongoing maintenance, feature enhancements, and technical support to ensure your
+                        web app continues to deliver value as your business grows.
                     </p>
                 </div>
 
@@ -156,8 +182,8 @@
 
 <style scoped>
 /* Smooth transitions for all interactive elements */
-a:not(.exclude-homebutton),
-button:not(.exclude-homebutton),
+a,
+button,
 .group:not(.exclude-homebutton) {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition-property: color, background-color, border-color, transform, box-shadow, opacity;
@@ -167,12 +193,12 @@ button:not(.exclude-homebutton),
 }
 
 /* Ensure hover states are smooth */
-.group:hover:not(.exclude-homebutton) {
+.group:hover {
     transform: translateY(-0.5rem);
 }
 
 /* Link underline animation */
-a[href^="http"]:not(.exclude-homebutton) {
+a[href^="http"] {
     position: relative;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
