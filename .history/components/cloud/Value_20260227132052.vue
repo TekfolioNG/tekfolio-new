@@ -17,7 +17,7 @@
                     <h3 class="text-xl font-medium tekfolio-text mb-5 text-center md:text-left">
                         The Tekfolio Edge for Data & Business Intelligence
                     </h3>
-                    <p class="text-base md:text-lg leading-relaxed text-gray-900 text-center md:text-left">
+                    <p class="text-base md:text-lg leading-relaxed text-gray-700 text-center md:text-left">
                         We build data solutions that go beyond pretty dashboards—combining robust data engineering,
                         rigorous analysis, and business-context-aware reporting that empowers every layer of your
                         organization to act with confidence.

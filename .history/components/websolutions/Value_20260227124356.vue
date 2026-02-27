@@ -12,16 +12,15 @@
                 <div class="order-1 lg:order-1">
                     <h2
                         class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight mb-4 text-center md:text-left">
-                        What Clients Get When They Build Data Science Solutions With Us
+                        What You Get When You Hire Us as Your Website Developers in Nigeria
                     </h2>
-                    <h3 class="text-xl font-medium tekfolio-text mb-5 text-center md:text-left">
-                        The Tekfolio Edge for Data & Business Intelligence
+                    <h3 class="text-xl md:text-2xl font-medium tekfolio-text mb-5 text-center md:text-left">
+                        The Tekfolio Edge Your Web App
                     </h3>
-                    <p class="text-base md:text-lg leading-relaxed text-gray-900 text-center md:text-left">
-                        We build data solutions that go beyond pretty dashboards—combining robust data engineering,
-                        rigorous analysis, and business-context-aware reporting that empowers every layer of your
-                        organization to act with confidence.
-
+                    <p class="text-base md:text-lg leading-relaxed text-gray-700 text-center md:text-left">
+                        We build web applications that go beyond aesthetics—combining purposeful architecture,
+                        business-ready functionality, and exceptional user experiences that drive real results for your
+                        team and customers.
                     </p>
                 </div>
 
@@ -181,9 +180,9 @@
 </template>
 
 <script setup>
-import { ChartPie, ChartScatter, Database, Globe, LayoutDashboard, SearchCode, SmilePlus, SquareMousePointer } from 'lucide-vue-next';
+import { Box, CheckCircle, Clock, Layers, Monitor, Shield, Smartphone, Users } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
-import webDesignImage from '~/assets/img/dataengineeringimg.png';
+import webDesignImage from '~/assets/img/webdesignimg.png';
 
 const openCards = ref([false, false, false, false, false, false, false, false]);
 const cardsVisible = ref(false);
@@ -192,51 +191,51 @@ const tekfolioEdgeSection = ref(null);
 const features = [
     {
         id: 1,
-        title: "Data Pipeline Engineering ",
-        icon: Database,
-        description: "We design and build reliable pipelines that collect, clean, transform, and deliver data from multiple sources into a single, structured, and trustworthy system. No more manually reconciling reports from five different tools."
+        title: "Purpose-Driven Architecture",
+        icon: Layers,
+        description: "Web platforms designed around real workflows, users, and outcomes, not generic layouts."
     },
     {
         id: 2,
-        title: "Business Intelligence Dashboards",
-        icon: LayoutDashboard,
-        description: "Interactive, real-time dashboards tailored to your business metrics; designed for decision-makers, not data scientists. Your team sees what matters, when it matters, in a format they can act on immediately."
+        title: "Business-Ready Functionality",
+        icon: Monitor,
+        description: "From dashboards to portals and integrations, your web app does real work for your team and customers."
     },
     {
         id: 3,
-        title: "Data Cleaning & Preparation",
-        icon: SquareMousePointer,
-        description: "Raw data is rarely ready to use. We handle the messy, time-consuming work of identifying errors, removing duplicates, standardizing formats, and structuring datasets so your analysis is built on solid foundations."
+        title: "Fast and Intuitive User Experience",
+        icon: Clock,
+        description: "Fast load times, smooth interactions, and stability under real-world usage."
     },
     {
         id: 4,
-        title: "Exploratory Data Analysis (EDA)",
-        icon: ChartScatter,
-        description: "Before drawing conclusions, we dig deep into your data to surface patterns, anomalies, and relationships you may not have known existed—often revealing insights that reframe how you understand your business."
+        title: "Quality Assurance at Every Stage",
+        icon: CheckCircle,
+        description: "Rigorous testing, peer reviews, and performance checks ensure your web app meets the highest global standards before launch."
     },
     {
         id: 5,
-        title: "Predictive Analytics & Forecasting",
-        icon: SearchCode,
-        description: "Using statistical models and introductory machine learning techniques, we help you move from understanding what happened to anticipating what's coming—whether that's demand forecasting, churn prediction, or revenue projections."
+        title: "Mobile-Responsive by Default",
+        icon: Smartphone,
+        description: "Full, responsive functionality across every device (desktops, tablets, and phones), so your team and customers can stay connected from anywhere, anytime."
     },
     {
         id: 6,
-        title: "Custom Reporting Systems",
-        icon: ChartPie,
-        description: "Automated, scheduled reports delivered to the right people at the right time. We replace manual, error-prone reporting workflows with reliable systems that save your team hours every week."
+        title: "Transparent Collaboration",
+        icon: Users,
+        description: "Clients stay in the loop with clear communication, progress updates, and shared decision-making."
     },
     {
         id: 7,
-        title: "Cloud-Based Data Infrastructure",
-        icon: Globe,
-        description: "We build and manage data solutions on Google Cloud, AWS, and other leading platforms—scalable, secure, and cost-optimized for your current size and future growth."
+        title: "Security & Compliance First",
+        icon: Shield,
+        description: "Built-in safeguards and adherence to industry standards -- data encryption, access controls, and compliance-ready architecture -- to protect data and build trust and confidence between you and your customers."
     },
     {
         id: 8,
-        title: "Actionable Recommendations",
-        icon: SmilePlus,
-        description: "Data without context is just noise. We don't just deliver reports; we interpret them, highlight what's important, and provide clear recommendations your team can act on immediately."
+        title: "Post-Launch Support That Lasts",
+        icon: Box,
+        description: "Ongoing monitoring, proactive maintenance, and quick response times. We're invested in your success beyond deployment."
     }
 ];
 

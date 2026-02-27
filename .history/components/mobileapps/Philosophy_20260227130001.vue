@@ -58,7 +58,7 @@
                                 <strong>The result is</strong> a mobile app development that feels intuitive, performs
                                 reliably, and
                                 aligns with the real needs of your target users. No shortcuts. No bloated features. Just
-                                focused, purpose-built mobile applications for android and iOS.
+                                focused, purpose-built mobile solutions.
 
                             </p>
 

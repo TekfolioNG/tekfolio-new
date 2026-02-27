@@ -17,55 +17,52 @@
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="h-px w-12 bg-linear-to-r from-purple-700 to-blue-600"></div>
                                 <span class="text-sm font-semibold text-purple-700 uppercase tracking-wider">
-                                    From Concept to Mobile App Development
+                                    From Prototype to Premium Web Development
                                 </span>
                             </div>
                             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic"
                                 style="line-height: 1.2;">
-                                Mobile Apps for Android & iOS.<br class="hidden sm:block">
-                                Programmed to Perform
+                                Websites Designed <br class="hidden sm:block">
+                                for Performance & Usability
                             </h2>
                         </div>
 
                         <!-- Content with refined typography -->
                         <div class="space-y-6 text-gray-900">
                             <p class="text-base md:text-lg leading-relaxed font-medium text-gray-900">
-                                Your customers live on mobile—and expectations are unforgiving.
-
+                                Your business doesn't run on generic playbooks—and your software shouldn't either.
                             </p>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                                Slow apps get deleted. Confusing mobile app landing pages get ignored. Generic apps
-                                don’t survive.
-
-                            </p>
-                            <p class="text-base md:text-lg leading-relaxed">
-                                At Tekfolio, we build native-quality mobile applications that deliver on iOS and Android
-                                from a single codebase, ensuring consistent performance without the cost and complexity
-                                of maintaining separate apps.
-
+                                At Tekfolio, we design and develop custom web applications built around your exact
+                                workflows, users, and business goals. From an internal tool that reclaims hours
+                                of your team's time each week to a customer-facing platform that directly drives
+                                revenue, we engineer web apps that become mission-critical to your operations.
                             </p>
 
                             <div class="pt-2 border-l-4 border-purple-700 pl-6 my-6">
                                 <p class="text-base md:text-lg leading-relaxed font-medium text-gray-800">
-                                    We start with user research and workflow mapping—understanding not just
-                                    <b><i class="text-purple-700">what</i></b> your app needs to do, but
-                                    <b><i class="text-purple-700">why</i></b> it matters to your users.
+                                    We start with discovery and architecture planning—understanding not just
+                                    <b><i class="text-purple-700">what</i></b> you need, but
+                                    <b><i class="text-purple-700">why</i></b>.
                                 </p>
                             </div>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                                <strong>The result is</strong> a mobile app development that feels intuitive, performs
-                                reliably, and
-                                aligns with the real needs of your target users. No shortcuts. No bloated features. Just
-                                focused, purpose-built mobile applications for android and iOS.
+                                <strong>The result?</strong> Software that feels like it was made for you ...And well,
+                                that's because it was.
+                                Every project combines technical precision with business insight, ensuring your web app
+                                not only works beautifully but also delivers measurable value from day one.
+                            </p>
 
+                            <p class="text-base md:text-lg leading-relaxed">
+                                No cookie-cutter templates. No bloated features you'll never use. Just purpose-built
+                                applications that solve real problems and scale with your business.
                             </p>
 
                             <p class="text-base md:text-lg leading-relaxed pt-2">
-                                <strong class="text-purple-700">Ready to bring your app idea to life?</strong>
-                                Let's talk about your next mobile app project.
-
+                                <strong class="text-purple-700">Ready to build something that actually fits?</strong>
+                                Let's talk about your next web app project.
                             </p>
                         </div>
                     </div>
@@ -95,9 +92,9 @@
                         <!-- Floating accent card -->
                         <div
                             class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-linear-to-br from-purple-700 to-blue-600 text-white p-4 sm:p-6 rounded-xl shadow-2xl max-w-50 sm:max-w-60 z-10 animate-float">
-                            <div class="text-base font-bold mb-1">Native Performance</div>
+                            <div class="text-base font-bold mb-1">Purpose-Built Solutions</div>
                             <div class="text-sm text-white/95 leading-snug">
-                                Cross-platform efficiency.
+                                That scale with your ambitions.
                             </div>
                         </div>
                     </div>
@@ -111,7 +108,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import webSolution3 from '~/assets/img/mobileappsolutions3.webp';
+import webSolution3 from '~/assets/img/websolutions3.webp';
 
 const imageLoaded = ref(false);
 

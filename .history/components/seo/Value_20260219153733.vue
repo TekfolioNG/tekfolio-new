@@ -12,15 +12,13 @@
                 <div class="order-1 lg:order-1">
                     <h2
                         class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight mb-4 text-center md:text-left">
-                        What Clients Get When They Build Data Science Solutions With Us
+                        What Clients Get When They Partner with Us on SEO & Performance
                     </h2>
-                    <h3 class="text-xl font-medium tekfolio-text mb-5 text-center md:text-left">
-                        The Tekfolio Edge for Data & Business Intelligence
+                    <h3 class="text-xl md:text-2xl font-medium tekfolio-text mb-5 text-center md:text-left">
+                        The Tekfolio Edge for Search Visibility & Digital Growth
                     </h3>
-                    <p class="text-base md:text-lg leading-relaxed text-gray-900 text-center md:text-left">
-                        We build data solutions that go beyond pretty dashboards—combining robust data engineering,
-                        rigorous analysis, and business-context-aware reporting that empowers every layer of your
-                        organization to act with confidence.
+                    <p class="text-base md:text-lg leading-relaxed text-gray-700 text-center md:text-left">
+                        We deliver SEO strategies that combine technical precision, strategic content, and performance optimization—engineered to move you from page 5 to page 1 on SERPs, and keep you there as search algorithms evolve.
 
                     </p>
                 </div>
@@ -181,9 +179,9 @@
 </template>
 
 <script setup>
-import { ChartPie, ChartScatter, Database, Globe, LayoutDashboard, SearchCode, SmilePlus, SquareMousePointer } from 'lucide-vue-next';
+import { ChartSpline, BriefcaseBusiness, Binoculars, Microscope, Link, Search, MousePointerClick, ShieldCheck } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
-import webDesignImage from '~/assets/img/dataengineeringimg.png';
+import webDesignImage from '~/assets/img/seoimg.png';
 
 const openCards = ref([false, false, false, false, false, false, false, false]);
 const cardsVisible = ref(false);
@@ -192,51 +190,51 @@ const tekfolioEdgeSection = ref(null);
 const features = [
     {
         id: 1,
-        title: "Data Pipeline Engineering ",
-        icon: Database,
-        description: "We design and build reliable pipelines that collect, clean, transform, and deliver data from multiple sources into a single, structured, and trustworthy system. No more manually reconciling reports from five different tools."
+        title: "Comprehensive Technical SEO Audit",
+        icon: Search,
+        description: "A clear breakdown of the technical, content, and authority issues limiting your search performance. No guessworks."
     },
     {
         id: 2,
-        title: "Business Intelligence Dashboards",
-        icon: LayoutDashboard,
-        description: "Interactive, real-time dashboards tailored to your business metrics; designed for decision-makers, not data scientists. Your team sees what matters, when it matters, in a format they can act on immediately."
+        title: "High-Intent Keyword Positioning",
+        icon: MousePointerClick,
+        description: "We target keywords your real customers actually search when they’re ready to engage or buy, not empty traffic terms."
     },
     {
         id: 3,
-        title: "Data Cleaning & Preparation",
-        icon: SquareMousePointer,
-        description: "Raw data is rarely ready to use. We handle the messy, time-consuming work of identifying errors, removing duplicates, standardizing formats, and structuring datasets so your analysis is built on solid foundations."
+        title: "Technical SEO That Removes Friction",
+        icon: Microscope,
+        description: "Site speed, structure, indexing, mobile performance, and crawlability optimized to meet modern search engine standards."
     },
     {
         id: 4,
-        title: "Exploratory Data Analysis (EDA)",
-        icon: ChartScatter,
-        description: "Before drawing conclusions, we dig deep into your data to surface patterns, anomalies, and relationships you may not have known existed—often revealing insights that reframe how you understand your business."
+        title: "Content Strategy That Earns Authority",
+        icon: ShieldCheck,
+        description: "We develop SEO-optimized content that answers your audience's real questions, positions your brand as the authority, and earns backlinks naturally. No keyword stuffing, no fluff—just valuable content that ranks and converts."
     },
     {
         id: 5,
-        title: "Predictive Analytics & Forecasting",
-        icon: SearchCode,
-        description: "Using statistical models and introductory machine learning techniques, we help you move from understanding what happened to anticipating what's coming—whether that's demand forecasting, churn prediction, or revenue projections."
+        title: "Local SEO & Google Business Profile Optimization",
+        icon: Link,
+        description: "If you serve local markets, we optimize your Google Business Profile, manage local citations, and implement location-based SEO strategies that put you in front of customers searching \"near me\" or in your service area."
     },
     {
         id: 6,
-        title: "Custom Reporting Systems",
-        icon: ChartPie,
-        description: "Automated, scheduled reports delivered to the right people at the right time. We replace manual, error-prone reporting workflows with reliable systems that save your team hours every week."
+        title: "Competitive Advantage Mapping",
+        icon: BriefcaseBusiness,
+        description: "Insight into how competitors are ranking, and where you can outperform them strategically."
     },
     {
         id: 7,
-        title: "Cloud-Based Data Infrastructure",
-        icon: Globe,
-        description: "We build and manage data solutions on Google Cloud, AWS, and other leading platforms—scalable, secure, and cost-optimized for your current size and future growth."
+        title: "Measurable Growth Signals",
+        icon: ChartSpline,
+        description: "Clear performance tracking focused on visibility, engagement quality, and conversion potential, not just rankings."
     },
     {
         id: 8,
-        title: "Actionable Recommendations",
-        icon: SmilePlus,
-        description: "Data without context is just noise. We don't just deliver reports; we interpret them, highlight what's important, and provide clear recommendations your team can act on immediately."
+        title: "Ongoing Monitoring, Reporting & Adaptation",
+        icon: Binoculars,
+        description: "SEO isn't set-and-forget. We provide monthly performance reports, track ranking movements, analyze traffic patterns, and continuously refine your strategy as algorithms change and new opportunities emerge."
     }
 ];
 

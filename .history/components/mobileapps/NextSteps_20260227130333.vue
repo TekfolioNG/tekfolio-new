@@ -19,7 +19,7 @@
                 <p class="text-lg sm:text-xl text-gray-900 leading-relaxed mb-6">
                     If you're ready to build, here's what happens next to get you from concept to launch
                     efficiently—with full transparency, regular updates, and zero surprises along the way. This is the
-                    same process that powers advanced mobile application examples for businesses across multiple
+                    same process that powers premium mobile application examples for businesses across multiple
                     industries. Clean,
                     reliable, and built to last.
                 </p>

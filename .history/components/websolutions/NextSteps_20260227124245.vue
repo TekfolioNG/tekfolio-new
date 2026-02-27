@@ -11,17 +11,37 @@
             <div class="max-w-4xl mx-auto text-center mb-16">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic mb-8"
                     style="line-height: 1.2;">
-                    How We Build Your Mobile App: <br class="hidden sm:block">
+                    How We Build Your Web App: <br class="hidden sm:block">
                     <span class="bg-linear-to-r from-purple-700 to-blue-600 bg-clip-text text-transparent">
                         Our 4-Step Process
                     </span>
                 </h2>
                 <p class="text-lg sm:text-xl text-gray-900 leading-relaxed mb-6">
-                    If you're ready to build, here's what happens next to get you from concept to launch
+                    If you're ready to build with premium website developers in Nigeria, ypu're in the right place.
+                    Here's what happens next to get you from concept to launch
                     efficiently—with full transparency, regular updates, and zero surprises along the way. This is the
-                    same process that powers advanced mobile application examples for businesses across multiple
-                    industries. Clean,
-                    reliable, and built to last.
+                    same process that delivered production-ready websites for
+                    <a href="https://syntaniumenergy.com/" target="_blank" rel="noopener"
+                        class="text-purple-600 to-blue-600 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
+                        Syntanium Energy
+                    </a>,
+                    <a href="https://pebblesuites.com/" target="_blank" rel="noopener"
+                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
+                        Pebble Suites
+                    </a>,
+                    <a href="https://wilsonsamson.com/" target="_blank" rel="noopener"
+                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
+                        Wilson Samson
+                    </a>,
+                    <a href="https://www.oaktreeinitiative.org/" target="_blank" rel="noopener"
+                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
+                        Oaktree Initiative
+                    </a>, and
+                    <a href="https://megafieldsolicitors.com/" target="_blank" rel="noopener"
+                        class="text-purple-700 font-semibold hover:text-purple-900 underline decoration-purple-300 hover:decoration-purple-700 transition-all duration-300">
+                        Megafield Solicitors
+                    </a>.
+                    See for yourself what quality standards we deliver.
                 </p>
             </div>
 
@@ -48,11 +68,11 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Discovery & User Research</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Discovery & Planning</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We start by understanding your business goals, target users, and technical requirements. Through
-                        user research and workflow analysis, we define features, user flows, and success
-                        metrics—ensuring we're building exactly what your users need and your business requires.
+                        We start by understanding your business goals, user needs, and technical requirements.
+                        Through collaborative interfaces, we map your workflows and define success metrics—ensuring
+                        we're building exactly what moves your business forward.
                     </p>
                 </div>
 
@@ -75,11 +95,11 @@
                     </div>
 
                     <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Design & Prototyping</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Design & Prototype</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        You'll see your mobile app come to life through interactive prototypes you can tap through on
-                        actual devices. This phase ensures alignment on user experience, navigation, visual design, and
-                        feature functionality before development begins.
+                        You'll see your web app come to life through interactive prototypes you can click through
+                        and test. This phase ensures alignment on user experience, functionality, and visual design
+                        before we write a single line of code.
                     </p>
                 </div>
 
@@ -104,9 +124,9 @@
                     <!-- Content -->
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Development & Testing</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We build your app in agile sprints with weekly progress updates. You'll have access to
-                        TestFlight (iOS) and internal testing (Android) to review features as they're completed. Our QA
-                        process ensures flawless performance across devices and OS versions.
+                        Using agile methodology, we build your app in sprints with weekly progress updates.
+                        You'll have access to staging environments to review features as they're completed, and
+                        our QA process ensures everything works flawlessly before launch.
                     </p>
                 </div>
 
@@ -131,9 +151,9 @@
                     <!-- Content -->
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Launch & Ongoing Support</h3>
                     <p class="text-gray-800 text-base md:text-lg leading-relaxed">
-                        We handle App Store and Google Play submissions, server deployment, and post-launch monitoring.
-                        Beyond launch, we provide ongoing maintenance, feature updates, OS compatibility updates, and
-                        technical support to ensure your app continues to deliver value as mobile platforms evolve.
+                        We handle deployment, performance optimization, and post-launch monitoring. Beyond launch,
+                        we provide ongoing maintenance, feature enhancements, and technical support to ensure your
+                        web app continues to deliver value as your business grows.
                     </p>
                 </div>
 

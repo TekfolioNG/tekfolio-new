@@ -17,54 +17,59 @@
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="h-px w-12 bg-linear-to-r from-purple-700 to-blue-600"></div>
                                 <span class="text-sm font-semibold text-purple-700 uppercase tracking-wider">
-                                    From Concept to Mobile App Development
+                                    From Search Page 5 to Page 1
                                 </span>
                             </div>
                             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight italic"
                                 style="line-height: 1.2;">
-                                Mobile Apps for Android & iOS.<br class="hidden sm:block">
-                                Programmed to Perform
+                                Effective SEO Strategy<br class="hidden sm:block">
+                                for Business Visibility
                             </h2>
                         </div>
 
                         <!-- Content with refined typography -->
                         <div class="space-y-6 text-gray-900">
                             <p class="text-base md:text-lg leading-relaxed font-medium text-gray-900">
-                                Your customers live on mobile—and expectations are unforgiving.
+                                Fact is you can’t fix your business or product visibility issues without understanding
+                                what’s holding it back.
+
 
                             </p>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                                Slow apps get deleted. Confusing mobile app landing pages get ignored. Generic apps
-                                don’t survive.
+                                ...And that's the clear truth we start with when you engage us as your digital marketing
+                                agency for your visibility, click-through, and sales goals.
 
                             </p>
                             <p class="text-base md:text-lg leading-relaxed">
-                                At Tekfolio, we build native-quality mobile applications that deliver on iOS and Android
-                                from a single codebase, ensuring consistent performance without the cost and complexity
-                                of maintaining separate apps.
+                                Before we recommend a single keyword or publish any content, we conduct a full
+                                diagnostic analysis of your digital footprint. This includes your website structure,
+                                technical health, current ranking signals, content quality, keyword positioning,
+                                competitive landscape, and even how your social presence reinforces—or weakens—your
+                                search authority.
+
 
                             </p>
 
                             <div class="pt-2 border-l-4 border-purple-700 pl-6 my-6">
                                 <p class="text-base md:text-lg leading-relaxed font-medium text-gray-800">
-                                    We start with user research and workflow mapping—understanding not just
-                                    <b><i class="text-purple-700">what</i></b> your app needs to do, but
-                                    <b><i class="text-purple-700">why</i></b> it matters to your users.
+                                    We identify exactly
+                                    <b><i class="text-purple-700">why</i></b> your brand is stuck on page 3, 4, or 5 of
+                                    the Search Engine Results page (SERPs), and
+                                    <b><i class="text-purple-700">what's</i></b> preventing Google, Bing and other major
+                                    search engines (and your target customers) from seeing your brand and its USP.
                                 </p>
                             </div>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                                <strong>The result is</strong> a mobile app development that feels intuitive, performs
-                                reliably, and
-                                aligns with the real needs of your target users. No shortcuts. No bloated features. Just
-                                focused, purpose-built mobile applications for android and iOS.
-
+                                We focus on earning your business or product <strong>visibility with the right
+                                    audience</strong>, so the clicks you receive are from people who are actually ready
+                                to engage or buy.
                             </p>
-
                             <p class="text-base md:text-lg leading-relaxed pt-2">
-                                <strong class="text-purple-700">Ready to bring your app idea to life?</strong>
-                                Let's talk about your next mobile app project.
+                                <strong class="text-purple-700">Ready to move from SERPs page 5 to page 1 with the right
+                                    SEO tools and strategy?</strong>
+                                Let's map out and implement a proven plan for you.
 
                             </p>
                         </div>
@@ -111,7 +116,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import webSolution3 from '~/assets/img/mobileappsolutions3.webp';
+import webSolution3 from '~/assets/img/seoclick.webp';
 
 const imageLoaded = ref(false);
 

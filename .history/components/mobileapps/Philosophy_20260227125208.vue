@@ -35,8 +35,7 @@
                             </p>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                                Slow apps get deleted. Confusing mobile app landing pages get ignored. Generic apps
-                                don’t survive.
+                                Slow apps get deleted. Confusing apps get ignored. Generic apps don’t survive.
 
                             </p>
                             <p class="text-base md:text-lg leading-relaxed">
@@ -55,11 +54,15 @@
                             </div>
 
                             <p class="text-base md:text-lg leading-relaxed">
-                                <strong>The result is</strong> a mobile app development that feels intuitive, performs
-                                reliably, and
+                                <strong>The result is</strong> a mobile app that feels intuitive, performs reliably, and
                                 aligns with the real needs of your target users. No shortcuts. No bloated features. Just
-                                focused, purpose-built mobile applications for android and iOS.
+                                focused, purpose-built mobile solutions.
 
+                            </p>
+
+                            <p class="text-base md:text-lg leading-relaxed">
+                                No clunky hybrid apps. No one-size-fits-all templates. Just purpose-built mobile
+                                solutions that solve real problems and scale with your business.
                             </p>
 
                             <p class="text-base md:text-lg leading-relaxed pt-2">
