@@ -125,6 +125,7 @@ import syntanium from '../assets/img/syntanium.png';
 import veraverde from '../assets/img/veraverde.png';
 import wilsonsamson from '../assets/img/wilsonsamson.png';
 import xstrato from '../assets/img/xstrato.png';
+import pebbles from '../assets/img/pebblessuites.png';
 
 const currentTestimonial = ref(0);
 
@@ -171,6 +172,7 @@ const clientLogos = [
     { name: "Sefa", src: sefa, url: "https://sefaenergy.com/" },
     { name: "VeraVerde", src: veraverde, url: "https://veraverde.org/" },
     { name: "Megafield", src: megafield, url: "https://megafieldsolicitors.com/" },
+    { name: "Pebblesgold", src: pebbles, url: "https://pebblesgoldsuites.com/" },
     { name: "Wilson & Samson", src: wilsonsamson, url: "https://wilsonsamson.com/" },
     { name: "BotIntegrated", src: botintegrated, url: "https://botintegratedservices.com/" },
     { name: "Xstrato", src: xstrato, url: "https://xstratoprime.com/" }, { name: "Akorite", src: akorite, url: "https://akoritetravels.com/" }
