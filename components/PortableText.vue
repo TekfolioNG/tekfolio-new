@@ -3,7 +3,7 @@
         <template v-for="(block, index) in value" :key="index">
             <!-- Handle list items -->
             <ul v-if="block._type === 'block' && block.listItem === 'bullet'"
-                class="list-disc list-outside pl-6 mb-4 space-y-2 text-gray-700">
+                class="list-disc list-outside pl-6 mb-4 space-y-2 text-gray-700 text-base md:text-lg">
                 <li class="leading-relaxed">
                     <component v-for="(child, childIndex) in block.children" :key="childIndex"
                         :is="renderChild(child, block.markDefs || [])" />
@@ -11,7 +11,7 @@
             </ul>
 
             <ol v-else-if="block._type === 'block' && block.listItem === 'number'"
-                class="list-decimal list-outside pl-6 mb-4 space-y-2 text-gray-700">
+                class="list-decimal list-outside pl-6 mb-4 space-y-2 text-gray-700 text-base md:text-lg">
                 <li class="leading-relaxed">
                     <component v-for="(child, childIndex) in block.children" :key="childIndex"
                         :is="renderChild(child, block.markDefs || [])" />
@@ -65,10 +65,10 @@ const getComponent = (block) => {
                 return () => h('h4', { class: 'text-xl font-bold mt-3 mb-2 text-gray-900' }, children)
             case 'blockquote':
                 return () => h('blockquote', {
-                    class: 'border-l-4 border-purple-600 pl-4 italic my-4 text-gray-700'
+                    class: 'border-l-4 border-purple-600 pl-4 italic my-4 text-gray-700 text-base md:text-lg'
                 }, children)
             default:
-                return () => h('p', { class: 'mb-4 leading-relaxed text-gray-700' }, children)
+                return () => h('p', { class: 'mb-4 leading-relaxed text-gray-700 text-base md:text-lg' }, children)
         }
     }
 
@@ -196,6 +196,13 @@ const renderChildren = (children, markDefs = []) => {
 .portable-text :deep(li) {
     margin-bottom: 0.5rem;
     color: #374151;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .portable-text :deep(li) {
+        font-size: 1.125rem;
+    }
 }
 
 .portable-text :deep(li strong) {
