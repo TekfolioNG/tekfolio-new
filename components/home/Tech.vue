@@ -32,7 +32,7 @@
                             <img src="/assets/img/nuxt.png" alt="Nuxt.js" class="tech-logo" />
                         </div>
                         <div class="logo-float logo-3">
-                            <img src="/assets/img/flutter.png" alt="Flutter" class="tech-logo" />
+                            <img src="/assets/img/kotlin.png" alt="Kotlin" class="tech-logo" />
                         </div>
                         <div class="logo-float logo-4">
                             <img src="/assets/img/ts.png" alt="TypeScript" class="tech-logo" />
@@ -77,7 +77,7 @@
                             <img src="/assets/img/figma.png" alt="Figma" class="tech-logo" />
                         </div>
                         <div class="logo-float logo-16">
-                            <img src="/assets/img/java.png" alt="Java" class="tech-logo" />
+                            <img src="/assets/img/swift.png" alt="Swift" class="tech-logo" />
                         </div>
 
                     </div>

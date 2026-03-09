@@ -16,12 +16,12 @@
 
                     <!-- Optional: Add a subtle decorative element -->
                     <div class="hidden lg:block pt-8">
-                        <div class="w-20 h-1 bg-gradient-to-r from-purple-700 to-blue-600 rounded-full"></div>
+                        <div class="w-20 h-1 bg-linear-to-r from-purple-700 to-blue-600 rounded-full"></div>
                     </div>
                 </div>
 
                 <!-- Right Side - Static Tech Logos with Shadows -->
-                <div class="relative h-[500px] md:h-[450px] lg:h-[500px] order-2 lg:col-span-3 -mt-8 md:mt-0 lg:mt-0 ">
+                <div class="relative h-125 md:h-112.4 lg:h-125 order-2 lg:col-span-3 -mt-8 md:mt-0 lg:mt-0 ">
                     <div class="floating-container">
 
                         <!-- Row 1 -->
@@ -32,7 +32,7 @@
                             <img src="/assets/img/nuxt.png" alt="Nuxt.js" class="tech-logo" />
                         </div>
                         <div class="logo-float logo-3">
-                            <img src="/assets/img/flutter.png" alt="Flutter" class="tech-logo" />
+                            <img src="/assets/img/kotlin.png" alt="Kotlin" class="tech-logo" />
                         </div>
                         <div class="logo-float logo-4">
                             <img src="/assets/img/ts.png" alt="TypeScript" class="tech-logo" />
@@ -77,7 +77,7 @@
                             <img src="/assets/img/figma.png" alt="Figma" class="tech-logo" />
                         </div>
                         <div class="logo-float logo-16">
-                            <img src="/assets/img/rlang.png" alt="R Language" class="tech-logo" />
+                            <img src="/assets/img/swift.png" alt="Swift" class="tech-logo" />
                         </div>
 
                     </div>
