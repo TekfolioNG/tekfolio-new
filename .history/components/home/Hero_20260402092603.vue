@@ -10,7 +10,7 @@
           <div class="space-y-1">
             <h1 class="hero-headline leading-[1.1]">
               <span class="block text-gray-900 text-3xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold">
-                Your Tech Advantage.
+                Your Tech + AI Advantage.
               </span>
               <span class="relative inline-block mt-1">
                 <span class="text-gradient text-3xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold">

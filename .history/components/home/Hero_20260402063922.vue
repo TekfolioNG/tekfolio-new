@@ -1,5 +1,5 @@
 <template>
-  <main class="relative w-full min-h-screen overflow-hidden bg-white">
+  <main class="relative w-full min-h-screen overflow-hidden bg-white pb-16 md:pb-16">
     <!-- Content Container -->
     <div class="container mx-auto px-6 md:px-12 lg:px-16 min-h-screen flex items-center">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-8 lg:gap-12 items-center w-full py-8 md:py-12 lg:py-0">
@@ -42,7 +42,8 @@
           <p
             class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
             We design and build smart, modern, and secure web, mobile, cloud, and data systems that make work easier and
-            faster, decisions clearer and more strategic, and businesses more efficient and profitable.
+            faster, decisions clearer and more strategic,
+            and businesses more efficient and profitable.
           </p>
 
           <!-- CTA Buttons -->
@@ -52,7 +53,8 @@
                 How We're Different
                 <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none"
                   stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
+                  </path>
                 </svg>
               </span>
             </HomeButton>
@@ -61,16 +63,20 @@
                 Get in Touch
                 <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none"
                   stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
+                  </path>
                 </svg>
               </span>
             </HomeButton>
+
+
+
           </div>
         </div>
 
         <!-- Right Side - Lottie Animation (2/5 on desktop) -->
         <div
-          class="relative h-62.5 sm:h-[350px] md:h-[400px] lg:h-[500px] order-1 lg:order-2 lg:col-span-2 flex items-center justify-center">
+          class="relative h-62.5 sm:h-350px md:h-400px lg:h-500px order-1 lg:order-2 lg:col-span-2 flex items-center justify-center">
           <div id="lottie-animation" class="lottie-container w-full h-full flex items-center justify-center">
             <!-- Lottie will be loaded here via JavaScript -->
           </div>
@@ -79,26 +85,92 @@
       </div>
     </div>
 
+    <!-- Trust Indicators - Positioned at the bottom of the section -->
+    <div class="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 w-full max-w-6xl px-4 sm:px-6">
+      <!-- Desktop: Single Card -->
+      <div class="hidden md:block bg-gray-100 rounded-xl shadow-lg px-6 sm:px-8 py-4 sm:py-5 border border-gray-100"
+        style="box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.55), 0 4px 6px -2px rgba(0, 0, 0, 0.35);">
+        <div class="flex flex-row gap-8 lg:gap-12 items-center justify-center">
+          <!-- Indicator 1 -->
+          <div class="flex items-start gap-3 flex-1 text-left">
+            <img :src="securityImg" alt="Security" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 brand-icon-filter" />
+            <div>
+              <h3 class="text-gray-900 font-bold text-sm sm:text-base md:text-lg mb-1">Trusted by Businesses in Nigeria
+                and Beyond</h3>
+              <p class="text-gray-900 text-xs sm:text-sm md:text-base">Reliable digital solutions built for
+                long-term performance.</p>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="w-px h-12 lg:h-14 bg-linear-to-b from-purple-700 to-blue-600"></div>
+
+          <!-- Indicator 2 -->
+          <div class="flex items-start gap-3 flex-1 text-left">
+            <img :src="qualityImg" alt="Quality" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 brand-icon-filter" />
+            <div>
+              <h3 class="text-gray-900 font-bold text-sm sm:text-base md:text-lg mb-1">Quality, Delivered
+                Fast</h3>
+              <p class="text-gray-900 text-xs sm:text-sm md:text-base">Speed without compromise plus rapid development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile: Two Separate Cards Side by Side -->
+      <div class="grid grid-cols-2 gap-3 md:hidden">
+        <!-- Card 1 -->
+        <div class="bg-gray-100 rounded-xl shadow-lg px-4 py-4 border border-gray-100"
+          style="box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.55), 0 4px 6px -2px rgba(0, 0, 0, 0.35);">
+          <div class="flex flex-col items-center text-center gap-2">
+            <div>
+              <h3 class="text-gray-900 font-bold text-xs mb-1">Trusted by Businesses in Nigeria</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-gray-100 rounded-xl shadow-lg px-4 py-4 border border-gray-100"
+          style="box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.55), 0 4px 6px -2px rgba(0, 0, 0, 0.35);">
+          <div class="flex flex-col items-center text-center gap-2">
+            <div>
+              <h3 class="text-gray-900 font-bold text-xs mb-1">Quality, Delivered Fast. No Compromise.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Subtle gradient overlay at bottom for depth -->
     <div
-      class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50/50 to-transparent pointer-events-none">
+      class="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-50/50 to-transparent pointer-events-none">
     </div>
   </main>
 </template>
 
 <script setup>
 import { onMounted } from 'vue';
+import qualityImg from '~/assets/home/img/quality.png';
+import securityImg from '~/assets/img/security.png';
 
 onMounted(() => {
+  // Load Lottie player script and initialize
   const loadLottie = async () => {
+    // Check if script already exists
     if (!document.querySelector('script[src*="dotlottie-player"]')) {
       const script = document.createElement('script');
       script.src = 'https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs';
       script.type = 'module';
       document.head.appendChild(script);
-      await new Promise((resolve) => { script.onload = resolve; });
+
+      // Wait for script to load
+      await new Promise((resolve) => {
+        script.onload = resolve;
+      });
     }
 
+    // Create and configure the player
     const container = document.getElementById('lottie-animation');
     if (container && !container.querySelector('dotlottie-player')) {
       const player = document.createElement('dotlottie-player');
@@ -118,10 +190,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.text-gradient {
-  background: linear-gradient(135deg, #5B21B6 0%, #3B82F6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+/* ... rest of your styles remain the same ... */
 </style>

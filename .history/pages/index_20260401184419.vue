@@ -63,7 +63,6 @@ useHead({
   <HomeServices />
   <HomeGlobe />
   <HomeTech />
-  <HomeCertified />
   <HomeClients />
   <HomeBlog />
 </template>
