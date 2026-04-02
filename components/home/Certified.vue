@@ -5,7 +5,7 @@
             <!-- Section Header -->
             <div class="text-center mb-10 md:mb-12">
                 <h2 class="text-white text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-                    Our Google-Certified
+                    Google-Certified
                     <span class="bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                         Expertise</span>
                 </h2>
