@@ -41,9 +41,7 @@
           <!-- Description -->
           <p
             class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
-            We build intelligent digital systems that help Nigerian enterprises scale faster, compete smarter, and grow
-            profitably. From AI agents that automate workflows and qualify leads to custom platforms that drive revenue
-            and operational efficiency, our solutions deliver measurable impact.
+            We build intelligent digital systems that help Nigerian enterprises scale faster, compete smarter, and grow profitably. From AI agents that automate workflows and qualify leads to custom platforms that drive revenue and operational efficiency, our solutions deliver measurable impact.
           </p>
 
           <!-- CTA Buttons -->

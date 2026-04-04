@@ -1,12 +1,12 @@
 <template>
     <main class="relative w-full overflow-hidden bg-white">
-        <!-- New Section - Vision Statement -->
+        <!-- Services Preview Section -->
         <section class="bg-white py-16 md:py-20">
             <div class="container mx-auto px-4 md:px-8 lg:px-12">
                 <div class="max-w-4xl mx-auto text-center">
                     <!-- Header -->
-                    <h2 class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-2">
-                        Our e-solutions are smart, simple and secure
+                    <h2 class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-2">
+                        Smart, simple, and secure digital solutions
                     </h2>
 
                     <!-- Rotating Text with Slide Animation -->
@@ -14,21 +14,27 @@
                         <div class="rotating-text-container">
                             <p
                                 class="rotating-text text-gradient-animated text-2xl md:text-3xl lg:text-4xl font-medium absolute w-full">
-                                Custom-built web apps that feel effortless
+                                AI agents that automate workflows 24/7
                             </p>
                             <p
                                 class="rotating-text text-gradient-animated text-2xl md:text-3xl lg:text-4xl font-medium absolute w-full">
-                                Next-Gen Mobile apps engineered for growth
+                                Custom web apps that feel effortless
                             </p>
                             <p
                                 class="rotating-text text-gradient-animated text-2xl md:text-3xl lg:text-4xl font-medium absolute w-full">
-                                Cloud solutions that scale as you do
+                                Next-gen mobile apps engineered for growth
+                            </p>
+                            <p
+                                class="rotating-text text-gradient-animated text-2xl md:text-3xl lg:text-4xl font-medium absolute w-full">
+                                Cloud-powered data systems that scale
                             </p>
                         </div>
                     </div>
+
+                    <!-- Trust Badge -->
                     <p class="text-gray-900 text-sm md:text-base font-medium">
-                        Over 40+ professional, A-class digital projects built, deployed, and fully optimized for the
-                        cloud
+                        Nigeria's first GEAR-certified AI development firm · 40+ enterprise projects delivered ·
+                        Google-certified cloud engineers
                     </p>
 
                 </div>
@@ -36,7 +42,6 @@
         </section>
     </main>
 </template>
-
 
 <style scoped>
 /* Gradient for animated text */
@@ -59,7 +64,7 @@
     top: 0;
     opacity: 0;
     transform: translateY(100%);
-    animation: slideRotate 9s infinite;
+    animation: slideRotate 12s infinite;
 }
 
 .rotating-text:nth-child(1) {
@@ -74,23 +79,27 @@
     animation-delay: 6s;
 }
 
+.rotating-text:nth-child(4) {
+    animation-delay: 9s;
+}
+
 @keyframes slideRotate {
     0% {
         opacity: 0;
         transform: translateY(100%);
     }
 
-    5% {
+    4% {
         opacity: 1;
         transform: translateY(0);
     }
 
-    27.77% {
+    21% {
         opacity: 1;
         transform: translateY(0);
     }
 
-    33.33% {
+    25% {
         opacity: 0;
         transform: translateY(-100%);
     }
