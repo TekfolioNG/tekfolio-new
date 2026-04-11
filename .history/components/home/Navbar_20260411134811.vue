@@ -44,8 +44,8 @@
           <button @click="toggleMobileMenu" class="lg:hidden p-2 rounded-lg transition-colors duration-200"
             :class="isDarkMode ? 'text-gray-100 hover:bg-white/10' : 'text-gray-700 hover:bg-gray-100'"
             aria-label="Toggle mobile menu">
-            <Icon v-if="!mobileMenuOpen" name="lucide:menu" class="w-6 h-6" />
-            <Icon v-else name="lucide:x" class="w-6 h-6" />
+            <Menu v-if="!mobileMenuOpen" class="w-6 h-6" :stroke-width="2" />
+            <X v-else class="w-6 h-6" :stroke-width="2" />
           </button>
         </div>
       </div>
@@ -90,16 +90,17 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { Menu, X } from 'lucide-vue-next';
+import { onMounted, onUnmounted, ref } from 'vue';
 
 const route = useRoute()
 
 // Base navigation items
 const baseNavItems = [
-  { path: '/web-solutions', label: 'Custom Web Apps' },
-  { path: '/mobile-apps', label: 'Mobile Apps' },
-  { path: '/data-business-intelligence', label: 'Data & Business Intelligence' },
-  { path: '/seo-performance', label: 'SEO & Performance' },
+  { path: '/web-solutions', label: 'AI Agents Development' },
+  { path: '/mobile-apps', label: 'Web & Mobile App' },
+  { path: '/data-engineering', label: 'Cloud Infrastructure' },
+  { path: '/seo-performance', label: 'Data Intelligence & Analytics' },
   { path: '/about-us', label: 'Company' }
 ]
 

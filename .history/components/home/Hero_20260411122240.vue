@@ -67,37 +67,6 @@
               </span>
             </HomeButton>
           </div>
-
-          <!-- Credentials Bar -->
-          <div class="pt-4 md:pt-6 mx-4 sm:mx-6 lg:mx-0">
-            <div class="grid grid-cols-2 sm:grid-cols-4 rounded-xl overflow-hidden bg-gray-800">
-
-
-              <div class="flex flex-col gap-1.5 px-5 py-4 border-r border-gray-600">
-                <div class="flex items-center gap-1.5">
-
-                  <span class="text-2xl font-bold text-white leading-none">Google-</span>
-                </div>
-                <span class="text-sm text-gray-100 leading-snug">Certified cloud engineers</span>
-              </div>
-
-              <div class="flex flex-col gap-1.5 px-5 py-4">
-                <span class="text-2xl font-bold text-white leading-none">1st</span>
-                <span class="text-sm text-gray-100 leading-snug">GEAR-certified firm in Nigeria</span>
-              </div>
-              <div class="flex flex-col gap-1.5 px-5 py-4 sm:border-r border-gray-600 border-b sm:border-b-0">
-                <span class="text-2xl font-bold text-white leading-none">10+</span>
-                <span class="text-sm text-gray-100 leading-snug">Years experience & expertise</span>
-              </div>
-              <div class="flex flex-col gap-1.5 px-5 py-4 border-r border-gray-600 border-b sm:border-b-0">
-                <span class="text-2xl font-bold text-white leading-none">40+</span>
-                <span class="text-sm text-gray-100 leading-snug">Custom-coded projects delivered</span>
-              </div>
-
-            </div>
-          </div>
-          <!-- End Credentials Bar -->
-
         </div>
 
         <!-- Right Side - Lottie Animation (2/5 on desktop) -->
@@ -152,13 +121,6 @@ onMounted(() => {
 <style scoped>
 .text-gradient {
   background: linear-gradient(135deg, #5B21B6 0%, #3B82F6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-gradient-light {
-  background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -2,7 +2,7 @@
   <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-6 sm:px-8 lg:px-12">
       <!-- Section Header -->
-      <div class="text-center md:text-left mb-12 -mt-16">
+      <div class="text-center md:text-left mb-12 -mt-12">
         <h2 class="text-4xl md:text-5xl font-semibold mb-4">
           <span class="bg-linear-to-r from-[#7B3AC5] to-[#4527A0] bg-clip-text text-transparent">
             Blog & Insights

@@ -76,7 +76,7 @@
               <div class="flex flex-col gap-1.5 px-5 py-4 border-r border-gray-600">
                 <div class="flex items-center gap-1.5">
 
-                  <span class="text-2xl font-bold text-white leading-none">Google-</span>
+                  <span class="text-base font-bold text-white leading-none">Google-</span>
                 </div>
                 <span class="text-sm text-gray-100 leading-snug">Certified cloud engineers</span>
               </div>
@@ -87,11 +87,11 @@
               </div>
               <div class="flex flex-col gap-1.5 px-5 py-4 sm:border-r border-gray-600 border-b sm:border-b-0">
                 <span class="text-2xl font-bold text-white leading-none">10+</span>
-                <span class="text-sm text-gray-100 leading-snug">Years experience & expertise</span>
+                <span class="text-sm text-gray-100 leading-snug">Years experience</span>
               </div>
               <div class="flex flex-col gap-1.5 px-5 py-4 border-r border-gray-600 border-b sm:border-b-0">
                 <span class="text-2xl font-bold text-white leading-none">40+</span>
-                <span class="text-sm text-gray-100 leading-snug">Custom-coded projects delivered</span>
+                <span class="text-sm text-gray-100 leading-snug">Projects delivered</span>
               </div>
 
             </div>

@@ -1,6 +1,6 @@
 <template>
     <section class="relative bg-transparent">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-18">
 
             <!-- Headline -->
             <div class="text-center mb-6 md:mb-8">

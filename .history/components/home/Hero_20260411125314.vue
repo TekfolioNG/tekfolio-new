@@ -67,37 +67,6 @@
               </span>
             </HomeButton>
           </div>
-
-          <!-- Credentials Bar -->
-          <div class="pt-4 md:pt-6 mx-4 sm:mx-6 lg:mx-0">
-            <div class="grid grid-cols-2 sm:grid-cols-4 rounded-xl overflow-hidden bg-gray-800">
-
-
-              <div class="flex flex-col gap-1.5 px-5 py-4 border-r border-gray-600">
-                <div class="flex items-center gap-1.5">
-
-                  <span class="text-2xl font-bold text-white leading-none">Google-</span>
-                </div>
-                <span class="text-sm text-gray-100 leading-snug">Certified cloud engineers</span>
-              </div>
-
-              <div class="flex flex-col gap-1.5 px-5 py-4">
-                <span class="text-2xl font-bold text-white leading-none">1st</span>
-                <span class="text-sm text-gray-100 leading-snug">GEAR-certified firm in Nigeria</span>
-              </div>
-              <div class="flex flex-col gap-1.5 px-5 py-4 sm:border-r border-gray-600 border-b sm:border-b-0">
-                <span class="text-2xl font-bold text-white leading-none">10+</span>
-                <span class="text-sm text-gray-100 leading-snug">Years experience & expertise</span>
-              </div>
-              <div class="flex flex-col gap-1.5 px-5 py-4 border-r border-gray-600 border-b sm:border-b-0">
-                <span class="text-2xl font-bold text-white leading-none">40+</span>
-                <span class="text-sm text-gray-100 leading-snug">Custom-coded projects delivered</span>
-              </div>
-
-            </div>
-          </div>
-          <!-- End Credentials Bar -->
-
         </div>
 
         <!-- Right Side - Lottie Animation (2/5 on desktop) -->
@@ -114,6 +83,41 @@
     <!-- Subtle gradient overlay at bottom for depth -->
     <div
       class="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-50/50 to-transparent pointer-events-none">
+    </div>
+    <!-- Credentials Bar -->
+    <div class="pt-4 md:pt-6">
+      <p class="text-[10px] font-medium tracking-widest uppercase text-gray-400 mb-3 text-center lg:text-left">
+        Credentials & track record
+      </p>
+      <div
+        class="grid grid-cols-2 sm:grid-cols-4 divide-x divide-gray-200 border border-gray-100 rounded-xl overflow-hidden">
+
+        <div class="flex flex-col gap-1 px-4 py-3">
+          <span class="text-xl font-bold text-gradient leading-none">40+</span>
+          <span class="text-xs text-gray-500 leading-snug">Projects delivered</span>
+        </div>
+
+        <div class="flex flex-col gap-1 px-4 py-3">
+          <span class="text-xl font-bold text-gradient leading-none">10+</span>
+          <span class="text-xs text-gray-500 leading-snug">Years experience</span>
+        </div>
+
+        <div class="flex flex-col gap-1 px-4 py-3">
+          <div class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="#4285F4" />
+            </svg>
+            <span class="text-xs font-semibold text-gray-700 leading-none">Google certified</span>
+          </div>
+          <span class="text-xs text-gray-500 leading-snug">Cloud engineers</span>
+        </div>
+
+        <div class="flex flex-col gap-1 px-4 py-3">
+          <span class="text-xl font-bold text-gradient leading-none">#1</span>
+          <span class="text-xs text-gray-500 leading-snug">GEAR-certified firm in Nigeria</span>
+        </div>
+
+      </div>
     </div>
   </main>
 </template>
@@ -152,13 +156,6 @@ onMounted(() => {
 <style scoped>
 .text-gradient {
   background: linear-gradient(135deg, #5B21B6 0%, #3B82F6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-gradient-light {
-  background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -87,7 +87,7 @@
               </div>
               <div class="flex flex-col gap-1.5 px-5 py-4 sm:border-r border-gray-600 border-b sm:border-b-0">
                 <span class="text-2xl font-bold text-white leading-none">10+</span>
-                <span class="text-sm text-gray-100 leading-snug">Years experience & expertise</span>
+                <span class="text-sm text-gray-100 leading-snug">Years industry experience & expertise</span>
               </div>
               <div class="flex flex-col gap-1.5 px-5 py-4 border-r border-gray-600 border-b sm:border-b-0">
                 <span class="text-2xl font-bold text-white leading-none">40+</span>

@@ -1,5 +1,5 @@
 <template>
-    <section class="relative w-full bg-linear-to-b from-white to-gray-200 mt-8 md:mt-14">
+    <section class="relative w-full bg-linear-to-b from-white to-gray-200 mt-16">
 
         <!-- Section Heading -->
         <div class="w-full py-6 md:py-8 text-center">

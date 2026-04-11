@@ -38,14 +38,14 @@
         <div class="flex items-center space-x-3 lg:space-x-4">
           <NuxtLink to="/contact"
             class="hidden lg:inline-flex items-center px-5 py-2.5 bg-linear-to-r from-purple-700 to-blue-600 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 text-white font-bold text-sm xl:text-base rounded-lg transition-all duration-200">
-            Ready to Start?
+            Contact Us
           </NuxtLink>
 
           <button @click="toggleMobileMenu" class="lg:hidden p-2 rounded-lg transition-colors duration-200"
             :class="isDarkMode ? 'text-gray-100 hover:bg-white/10' : 'text-gray-700 hover:bg-gray-100'"
             aria-label="Toggle mobile menu">
-            <Icon v-if="!mobileMenuOpen" name="lucide:menu" class="w-6 h-6" />
-            <Icon v-else name="lucide:x" class="w-6 h-6" />
+            <Menu v-if="!mobileMenuOpen" class="w-6 h-6" :stroke-width="2" />
+            <X v-else class="w-6 h-6" :stroke-width="2" />
           </button>
         </div>
       </div>
@@ -81,7 +81,7 @@
           <NuxtLink to="/contact"
             class="block w-full text-center mt-6 px-4 py-3 bg-linear-to-r from-purple-700 to-blue-600 hover:shadow-lg text-white font-bold rounded-lg transition-all duration-200"
             @click="closeMobileMenu">
-            Ready to Start?
+            Contact Us
           </NuxtLink>
         </div>
       </div>
@@ -90,17 +90,18 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { Menu, X } from 'lucide-vue-next';
+import { onMounted, onUnmounted, ref } from 'vue';
 
 const route = useRoute()
 
 // Base navigation items
 const baseNavItems = [
-  { path: '/web-solutions', label: 'Custom Web Apps' },
-  { path: '/mobile-apps', label: 'Mobile Apps' },
-  { path: '/data-engineering', label: 'Data & Business Intelligence' },
-  { path: '/seo-performance', label: 'SEO & Performance' },
-  { path: '/company', label: 'Company' }
+  { path: '/web-solutions', label: 'AI Agents Integration' },
+  { path: '/mobile-apps', label: 'Software Development' },
+  { path: '/data-engineering', label: 'Cloud Infrastructure' },
+  { path: '/seo-performance', label: 'Data Intelligence & Analytics' },
+  { path: '/about-us', label: 'Company' }
 ]
 
 // Desktop navigation (no Home)
