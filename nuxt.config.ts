@@ -1,138 +1,94 @@
 export default defineNuxtConfig({
-     ssr: true,
+  future: { compatibilityVersion: 4 },
+  ssr: true,
 
   runtimeConfig: {
     public: {
       sanityProjectId: process.env.NUXT_PUBLIC_SANITY_PROJECT_ID || '',
       sanityDataset: process.env.NUXT_PUBLIC_SANITY_DATASET || 'production',
-      web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY || 'fd76f0eb-7783-4a9d-a008-dd3da20c621e',
+      web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY || '',
     },
   },
 
-  css: ["~/assets/css/main.css"],
+  css: ['~/assets/css/main.css'],
 
-
- modules: [
-    "@nuxt/ui", 
-    "@nuxt/image"
-  ],
+  modules: ['@nuxt/ui', '@nuxt/image'],
 
   image: {
-    format: ['webp', 'avif', 'jpg', 'png', 'svg'],
+    format: ['webp', 'avif'],
     quality: 85,
     densities: [1, 2],
-    domains: [],
   },
 
-app: {
-    baseURL: "/",
+  app: {
+    baseURL: '/',
     head: {
       charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
+      viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
       link: [
-        {
-          rel: 'icon',
-          type: 'image/x-icon',
-          href: '/favicon.ico'
-        },
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.googleapis.com'
-        },
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com',
-          crossorigin: ''
-        },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap'
-        }
-      ]
-    }
-},
+          href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap',
+        },
+      ],
+    },
+  },
 
   vite: {
     server: {
-      hmr: {
-        timeout: 30000,
-      },
-      watch: {
-        // Removed usePolling for better performance
-        ignored: ['**/node_modules/**', '**/.git/**']
-      }
+      hmr: { timeout: 30000 },
+      watch: { ignored: ['**/node_modules/**', '**/.git/**'] },
     },
-    build: {
-      chunkSizeWarningLimit: 1000
-    },
+    build: { chunkSizeWarningLimit: 1000 },
   },
 
   nitro: {
-    preset: "cloudflare-pages",
-    output: {
-      publicDir: ".output/public",
-      serverDir: '.output/server'
-    },
+    preset: 'cloudflare-pages',
+    output: { publicDir: '.output/public', serverDir: '.output/server' },
     prerender: {
       failOnError: false,
-      crawlLinks: true, // Changed to true for better route discovery
+      crawlLinks: true,
       routes: [
-        '/',
-        '/web-solutions',
-        '/mobile-apps',
-        '/data-engineering',
-        '/seo-performance',
-        '/about-us',
-        '/careers',
-        '/case-studies',
-        '/blog',
-        '/contact'
+        '/', '/expertise', '/certified-expertise', '/case-studies',
+        '/training', '/about', '/contact', '/blog',
       ],
     },
     cloudflare: {
       pages: {
         routes: {
           include: ['/*'],
-          exclude: [
-            '/favicon.ico',
-            '/assets/*',
-            '/_nuxt/*',
-            '/api/*'
-          ]
-        }
-      }
+          exclude: ['/favicon.ico', '/assets/*', '/_nuxt/*', '/api/*'],
+        },
+      },
     },
     routeRules: {
-      // Prerender static pages
       '/': { prerender: true },
-      '/web-solutions': { prerender: true },
-      '/mobile-apps': { prerender: true },
-      '/data-engineering': { prerender: true },
-      '/seo-performance': { prerender: true },
-      '/about-us': { prerender: true },
-      '/careers': { prerender: true },
+      '/expertise': { prerender: true },
+      '/certified-expertise': { prerender: true },
       '/case-studies': { prerender: true },
-      '/blog': { prerender: true },
+      '/training': { prerender: true },
+      '/about': { prerender: true },
       '/contact': { prerender: true },
-      // Cache Sanity API calls
-      '/api/sanity/**': { 
-        swr: 3600, // Cache for 1 hour
-      },
-      // CORS for API routes
-      '/api/**': { 
+      '/blog': { prerender: true },
+      '/api/sanity/**': { swr: 3600 },
+      '/api/**': {
         cors: true,
-        headers: { 
+        headers: {
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-          'Access-Control-Allow-Headers': 'Content-Type, Accept'
-        }
-      }
-    }
-  },
-  experimental: {
-    payloadExtraction: false,
-    appManifest: false
+          'Access-Control-Allow-Headers': 'Content-Type, Accept',
+        },
+      },
+    },
   },
 
-  compatibilityDate: "2025-01-25",
-});
+  experimental: {
+    payloadExtraction: false,
+    appManifest: false,
+  },
+
+  compatibilityDate: '2026-09-23',
+})

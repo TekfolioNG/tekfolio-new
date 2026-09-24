@@ -55,9 +55,7 @@ useHead({
 </script>
 
 <template>
-  <HomeContainer>
-    <HomeHero />
-  </HomeContainer>
+  <HomeHero />
   <HomePreview />
   <HomeServices />
   <HomeGlobe />

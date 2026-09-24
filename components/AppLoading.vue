@@ -2,7 +2,7 @@
     <Transition name="fade" @after-leave="$emit('loaded')">
         <div v-if="isLoading" class="loading-screen">
             <div class="loading-content">
-                <img src="/tekfolio.svg" alt="Tekfolio Logo" class="logo-static" />
+                <img src="/img/tekfolio-logo.png" alt="Tekfolio Logo" class="logo-static" />
                 <div class="dots">
                     <span></span>
                     <span></span>

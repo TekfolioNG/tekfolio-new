@@ -1,195 +1,304 @@
-<template>
-  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-all duration-300" :class="[
-    { '-translate-y-full': !navVisible },
-    isDarkMode
-      ? 'bg-linear-to-r from-purple-900/95 to-blue-900/95 border-purple-700/30'
-      : 'border-gray-200/20'
-  ]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16 lg:h-20">
-        <!-- Logo -->
-        <div class="shrink-0 flex items-center">
-          <NuxtLink to="/" class="inline-block rounded-lg px-2 py-1 hover:opacity-80 transition-opacity duration-200">
-            <!-- Preload both logos and toggle visibility -->
-            <img src="/tekfolio-full.png" alt="Tekfolio Logo"
-              class="h-8 md:h-8 lg:h-12 absolute transition-opacity duration-300"
-              :class="isDarkMode ? 'opacity-0' : 'opacity-100'" />
-            <img src="/tekfolio-full2.png" alt="Tekfolio Logo"
-              class="h-8 md:h-8 lg:h-12 transition-opacity duration-300"
-              :class="isDarkMode ? 'opacity-100' : 'opacity-0'" />
-          </NuxtLink>
-        </div>
-
-        <!-- Desktop Navigation - Centered -->
-        <div class="hidden lg:flex lg:items-center lg:space-x-0.5 xl:space-x-0.5">
-          <!-- Main Nav Items -->
-          <NuxtLink v-for="item in desktopNavItems" :key="item.path" :to="item.path"
-            class="text-sm xl:text-base font-semibold transition-all duration-200 px-4 py-2 rounded-lg whitespace-nowrap"
-            :class="route.path === item.path
-              ? 'text-white bg-linear-to-r from-purple-700 to-blue-600'
-              : isDarkMode
-                ? 'text-gray-100 hover:text-white hover:bg-white/10'
-                : 'text-gray-700 hover:text-white hover:bg-linear-to-r hover:from-purple-700 hover:to-blue-600'">
-            {{ item.label }}
-          </NuxtLink>
-        </div>
-
-        <!-- Right Side - Contact Button -->
-        <div class="flex items-center space-x-3 lg:space-x-4">
-          <NuxtLink to="/contact"
-            class="hidden lg:inline-flex items-center px-5 py-2.5 bg-linear-to-r from-purple-700 to-blue-600 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 text-white font-bold text-sm xl:text-base rounded-lg transition-all duration-200">
-            Contact Us
-          </NuxtLink>
-
-          <button @click="toggleMobileMenu" class="lg:hidden p-2 rounded-lg transition-colors duration-200"
-            :class="isDarkMode ? 'text-gray-100 hover:bg-white/10' : 'text-gray-700 hover:bg-gray-100'"
-            aria-label="Toggle mobile menu">
-            <Menu v-if="!mobileMenuOpen" class="w-6 h-6" :stroke-width="2" />
-            <X v-else class="w-6 h-6" :stroke-width="2" />
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile Menu Overlay -->
-    <Transition name="fade">
-      <div v-if="mobileMenuOpen" @click="mobileMenuOpen = false"
-        class="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40" :style="{ top: navHeight + 'px' }">
-      </div>
-    </Transition>
-
-    <!-- Mobile Menu -->
-    <Transition name="slide">
-      <div v-if="mobileMenuOpen"
-        class="lg:hidden fixed right-0 backdrop-blur-md border-l overflow-y-auto z-50 w-72 max-w-full h-[calc(100vh-64px)]"
-        :class="isDarkMode
-          ? 'bg-linear-to-b from-purple-900/98 to-blue-900/98 border-purple-700/40'
-          : 'bg-white/98 border-gray-200/60'">
-        <div class="px-4 py-6 space-y-2">
-          <!-- Mobile Nav Items (includes Home) -->
-          <NuxtLink v-for="item in mobileNavItems" :key="item.path" :to="item.path"
-            class="block font-semibold px-4 py-3 rounded-lg transition-all" :class="route.path === item.path
-              ? 'text-white bg-linear-to-r from-purple-700 to-blue-600'
-              : isDarkMode
-                ? 'text-gray-100 hover:text-white hover:bg-white/10'
-                : 'text-gray-700 hover:text-white hover:bg-linear-to-r hover:from-purple-700 hover:to-blue-600'"
-            @click="closeMobileMenu">
-            {{ item.label }}
-          </NuxtLink>
-
-          <!-- Mobile Contact Button -->
-          <NuxtLink to="/contact"
-            class="block w-full text-center mt-6 px-4 py-3 bg-linear-to-r from-purple-700 to-blue-600 hover:shadow-lg text-white font-bold rounded-lg transition-all duration-200"
-            @click="closeMobileMenu">
-            Contact Us
-          </NuxtLink>
-        </div>
-      </div>
-    </Transition>
-  </nav>
-</template>
-
+<!-- app/components/global/Navbar.vue -->
 <script setup>
-import { Menu, X } from 'lucide-vue-next';
-import { onMounted, onUnmounted, ref } from 'vue';
+const menuitems = [
+  { title: 'Expertise', path: '/expertise' },
+  { title: 'Case Studies', path: '/case-studies' },
+  { title: 'Training', path: '/training' },
+  { title: 'About', path: '/about' }
+]
 
+const open = ref(false)
+const isScrolled = ref(false)
 const route = useRoute()
 
-// Base navigation items
-const baseNavItems = [
-  { path: '/web-solutions', label: 'AI Agents Integration' },
-  { path: '/mobile-apps', label: 'Software Development' },
-  { path: '/data-engineering', label: 'Cloud Infrastructure' },
-  { path: '/seo-performance', label: 'Data Intelligence & Analytics' },
-  { path: '/about-us', label: 'Company' }
-]
+// The whole bar (logo, links, CTA) only exists once the visitor has scrolled,
+// or while the mobile menu is open.
+const showBar = computed(() => isScrolled.value || open.value)
 
-// Desktop navigation (no Home)
-const desktopNavItems = baseNavItems
-
-// Mobile navigation (with Home prepended)
-const mobileNavItems = [
-  { path: '/', label: 'Home' },
-  ...baseNavItems
-]
-
-// Reactive state
-const mobileMenuOpen = ref(false)
-const navVisible = ref(true)
-const lastScrollY = ref(0)
-const navHeight = ref(64)
-const isDarkMode = ref(false)
-
-const handleScroll = () => {
-  const currentScrollY = window.scrollY
-
-  if (currentScrollY < 100) {
-    navVisible.value = true
-  } else if (currentScrollY > lastScrollY.value && currentScrollY > 100) {
-    navVisible.value = false
-    mobileMenuOpen.value = false
-  } else if (currentScrollY < lastScrollY.value) {
-    navVisible.value = true
-  }
-
-  lastScrollY.value = currentScrollY
+function onScroll() {
+  isScrolled.value = window.scrollY > 80
 }
 
-const handleMouseMove = () => {
-  isDarkMode.value = true
+function onKeydown(e) {
+  if (e.key === 'Escape') open.value = false
 }
 
-const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value
-}
-
-const closeMobileMenu = () => {
-  mobileMenuOpen.value = false
-}
-
-const updateNavHeight = () => {
-  const nav = document.querySelector('nav')
-  if (nav) {
-    navHeight.value = nav.offsetHeight
-  }
+let mq
+function onBreakpoint(e) {
+  // Desktop layout has no drawer, so make sure it's closed when resizing up
+  if (e.matches) open.value = false
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll, { passive: true })
-  window.addEventListener('mousemove', handleMouseMove, { passive: true })
-  lastScrollY.value = window.scrollY
-  updateNavHeight()
-  window.addEventListener('resize', updateNavHeight)
+  window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('keydown', onKeydown)
+  mq = window.matchMedia('(min-width: 1024px)')
+  mq.addEventListener('change', onBreakpoint)
+  onScroll()
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-  window.removeEventListener('mousemove', handleMouseMove)
-  window.removeEventListener('resize', updateNavHeight)
+  window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('keydown', onKeydown)
+  mq?.removeEventListener('change', onBreakpoint)
+  document.documentElement.style.overflow = ''
+})
+
+// Lock page scroll while the mobile drawer is open
+watch(open, (v) => {
+  if (import.meta.client) document.documentElement.style.overflow = v ? 'hidden' : ''
+})
+
+watch(() => route.fullPath, () => {
+  open.value = false
 })
 </script>
 
+<template>
+  <header class="fixed inset-x-0 top-0 z-50">
+    <!-- The bar: slides in on scroll, slides out at the top of the page -->
+    <Transition name="bar">
+      <div v-show="showBar" class="relative">
+        <!-- Background layer (separate so backdrop-blur never affects the mobile drawer) -->
+        <div aria-hidden="true"
+          class="pointer-events-none absolute inset-0 border-b border-[#E5E8ED]/10 transition-colors duration-300"
+          :class="open
+            ? 'bg-[#0B0B14]'
+            : 'bg-[#0B0B14]/85 shadow-[0_12px_32px_-16px_rgba(0,0,0,0.75)] backdrop-blur-xl'" />
+        <!-- Brand-gradient hairline -->
+        <div aria-hidden="true" class="hairline pointer-events-none absolute inset-x-0 bottom-0 h-px" />
+
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid h-[72px] grid-cols-[1fr_auto] items-center lg:h-20 lg:grid-cols-[1fr_auto_1fr]">
+            <!-- Logo -->
+            <NuxtLink to="/" class="logo-link justify-self-start" aria-label="Tekfolio — Home">
+              <img src="/img/tekfolio-logo.png" alt="Tekfolio" decoding="async" class="h-11 w-auto lg:h-14">
+            </NuxtLink>
+
+            <!-- Desktop nav (truly centred) -->
+            <nav class="hidden justify-self-center lg:flex lg:items-center lg:gap-11" aria-label="Primary">
+              <NuxtLink v-for="item in menuitems" :key="item.path" :to="item.path" active-class="is-active"
+                class="nav-link relative py-2 text-[15px] font-medium tracking-[0.01em] text-[#FAFBFC]/70 transition-colors duration-200 hover:text-[#FAFBFC] focus-visible:text-[#FAFBFC] focus-visible:outline-none">
+                {{ item.title }}
+              </NuxtLink>
+            </nav>
+
+            <!-- CTA + mobile toggle -->
+            <div class="flex items-center justify-self-end gap-2 sm:gap-3">
+              <NuxtLink to="/contact"
+                class="cta group relative hidden h-10 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-gradient-to-r from-[#4A15A4] to-[#75138C] px-5 text-sm font-semibold text-[#FAFBFC] shadow-lg shadow-black/20 transition-all duration-300 ease-out hover:scale-[0.97] hover:brightness-110 hover:shadow-2xl hover:shadow-[#75138C]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2FB6FF]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0B14] active:scale-95 sm:inline-flex lg:h-11 lg:px-6">
+                <span class="relative z-10">Get in Touch</span>
+                <span class="shine" aria-hidden="true" />
+              </NuxtLink>
+
+              <button type="button"
+                class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[#E5E8ED]/10 text-[#FAFBFC] transition-colors hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2FB6FF]/70 lg:hidden"
+                :aria-expanded="open" aria-controls="mobile-menu" aria-label="Toggle navigation menu"
+                @click="open = !open">
+                <span class="relative block h-4 w-5" aria-hidden="true">
+                  <span
+                    class="absolute left-0 top-0 block h-[1.5px] w-full rounded-full bg-current transition-transform duration-300"
+                    :class="open && 'translate-y-[7.25px] rotate-45'" />
+                  <span
+                    class="absolute left-0 top-1/2 block h-[1.5px] w-full -translate-y-1/2 rounded-full bg-current transition-opacity duration-200"
+                    :class="open && 'opacity-0'" />
+                  <span
+                    class="absolute bottom-0 left-0 block h-[1.5px] w-full rounded-full bg-current transition-transform duration-300"
+                    :class="open && '-translate-y-[7.25px] -rotate-45'" />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Transition>
+
+    <!-- Phones/tablets only: keeps navigation reachable at the top of the page while the bar is hidden -->
+    <Transition name="fab">
+      <button v-if="!showBar" type="button"
+        class="fixed right-4 top-[14px] inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[#E5E8ED]/15 bg-[#0B0B14]/60 text-[#FAFBFC] backdrop-blur-md transition-colors hover:bg-[#0B0B14]/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2FB6FF]/70 sm:right-6 lg:hidden"
+        aria-controls="mobile-menu" aria-label="Open navigation menu" @click="open = true">
+        <span class="relative block h-4 w-5" aria-hidden="true">
+          <span class="absolute left-0 top-0 block h-[1.5px] w-full rounded-full bg-current" />
+          <span class="absolute left-0 top-1/2 block h-[1.5px] w-full -translate-y-1/2 rounded-full bg-current" />
+          <span class="absolute bottom-0 left-0 block h-[1.5px] w-full rounded-full bg-current" />
+        </span>
+      </button>
+    </Transition>
+
+    <!-- Mobile / tablet drawer -->
+    <Transition name="menu">
+      <div v-if="open" id="mobile-menu"
+        class="absolute inset-x-0 top-full h-[calc(100dvh-72px)] overflow-y-auto overscroll-contain bg-[#0B0B14] lg:hidden">
+        <nav class="mx-auto flex min-h-full max-w-7xl flex-col px-4 pb-8 pt-2 sm:px-6" aria-label="Mobile">
+          <ul>
+            <li v-for="(item, i) in menuitems" :key="item.path">
+              <NuxtLink :to="item.path" active-class="is-active"
+                class="m-item group flex items-center gap-4 border-b border-[#E5E8ED]/10 py-5 text-xl font-medium text-[#FAFBFC]/75 transition-colors hover:text-[#FAFBFC] focus-visible:text-[#FAFBFC] focus-visible:outline-none [&.is-active]:text-[#FAFBFC]"
+                :style="{ '--i': i }">
+                <!-- Node motif bullet -->
+                <span
+                  class="h-2 w-2 shrink-0 rounded-full border-[1.5px] border-[#E5E8ED]/35 transition-colors duration-200 group-hover:border-[#2FB6FF] group-focus-visible:border-[#2FB6FF] group-[.is-active]:border-[#FAFBFC] group-[.is-active]:bg-[#FAFBFC]"
+                  aria-hidden="true" />
+                <span class="flex-1">{{ item.title }}</span>
+                <svg
+                  class="h-5 w-5 text-[#E5E8ED]/40 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#FAFBFC]"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </NuxtLink>
+            </li>
+          </ul>
+
+          <div class="m-item mt-auto pt-10" :style="{ '--i': menuitems.length }">
+            <NuxtLink to="/contact"
+              class="cta group relative flex h-14 w-full items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-gradient-to-r from-[#4A15A4] to-[#75138C] text-base font-semibold text-[#FAFBFC] shadow-lg shadow-black/20 transition-all duration-300 ease-out active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2FB6FF]/70">
+              <span class="relative z-10">Get in Touch</span>
+              <span class="shine" aria-hidden="true" />
+            </NuxtLink>
+            <p class="tagline mt-6 text-center text-[11px] uppercase tracking-[0.28em] text-[#E5E8ED]/40">
+              Engineering Enterprise Intelligence
+            </p>
+          </div>
+        </nav>
+      </div>
+    </Transition>
+  </header>
+</template>
+
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
+/* ---------- Bar entrance / exit ---------- */
+.bar-enter-active,
+.bar-leave-active {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.bar-enter-from,
+.bar-leave-to {
+  transform: translateY(-100%);
   opacity: 0;
 }
 
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.3s ease;
+.fab-enter-active,
+.fab-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.slide-enter-from {
-  transform: translateX(100%);
+.fab-enter-from,
+.fab-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
 }
 
-.slide-leave-to {
-  transform: translateX(100%);
+/* ---------- Brand-gradient hairline ---------- */
+.hairline {
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(74, 21, 164, 0.95) 30%,
+      rgba(117, 19, 140, 0.95) 70%,
+      transparent 100%);
+}
+
+/* ---------- Desktop link: hover underline + active node ---------- */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1.5px;
+  border-radius: 999px;
+  background: #2FB6FF;
+  /* AI Cyber Blue: hover/focus only */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Active page = the logo's connector node */
+.nav-link.is-active::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  border-radius: 999px;
+  background: #FAFBFC;
+  box-shadow: 0 0 0 3px rgba(250, 251, 252, 0.1);
+}
+
+/* ---------- Get in Touch: shine sweep (same mechanics as the hero CTA) ---------- */
+.shine {
+  position: absolute;
+  inset: 0 auto 0 -60%;
+  width: 45%;
+  pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgb(255 255 255 / 0.35), transparent);
+  transform: skewX(-18deg);
+  transition: left 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cta:hover .shine,
+.cta:focus-visible .shine {
+  left: 115%;
+}
+
+/* ---------- Mobile drawer transition (staggered items) ---------- */
+.menu-enter-active,
+.menu-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.menu-enter-from,
+.menu-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.menu-enter-active .m-item {
+  transition: opacity 0.35s ease calc(var(--i) * 50ms + 80ms),
+    transform 0.35s ease calc(var(--i) * 50ms + 80ms),
+    color 0.2s ease;
+}
+
+.menu-enter-from .m-item {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.tagline {
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---------- Accessibility ---------- */
+.logo-link:focus-visible {
+  outline: 2px solid rgba(47, 182, 255, 0.7);
+  outline-offset: 6px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .bar-enter-active,
+  .bar-leave-active,
+  .fab-enter-active,
+  .fab-leave-active,
+  .menu-enter-active,
+  .menu-leave-active,
+  .menu-enter-active .m-item,
+  .nav-link::after,
+  .shine,
+  .cta {
+    transition: none !important;
+  }
 }
 </style>

@@ -2,15 +2,16 @@
     "name": "tekfolio",
     "private": true,
     "type": "module",
+    "packageManager": "npm@10.9.0",
     "scripts": {
         "build": "nuxt build",
         "dev": "nuxt dev",
-        "dev:studio": "cd studio && pnpm dev",
-        "dev:all": "concurrently \"pnpm dev\" \"pnpm dev:studio\"",
+        "dev:studio": "cd studio && npm run dev",
+        "dev:all": "concurrently \"npm run dev\" \"npm run dev:studio\"",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "deploy:studio": "cd studio && pnpm deploy",
+        "deploy:studio": "cd studio && npm run deploy",
         "find-unused": "unimported"
     },
     "devDependencies": {
@@ -19,42 +20,28 @@
         "@tailwindcss/vite": "^4.1.18",
         "autoprefixer": "^10.4.17",
         "concurrently": "^9.2.1",
-        "esbuild": "^0.25.5",
         "nuxi": "^3.32.0",
-        "nuxt-icon": "^0.6.8",
         "postcss": "^8.4.0",
         "tailwindcss": "^4.1.18",
         "typescript": "5.8.3",
         "unimported": "^1.31.1",
-        "vue": "^3.4.3",
-        "vue-router": "^4.2.5"
+        "vue": "^3.5.0",
+        "vue-router": "^4.5.0"
     },
     "dependencies": {
-        "@fortawesome/vue-fontawesome": "^3.1.2",
         "@heroicons/vue": "^2.2.0",
         "@lottiefiles/dotlottie-vue": "^0.6.3",
         "@nuxt/image": "^1.10.0",
-        "@nuxt/kit": "^3.5.0",
         "@nuxt/ui": "^3.3.7",
         "@nuxtjs/color-mode": "^3.5.2",
         "@paystack/inline-js": "^2.22.2",
         "@portabletext/vue": "^1.0.14",
         "@sanity/client": "^7.13.2",
         "@sanity/image-url": "^2.0.2",
-        "aos": "^2.3.4",
         "gsap": "^3.12.7",
-        "lottie-web": "^5.13.0",
         "lucide-vue-next": "^0.474.0",
         "nodemailer": "^6.10.0",
-        "nuxt": "3.17.4"
-    },
-    "pnpm": {
-        "onlyBuiltDependencies": [
-            "@parcel/watcher",
-            "esbuild",
-            "sharp",
-            "vue-demi"
-        ]
+        "nuxt": "^4.0.0"
     },
     "engines": {
         "node": "^18.0.0 || >=20.0.0"

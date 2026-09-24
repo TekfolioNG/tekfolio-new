@@ -1,31 +1,33 @@
 @import "tailwindcss/index.css";
 @import "@nuxt/ui";
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --indigo: #4A15A4;
+  --magenta: #75138C;
+  --ink: #0B0B14;
+  --cyberblue: #2FB6FF;
+  --paper: #FAFBFC;
+  --cloud: #E5E8ED;
+}
 
 html,
 body {
   width: 100%;
   overflow-x: hidden;
-  font-family: "Barlow", sans-serif;
-  background-color: #ffffff;
-  color: #111827;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+  font-family: "Inter", sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Headings use Ubuntu */
-h1,
-h2 {
-  font-family: "Barlow", sans-serif;
+h1, h2, h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
 }
 
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Barlow", sans-serif;
+h4, h5, h6 {
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
 }
