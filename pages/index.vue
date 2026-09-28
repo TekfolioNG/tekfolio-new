@@ -56,7 +56,7 @@ useHead({
 
 <template>
   <HomeHero />
-  <HomePreview />
+  <HomeCredentials />
   <HomeServices />
   <HomeGlobe />
   <HomeTech />

@@ -6,19 +6,6 @@ const capabilities = [
   'Enterprise AI & Automation'
 ]
 
-// Monochrome credential strip. `label` is what shows; `full` is the official name,
-// used for the hover title and screen readers.
-// Swap in unaltered vendor artwork later via an optional `src` field.
-const badges = [
-  {
-    label: 'GCP-Gemini Certified Partner Specialist (CSP)',
-    full: 'Google Cloud Gemini Enterprise Certified Partner Specialist (Deployment and Agent Development)'
-  },
-  { label: 'GCP-PCA', full: 'Google Cloud Certified Professional Cloud Architect' },
-  { label: 'GCP-PDE', full: 'Google Cloud Certified Professional Data Engineer' },
-  { label: 'GCP-GAIL', full: 'Google Cloud Certified Generative AI Leader' }
-]
-
 /* ---- Rotating capability line ---- */
 const active = ref(0)
 const prev = ref(-1)
@@ -134,7 +121,7 @@ const nodes = Object.keys(coords).map((name, i) => {
     <div class="glow-left pointer-events-none absolute -bottom-40 -left-40 -z-10 h-[34rem] w-[34rem]"
       aria-hidden="true" />
 
-    <div class="mx-auto w-full max-w-7xl px-4 pb-16 pt-28 sm:px-6 lg:px-8 lg:pb-20 lg:pt-24">
+    <div class="mx-auto w-full max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8 lg:pb-8 lg:pt-4">
       <!-- Mobile order: intro, visual, actions. Desktop: text column left, visual right. -->
       <div
         class="grid items-center gap-y-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] xl:grid-cols-[minmax(0,1fr)_minmax(0,1.14fr)] lg:grid-rows-[auto_auto] lg:gap-x-8 lg:gap-y-0">
@@ -150,9 +137,9 @@ const nodes = Object.keys(coords).map((name, i) => {
           </p>
 
           <h1
-            class="display reveal mt-6 text-[2.5rem] font-bold leading-[1.05] tracking-tight text-[#FAFBFC] sm:text-5xl lg:text-6xl xl:text-[4rem]"
+            class="display reveal mt-6 text-[2.3rem] font-bold leading-[1.05] tracking-tight text-[#FAFBFC] sm:text-4xl lg:text-5xl xl:text-[3.5rem]"
             style="--d: 100ms">
-            <span class="block">Google-Certified Architecture.</span>
+            <span class="block">Google-Cloud Certified Architecture.</span>
             <span class="block">Built for African Enterprises.</span>
           </h1>
 
@@ -203,10 +190,10 @@ const nodes = Object.keys(coords).map((name, i) => {
           </svg>
         </div>
 
-        <!-- Actions + credentials (after the visual on mobile) -->
+        <!-- Actions (after the visual on mobile) -->
         <div class="relative z-10 mx-auto max-w-2xl lg:col-start-1 lg:row-start-2 lg:mx-0 lg:self-start">
           <div
-            class="reveal flex flex-col items-center gap-5 sm:flex-row sm:justify-center sm:gap-8 lg:mt-10 lg:justify-start"
+            class="reveal mb-2 flex flex-col items-center gap-5 sm:flex-row sm:justify-center sm:gap-8 lg:mb-0 lg:mt-10 lg:justify-start"
             style="--d: 500ms">
             <NuxtLink to="/contact"
               class="cta group relative inline-flex h-12 w-full max-w-xs items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-gradient-to-r from-[#4A15A4] to-[#75138C] px-8 text-base font-semibold text-[#FAFBFC] shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_10px_24px_-14px_rgba(0,0,0,0.7)] transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2FB6FF]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0B14] active:scale-[0.98] active:brightness-95 sm:w-auto sm:max-w-none lg:hover:scale-[0.97] lg:hover:brightness-110 lg:hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_14px_36px_-12px_rgba(117,19,140,0.6)] lg:active:scale-95">
@@ -226,24 +213,6 @@ const nodes = Object.keys(coords).map((name, i) => {
               </svg>
             </a>
           </div>
-
-          <!-- Certified expertise: monochrome, full credential names -->
-          <ul
-            class="reveal mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-4 border-t border-[#E5E8ED]/10 pt-5 sm:gap-x-7 lg:mt-12 lg:justify-start lg:pt-6"
-            style="--d: 650ms" aria-label="Certified expertise">
-            <li v-for="(badge, i) in badges" :key="badge.label"
-              class="flex items-center justify-center gap-2 text-center text-[13px] font-medium leading-snug text-[#E5E8ED]/60 sm:gap-2.5 lg:justify-start lg:text-left"
-              :class="i === 0 ? 'w-full' : ''" :title="badge.full">
-              <svg class="h-4 w-4 shrink-0 text-[#E5E8ED]/45" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path
-                  d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.78 4.78 4 4 0 0 1-6.74 0 4 4 0 0 1-4.78-4.78 4 4 0 0 1 0-6.75Z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-              <span aria-hidden="true">{{ badge.label }}</span>
-              <span class="sr-only">{{ badge.full }}</span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
