@@ -9,7 +9,10 @@ const badges = [
 
 <template>
     <section class="relative bg-[#0B0B14] pb-14 pt-20 lg:pb-20 lg:pt-24">
-        <!-- Tiny top divider, separates this section from the hero without adding weight -->
+        <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+            <div class="border-t border-[#E5E8ED]/10 pb-2" />
+            <p class="eyebrow mt-10 text-center text-xs text-[#2FB6FF]/80 lg:text-left">Who We Are</p>
+        </div>
         <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             <div class="border-t border-[#E5E8ED]/10" />
         </div>
@@ -74,6 +77,13 @@ const badges = [
 <style scoped>
 .display {
     font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}
+
+.eyebrow {
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-weight: 500;
 }
 
 .badge-img {

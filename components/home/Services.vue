@@ -1,258 +1,59 @@
 <template>
-    <section class="w-full bg-white py-2">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <section class="relative bg-[#0B0B14] py-12 lg:py-16">
+        <div class="mx-auto max-w-6xl px-6 sm:px-10 lg:px-16">
+            <div class="border-t border-[#E5E8ED]/10 pb-2" />
+            <p class="eyebrow mt-6 text-center text-xs text-[#2FB6FF]/80 lg:text-left">What We Do</p>
+        </div>
 
-            <!-- Service 1: Enterprise Web Solutions (Animation first on mobile, Text left on desktop) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-2 md:mb-3">
-                <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-2 lg:order-1">
-                    <h2
-                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
-                        Enterprise Web Solutions
-                    </h2>
-                    <h3 class="text-base md:text-lg font-semibold text-gradient text-center lg:text-left">
-                        Web Platforms Engineered for Real Business Value
-                    </h3>
-                    <p
-                        class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium text-center lg:text-left">
-                        Enterprise-grade web applications that function as real business tools, supporting workflows,
-                        data, integrations, and customer interactions. Each
-                        solution is custom-engineered to scale with your operations, improve efficiency, and deliver
-                        measurable business value over time.
-                    </p>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-                         <HomeButton to="/web-solutions">
-                          <span class="relative flex items-center gap-2 z-10">
-                           See How
-                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                          </span>
-                        </HomeButton>
-                        <HomeButton to="/contact" variant="gradient">
-                          <span class="relative flex items-center gap-2 z-10">
-                            Start Project
-                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                          </span>
-                        </HomeButton>                
-                    </div>
-                </div>
-
-                <!-- Lottie Animation -->
-                <div class="relative h-82.5 md:h-100 lg:h-112.5 order-1 lg:order-2">
-                    <div id="lottie-web-solutions" class="w-full h-full"></div>
-                </div>
-            </div>
-
-            <!-- Service 2: Mobile App Development (Animation first on mobile, Animation left on desktop) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-2 md:mb-3">
-                <!-- Lottie Animation -->
-                <div class="relative h-95 md:h-102.5 lg:h-115 order-1">
-                    <div id="lottie-mobile-apps" class="w-full h-full"></div>
-                </div>
-
-                <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-2">
-                    <h2
-                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
-                        Mobile App Development
-                    </h2>
-                    <h3 class="text-base md:text-lg font-semibold text-gradient text-center lg:text-left">
-                        Intuitive. Fast. Cross-Platform.
-                    </h3>
-                    <p
-                        class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium text-center lg:text-left">
-                        Cross-platform mobile apps engineered for performance and designed for smooth and consistent
-                        user experiences. We build mobile products that feel natural, work reliably, and deliver the
-                        features your users value most.
-                    </p>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-                        <HomeButton to="/mobile-apps">
-                          <span class="relative flex items-center gap-2 z-10">
-                           See How
-                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                          </span>
-                        </HomeButton>
-                        <HomeButton to="/contact" variant="gradient">
-                          <span class="relative flex items-center gap-2 z-10">
-                            Start Project
-                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                          </span>
-                        </HomeButton> 
-                        </div>
-                </div>
-            </div>
-
-            <!-- Service 3: Data & Business Intelligence (Animation first on mobile, Text left on desktop) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-12 md:mb-14">
-                <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-2 lg:order-1">
-                    <h2
-                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
-                        Data & Business Intelligence
-                    </h2>
-                    <h3 class="text-base md:text-lg font-semibold text-gradient text-center lg:text-left">
-                        Cloud-Based Data Systems, Analytics, and Intelligent Models
-                    </h3>
-                    <p
-                        class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium text-center lg:text-left">
-                        We help businesses transform raw data into clear, usable insights. Through clean data pipelines,
-                        analytics, and intelligent models, we support better planning, smarter operations, and confident
-                        decision making.
-                    </p>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-                        <HomeButton to="/data-engineering">
-                          <span class="relative flex items-center gap-2 z-10">
-                           See How
-                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                          </span>
-                        </HomeButton>
-                        <HomeButton to="/contact" variant="gradient">
-                          <span class="relative flex items-center gap-2 z-10">
-                            Start Project
-                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                          </span>
-                        </HomeButton> 
-                    </div>
-                </div>
-
-                <!-- Lottie Animation -->
-                <div class="relative h-70 md:h-87.5 lg:h-100 order-1 lg:order-2">
-                    <div id="lottie-cloud" class="w-full h-full"></div>
-                </div>
-            </div>
-
-            <!-- Service 4: SEO & Performance (Animation first on mobile, Animation left on desktop) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mb-8 md:mb-12">
-                <!-- Lottie Animation -->
-                <div class="relative h-55 md:h-72.5 lg:h-85 order-1">
-                    <div id="lottie-seo-performance" class="w-full h-full"></div>
-                </div>
-
-                <!-- Text Content -->
-                <div class="space-y-3 lg:space-y-4 order-2">
-                    <h2
-                        class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center lg:text-left">
-                        SEO & Performance Optimization
-                    </h2>
-                    <h3 class="text-base md:text-lg font-semibold text-gradient text-center lg:text-left">
-                        Get Found. Make Every Click Count.
-                    </h3>
-                    <p
-                        class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium text-center lg:text-left">
-                        We optimize your digital assets for speed, search visibility, and real results. Make your pages
-                        load faster, rank better, and convert more effectively.
-                    </p>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-                        <HomeButton to="/seo-performance">
-                          <span class="relative flex items-center gap-2 z-10">
-                           See How
-                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                          </span>
-                        </HomeButton>
-                        <HomeButton to="/contact" variant="gradient">
-                          <span class="relative flex items-center gap-2 z-10">
-                            Start Project
-                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                          </span>
-                        </HomeButton> 
-                    </div>
-                </div>
-            </div>
-
+        <div class="mx-auto max-w-6xl divide-y divide-[#E5E8ED]/10 px-6 sm:px-10 lg:px-16">
+            <ServiceRow v-for="(service, i) in services" :key="service.category" v-bind="service"
+                :reverse="i % 2 === 1" />
         </div>
     </section>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import ServiceRow from './ServiceRow.vue';
 
-onMounted(() => {
-    // Load Lottie player script
-    const loadLottieScript = async () => {
-        if (!document.querySelector('script[src*="dotlottie-player"]')) {
-            const script = document.createElement('script');
-            script.src = 'https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs';
-            script.type = 'module';
-            document.head.appendChild(script);
-
-            await new Promise((resolve) => {
-                script.onload = resolve;
-            });
-        }
-    };
-
-    // Initialize Lottie animations
-    const initLottieAnimations = async () => {
-        await loadLottieScript();
-
-        const animations = [
-            {
-                containerId: 'lottie-web-solutions',
-                src: 'https://lottie.host/b4d0bb6b-de7a-44ce-9c5a-239741aa1c35/hFAF5m26XR.lottie'
-            },
-            {
-                containerId: 'lottie-mobile-apps',
-                src: 'https://lottie.host/eb675f8c-4b20-48c4-ae92-3b864c447497/nT5yaC5iA0.lottie'
-            },
-            {
-                containerId: 'lottie-cloud',
-                src: 'https://lottie.host/49587e08-ce13-48ba-b024-f2aac1336a13/lMFiLM8kZl.lottie'
-            },
-            {
-                containerId: 'lottie-seo-performance',
-                src: 'https://lottie.host/f2972ad1-baf5-4306-9759-66d201cfbfbf/xCxWWMHFt2.lottie'
-            }
-        ];
-
-        animations.forEach(({ containerId, src }) => {
-            const container = document.getElementById(containerId);
-            if (container && !container.querySelector('dotlottie-player')) {
-                const player = document.createElement('dotlottie-player');
-                player.setAttribute('src', src);
-                player.setAttribute('background', 'transparent');
-                player.setAttribute('speed', '1');
-                player.setAttribute('loop', '');
-                player.setAttribute('autoplay', '');
-                player.style.width = '100%';
-                player.style.height = '100%';
-                container.appendChild(player);
-            }
-        });
-    };
-
-    initLottieAnimations();
-});
+const services = [
+    {
+        category: 'Cloud Architecture & Infrastructure',
+        heading: 'Scale infrastructure with precision.',
+        body: 'We design and build enterprise cloud systems on Google Cloud optimized for continuous growth. Security, resilience, and operational scale are embedded into your architecture from day one.',
+        statValue: '318%',
+        statLabel: 'Average five year return on investment achieved by enterprises migrating core infrastructure to Google Cloud.',
+        statSource: 'Source: IDC & Google Cloud',
+        image: '/img/cloudhero.webp',
+        imageAlt: 'Cloud infrastructure and architecture'
+    },
+    {
+        category: 'Enterprise Custom AI & Automation',
+        heading: 'Operationalize AI across workflows.',
+        body: 'We build robust enterprise AI systems that integrate directly into your production workflows. From initial validation to full scale deployment, every solution is backed by our certified Gemini Enterprise agents.',
+        statValue: '80%',
+        statLabel: 'of business leaders track immediate, measurable productivity surges after deploying AI directly into functional team workflows.',
+        statSource: 'Source: McKinsey',
+        image: '/img/creativehero.webp',
+        imageAlt: 'Enterprise AI and automation systems'
+    },
+    {
+        category: 'Data & Business Intelligence',
+        heading: 'Transform raw metrics into strategy.',
+        body: 'We engineer data architecture and intelligence dashboards your leadership team can trust completely, ensuring every high stakes decision is anchored in verified numbers.',
+        statValue: '19x',
+        statLabel: 'Higher likelihood of sustained profitability for organizations that execute decisions using mature, data driven intelligence.',
+        statSource: 'Source: McKinsey',
+        image: '/img/companyhero.webp',
+        imageAlt: 'Data pipelines and business intelligence dashboards'
+    }
+]
 </script>
 
 <style scoped>
-/* Brand gradient for headings */
-.text-gradient {
-    background: linear-gradient(135deg, #4C1D95 0%, #2563EB 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.eyebrow {
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-weight: 500;
 }
 </style>

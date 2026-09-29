@@ -1,5 +1,7 @@
 <!-- app/components/global/Footer.vue -->
 <script setup>
+import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-vue-next'
+
 const year = new Date().getFullYear()
 
 const expertise = [
@@ -32,13 +34,40 @@ const partnerBadges = [
   }
 ]
 
-// Address is left empty until confirmed; the line only renders when it has a value.
 const contact = {
-  address: '',
   phone: '+234 708 854 7450',
   phoneHref: 'tel:+2347088547450',
   email: 'contact@tekfolio.ng'
 }
+
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/tekfolio-ng', icon: Linkedin },
+  { name: 'X', href: 'https://x.com/tekfoliong', iconSvg: 'x' },
+  { name: 'Facebook', href: 'https://web.facebook.com/tekfolio/', icon: Facebook },
+  { name: 'Instagram', href: 'https://www.instagram.com/tekfoliong/', icon: Instagram },
+  { name: 'YouTube', href: 'https://www.youtube.com/@Tekfoliong', icon: Youtube }
+]
+
+// Organization structured data, written as plain JSON-LD via core Nuxt's
+// useHead — no schema.org module dependency required. Ties the footer's
+// public contact points and socials into one machine-readable record.
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Tekfolio',
+        url: 'https://tekfolio.ng',
+        logo: 'https://tekfolio.ng/img/tekfolio-logo.png',
+        telephone: contact.phone,
+        email: contact.email,
+        sameAs: socialLinks.map((s) => s.href)
+      })
+    }
+  ]
+})
 </script>
 
 <template>
@@ -52,8 +81,7 @@ const contact = {
         <!-- Brand -->
         <div class="flex flex-col items-center lg:items-start">
           <NuxtLink to="/" class="focus-ring inline-block" aria-label="Tekfolio — Home">
-            <img src="/img/tekfolio-logo3.png" alt="Tekfolio" class="h-18 w-auto" loading="lazy"
-              decoding="async">
+            <img src="/img/tekfolio-logo3.png" alt="Tekfolio" class="h-18 w-auto" loading="lazy" decoding="async">
           </NuxtLink>
           <p class="tagline mt-6 text-[11px] text-[#E5E8ED]/70 sm:text-xs">
             Engineering Enterprise Intelligence
@@ -61,6 +89,20 @@ const contact = {
           <p class="mt-4 max-w-xs text-sm leading-relaxed text-[#E5E8ED]/55">
             Translating the ambitions of African organizations into secure, scalable digital infrastructure.
           </p>
+
+          <!-- Social -->
+          <div class="mt-6 flex items-center gap-4">
+            <a v-for="social in socialLinks" :key="social.name" :href="social.href" target="_blank"
+              rel="noopener noreferrer" :aria-label="`Tekfolio on ${social.name}`"
+              class="social-link flex h-9 w-9 items-center justify-center rounded-full border border-[#E5E8ED]/15 text-[#E5E8ED]/60">
+              <component :is="social.icon" v-if="social.icon" class="h-4 w-4" stroke-width="1.75" />
+              <svg v-else-if="social.iconSvg === 'x'" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.75">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
         </div>
 
         <!-- Link lists: side by side on mobile, separate columns on desktop -->
@@ -90,7 +132,7 @@ const contact = {
           <ul class="mt-5 flex items-center justify-center gap-5 lg:justify-start" aria-label="Partner specialisations">
             <li v-for="badge in partnerBadges" :key="badge.file">
               <img :src="`/img/${badge.file}`" :alt="badge.alt" :title="badge.alt"
-                class="partner-badge h-32 w-auto object-contain lg:h-36" loading="lazy" decoding="async">
+                class="partner-badge h-36 w-auto object-contain lg:h-40" loading="lazy" decoding="async">
             </li>
           </ul>
           <p class="mt-5 max-w-[16rem] text-xs leading-relaxed text-[#E5E8ED]/55">
@@ -131,7 +173,6 @@ const contact = {
       transparent 100%);
 }
 
-/* Tagline: Space Grotesk caps, generous letter-spacing, verbatim per brand book */
 .tagline {
   font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   text-transform: uppercase;
@@ -148,7 +189,6 @@ const contact = {
   color: rgba(229, 232, 237, 0.5);
 }
 
-/* Link with the logo's connector-node as its bullet */
 .foot-link {
   display: inline-flex;
   align-items: center;
@@ -168,7 +208,6 @@ const contact = {
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-/* AI Cyber Blue: hover and focus only */
 .foot-link:hover,
 .foot-link:focus-visible {
   color: #FAFBFC;
@@ -189,15 +228,26 @@ const contact = {
   color: #FAFBFC;
 }
 
+/* Social icons: outline only, brighten + border lifts to Cyber Blue on hover/focus */
+.social-link {
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: #FAFBFC;
+  border-color: #2FB6FF;
+}
+
 .foot-link:focus-visible,
 .contact-link:focus-visible,
+.social-link:focus-visible,
 .focus-ring:focus-visible {
   outline: 2px solid rgba(47, 182, 255, 0.7);
   outline-offset: 4px;
   border-radius: 4px;
 }
 
-/* Partner badges: same settle on hover as the credentials section */
 .partner-badge {
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
   transition: transform 0.3s ease-out;
@@ -212,6 +262,7 @@ const contact = {
   .foot-link,
   .foot-link::before,
   .contact-link,
+  .social-link,
   .partner-badge {
     transition: none;
   }

@@ -1,10 +1,11 @@
 <script setup lang="ts">
+
 definePageMeta({
   layout: "home"
 });
 
 useHead({
-  title: 'Tekfolio | Custom Software, Cloud & Data Engineering in Nigeria',
+  title: 'Tekfolio | ENGINEERING ENTERPRISE INTELLIGENCE',
   meta: [
     {
       name: 'description',
@@ -52,6 +53,7 @@ useHead({
 
 <template>
   <HomeHero />
-  <HomeCredentials /> 
+  <HomeCredentials />
+  <HomeServices />
   <HomeBlog />
 </template>
