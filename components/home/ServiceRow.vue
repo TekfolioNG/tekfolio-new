@@ -34,6 +34,17 @@
                 <p class="reveal-item mt-4 text-base leading-relaxed text-[#E5E8ED]/85" style="--d: 240ms">
                     {{ body }}
                 </p>
+                <NuxtLink :to="`/expertise#${id}`"
+                    class="service-link reveal-item group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#FAFBFC]/80 transition-colors duration-200 hover:text-[#FAFBFC] focus-visible:text-[#FAFBFC] focus-visible:outline-none"
+                    style="--d: 360ms">
+                    <span class="service-link-label relative">Explore {{ category }}</span>
+                    <svg class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                    </svg>
+                </NuxtLink>
             </div>
         </div>
     </div>
@@ -43,6 +54,7 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 defineProps({
+    id: { type: String, required: true },
     category: { type: String, required: true },
     heading: { type: String, required: true },
     body: { type: String, required: true },
@@ -159,12 +171,45 @@ onBeforeUnmount(() => {
     transition-delay: 480ms;
 }
 
+/* Explore-service link: Cyber Blue underline on hover/focus only, matching the
+   Navbar and Hero's text links */
+.service-link-label::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 1.5px;
+    border-radius: 999px;
+    background: #2FB6FF;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.service-link:hover .service-link-label::after,
+.service-link:focus-visible .service-link-label::after {
+    transform: scaleX(1);
+}
+
+.service-link:focus-visible {
+    outline: 2px solid rgba(47, 182, 255, 0.7);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 @media (prefers-reduced-motion: reduce) {
 
     .reveal-item,
     .stat-reveal {
         opacity: 1;
         transform: none;
+        transition: none;
+    }
+
+    /* Only drop the transition here — forcing transform:none would leave the
+       underline permanently visible instead of hidden until hover/focus. */
+    .service-link-label::after {
         transition: none;
     }
 }

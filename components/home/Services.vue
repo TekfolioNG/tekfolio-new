@@ -17,32 +17,35 @@ import ServiceRow from './ServiceRow.vue';
 
 const services = [
     {
+        id: 'cloud-architecture',
         category: 'Cloud Architecture & Infrastructure',
-        heading: 'Scale infrastructure with precision.',
-        body: 'We design and build enterprise cloud systems on Google Cloud optimized for continuous growth. Security, resilience, and operational scale are embedded into your architecture from day one.',
+        heading: 'Infrastructure that doesn\'t blink and grows with you.',
+        body: 'We design your Google Cloud environment the way a Well-Architected build demands: secure by default, cost-efficient by design, and built to hold under real enterprise load and expand your business potential, giving you peace of mind.',
         statValue: '318%',
-        statLabel: 'Average five year return on investment achieved by enterprises migrating core infrastructure to Google Cloud.',
-        statSource: 'Source: IDC & Google Cloud',
+        statLabel: 'Five year ROI for enterprises migrating to Google Cloud infrastructure.',
+        statSource: 'Source: IDC, commissioned by Google Cloud',
         image: '/img/cloudhero.webp',
         imageAlt: 'Cloud infrastructure and architecture'
     },
     {
-        category: 'Enterprise Custom AI & Automation',
-        heading: 'Operationalize AI across workflows.',
-        body: 'We build robust enterprise AI systems that integrate directly into your production workflows. From initial validation to full scale deployment, every solution is backed by our certified Gemini Enterprise agents.',
-        statValue: '80%',
-        statLabel: 'of business leaders track immediate, measurable productivity surges after deploying AI directly into functional team workflows.',
+        id: 'enterprise-ai',
+        category: 'Enterprise AI & Automation',
+        heading: 'Custom AI that knows your business, not the internet.',
+        body: 'Move beyond generic public language models. We build custom, licensed, and strictly private AI agents that understand your unique business logic like a founding assistant. These proprietary workflows integrate securely with critical core data to  accelerate logistics and execution.',
+        statValue: '70%',
+        statLabel: 'of enterprise custom AI adopters report accelerated, more efficient operational workflows.',
         statSource: 'Source: McKinsey',
         image: '/img/creativehero.webp',
         imageAlt: 'Enterprise AI and automation systems'
     },
     {
+        id: 'data-bi',
         category: 'Data & Business Intelligence',
-        heading: 'Transform raw metrics into strategy.',
-        body: 'We engineer data architecture and intelligence dashboards your leadership team can trust completely, ensuring every high stakes decision is anchored in verified numbers.',
+        heading: 'Key business decisions anchored on evidence. No guessworks.',
+        body: 'Data is the definitive boundary between market leaders and struggling operations. We construct trusted intelligence dashboards that replace boardroom guesswork with hard competitor analytics and live market research, giving leadership teams confidence to act.',
         statValue: '19x',
-        statLabel: 'Higher likelihood of sustained profitability for organizations that execute decisions using mature, data driven intelligence.',
-        statSource: 'Source: McKinsey',
+        statLabel: 'More likely to be profitable when decisions are data driven.',
+        statSource: 'Source: McKinsey Global Institute',
         image: '/img/companyhero.webp',
         imageAlt: 'Data pipelines and business intelligence dashboards'
     }
