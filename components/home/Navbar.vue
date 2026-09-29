@@ -1,6 +1,7 @@
 <!-- app/components/global/Navbar.vue -->
 <script setup>
 const menuitems = [
+  { title: 'Home', path: '/' },
   { title: 'Expertise', path: '/expertise' },
   { title: 'Case Studies', path: '/case-studies' },
   { title: 'Training', path: '/training' },

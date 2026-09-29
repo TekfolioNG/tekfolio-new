@@ -38,6 +38,7 @@ export default defineType({
         decorators: [
           {title: 'Strong', value: 'strong'},
           {title: 'Emphasis', value: 'em'},
+          {title: 'Code', value: 'code'},
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -62,6 +63,59 @@ export default defineType({
     defineArrayMember({
       type: 'image',
       options: {hotspot: true},
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+          description: 'Important for SEO and accessibility',
+          validation: (Rule) => Rule.required().warning('Images without alt text hurt SEO and accessibility'),
+        },
+      ],
+    }),
+    defineArrayMember({
+      title: 'Code block',
+      name: 'codeBlock',
+      type: 'object',
+      fields: [
+        {
+          name: 'language',
+          title: 'Language',
+          type: 'string',
+          options: {
+            list: [
+              {title: 'JavaScript', value: 'javascript'},
+              {title: 'TypeScript', value: 'typescript'},
+              {title: 'Vue', value: 'vue'},
+              {title: 'HTML', value: 'html'},
+              {title: 'CSS', value: 'css'},
+              {title: 'JSON', value: 'json'},
+              {title: 'Bash', value: 'bash'},
+              {title: 'Python', value: 'python'},
+              {title: 'Plain text', value: 'text'},
+            ],
+          },
+          initialValue: 'javascript',
+        },
+        {
+          name: 'code',
+          title: 'Code',
+          type: 'text',
+          rows: 10,
+        },
+      ],
+      preview: {
+        select: {
+          language: 'language',
+          code: 'code',
+        },
+        prepare({language, code}) {
+          return {
+            title: `Code (${language || 'text'})`,
+            subtitle: code ? code.slice(0, 60) : '',
+          }
+        },
+      },
     }),
   ],
 })

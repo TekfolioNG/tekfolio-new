@@ -48,20 +48,10 @@ useHead({
   ],
 });
 
-
-
-
-
 </script>
 
 <template>
   <HomeHero />
-  <HomeCredentials />
-  <HomeServices />
-  <HomeGlobe />
-  <HomeTech />
-  <HomeCertified />
-  <HomeClients />
-  <HomeVerifiedTrusted />
+  <HomeCredentials /> 
   <HomeBlog />
 </template>

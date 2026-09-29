@@ -1,5 +1,5 @@
 <template>
-  <HomeNavbar></HomeNavbar>
-  <slot></slot>
-  <HomeFooter></HomeFooter>
+  <HomeNavbar/>
+  <slot/>
+  <HomeFooter/>
 </template>

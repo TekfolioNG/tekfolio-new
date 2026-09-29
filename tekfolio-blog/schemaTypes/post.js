@@ -19,7 +19,7 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
-      validation: (Rule) => Rule.required(),
+      validation: (Rule) => Rule.required().error('A post needs a slug to be linkable'),
     }),
     defineField({
       name: 'author',
@@ -39,6 +39,7 @@ export default defineType({
           name: 'alt',
           type: 'string',
           title: 'Alternative Text',
+          validation: (Rule) => Rule.required().warning('Images without alt text hurt SEO and accessibility'),
         },
       ],
     }),

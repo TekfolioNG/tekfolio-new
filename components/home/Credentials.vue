@@ -1,9 +1,9 @@
 <!-- app/components/home/AboutCredentials.vue -->
 <script setup>
 const badges = [
-    { file: 'gemini-enterprise-agent-dev.png', name: 'Gemini Enterprise Certified Partner Specialist — Agent Development' },
+    { file: 'pca.png', name: 'Professional Cloud Architect' },
     { file: 'gail.png', name: 'Generative AI Leader' },
-    { file: 'pca.png', name: 'Professional Cloud Architect' }
+    { file: 'pde.png', name: 'Professional Data Engineer' }
 ]
 </script>
 
@@ -48,12 +48,10 @@ const badges = [
                 <!-- Text block B: subheading + credentials + link -->
                 <div class="mx-auto mt-8 w-full max-w-md text-center lg:-mt-12 lg:self-center lg:text-left">
                     <h3 class="display text-lg font-semibold text-[#FAFBFC] sm:text-xl">
-                        Credentials Behind the Work
+                        Credentials Behind Our Work
                     </h3>
                     <p class="mt-3 text-base leading-relaxed text-[#F5F6F8]/90">
                         Our architects and engineers are Google Cloud-certified, including as
-                        <strong class="font-medium text-[#FAFBFC]">Gemini Enterprise Certified Partner Specialists
-                            (Agent Development and Deployment)</strong>,
                         <strong class="font-medium text-[#FAFBFC]">Professional Cloud Architects (PCA)</strong>,
                         <strong class="font-medium text-[#FAFBFC]">Professional Data Engineers (PDE)</strong>, and
                         <strong class="font-medium text-[#FAFBFC]">Generative AI Leaders (GAIL)</strong>.
