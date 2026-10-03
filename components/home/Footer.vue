@@ -45,7 +45,8 @@ const socialLinks = [
   { name: 'X', href: 'https://x.com/tekfoliong', iconSvg: 'x' },
   { name: 'Facebook', href: 'https://web.facebook.com/tekfolio/', icon: Facebook },
   { name: 'Instagram', href: 'https://www.instagram.com/tekfoliong/', icon: Instagram },
-  { name: 'YouTube', href: 'https://www.youtube.com/@Tekfoliong', icon: Youtube }
+  { name: 'YouTube', href: 'https://www.youtube.com/@Tekfoliong', icon: Youtube },
+  { name: 'TikTok', href: '#', iconSvg: 'tiktok' } // TODO: replace with real profile URL
 ]
 
 // Organization structured data, written as plain JSON-LD via core Nuxt's
@@ -60,10 +61,10 @@ useHead({
         '@type': 'Organization',
         name: 'Tekfolio',
         url: 'https://tekfolio.ng',
-        logo: 'https://tekfolio.ng/img/tekfolio-logo.png',
+        logo: 'https://tekfolio.ng/img/tekfolio--logo-full.png',
         telephone: contact.phone,
         email: contact.email,
-        sameAs: socialLinks.map((s) => s.href)
+        sameAs: socialLinks.map((s) => s.href).filter((href) => href !== '#')
       })
     }
   ]
@@ -81,7 +82,7 @@ useHead({
         <!-- Brand -->
         <div class="flex flex-col items-center lg:items-start">
           <NuxtLink to="/" class="focus-ring inline-block" aria-label="Tekfolio — Home">
-            <img src="/img/tekfolio-logo3.png" alt="Tekfolio" class="h-18 w-auto" loading="lazy" decoding="async">
+            <img src="/img/tekfolio--logo-full2.png" alt="Tekfolio" class="h-18 w-auto" loading="lazy" decoding="async">
           </NuxtLink>
           <p class="tagline mt-6 text-[11px] text-[#E5E8ED]/70 sm:text-xs">
             Engineering Enterprise Intelligence
@@ -100,6 +101,15 @@ useHead({
                 stroke="currentColor" stroke-width="1.75">
                 <path
                   d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              <svg v-else-if="social.iconSvg === 'x'" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.75">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              <svg v-else-if="social.iconSvg === 'tiktok'" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
               </svg>
             </a>
           </div>

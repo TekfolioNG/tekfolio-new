@@ -1,11 +1,16 @@
 <template>
-  <section class="py-20 bg-[#0B0B14]">
-    <div class="container mx-auto px-6 sm:px-8 lg:px-12">
+  <section class="bg-[#0B0B14] pb-14 pt-20 lg:pb-20 lg:pt-24">
+    <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+      <div class="border-t border-[#E5E8ED]/10 pb-2" />
+      <p class="eyebrow mt-6 text-center text-xs text-[#2FB6FF]/80 lg:text-left">Blog Posts</p>
+    </div>
+    <div class="mx-auto max-w-6xl px-6 sm:px-10 lg:px-12">
+
       <!-- Section Header -->
-      <div class="text-center md:text-left mb-12">
+      <div class="text-center md:text-left mb-12 mt-8">
         <h2 class="display text-4xl md:text-5xl font-semibold mb-4">
           <span class="bg-[#f3e8ff] bg-clip-text text-transparent">
-            Technology Today
+            NextGen Tech
           </span>
         </h2>
       </div>
@@ -48,7 +53,8 @@
             </div>
 
             <!-- Post Title -->
-            <h3 class="display text-xl font-bold mb-3 text-[#FAFBFC] group-hover:text-[#D8B4F0] transition-colors line-clamp-2">
+            <h3
+              class="display text-xl font-bold mb-3 text-[#FAFBFC] group-hover:text-[#D8B4F0] transition-colors line-clamp-2">
               {{ post.title }}
             </h3>
 
@@ -138,5 +144,12 @@ const formatDate = (date) => {
 <style scoped>
 .display {
   font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}
+
+.eyebrow {
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-weight: 500;
 }
 </style>

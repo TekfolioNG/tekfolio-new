@@ -1,6 +1,6 @@
 <template>
     <section class="relative bg-[#0B0B14] py-12 lg:py-16">
-        <div class="mx-auto max-w-6xl px-6 sm:px-10 lg:px-16">
+        <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div class="border-t border-[#E5E8ED]/10 pb-2" />
             <p class="eyebrow mt-6 text-center text-xs text-[#2FB6FF]/80 lg:text-left">What We Do</p>
         </div>
@@ -32,16 +32,16 @@ const services = [
         category: 'Enterprise AI & Automation',
         heading: 'Custom AI that knows your business, not the internet.',
         body: 'Move beyond generic public language models. We build custom, licensed, and strictly private AI agents that understand your unique business logic like a founding assistant. These proprietary workflows integrate securely with critical core data to  accelerate logistics and execution.',
-        statValue: '70%',
-        statLabel: 'of enterprise custom AI adopters report accelerated, more efficient operational workflows.',
-        statSource: 'Source: McKinsey',
+        statValue: '74%',
+        statLabel: 'of companies say their advanced AI initiatives meet or exceed ROI expectations.',
+        statSource: 'Source: Deloitte',
         image: '/img/creativehero.webp',
         imageAlt: 'Enterprise AI and automation systems'
     },
     {
         id: 'data-bi',
         category: 'Data & Business Intelligence',
-        heading: 'Key business decisions anchored on evidence. No guessworks.',
+        heading: 'Key business decisions anchored in trusted data. No guessworks.',
         body: 'Data is the definitive boundary between market leaders and struggling operations. We construct trusted intelligence dashboards that replace boardroom guesswork with hard competitor analytics and live market research, giving leadership teams confidence to act.',
         statValue: '19x',
         statLabel: 'More likely to be profitable when decisions are data driven.',

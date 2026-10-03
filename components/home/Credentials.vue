@@ -13,9 +13,7 @@ const badges = [
             <div class="border-t border-[#E5E8ED]/10 pb-2" />
             <p class="eyebrow mt-10 text-center text-xs text-[#2FB6FF]/80 lg:text-left">Who We Are</p>
         </div>
-        <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-            <div class="border-t border-[#E5E8ED]/10" />
-        </div>
+
 
         <div class="mx-auto max-w-7xl px-5 pt-14 sm:px-6 lg:px-8 lg:pt-20">
             <div class="ac-grid mx-auto max-w-md lg:max-w-[64rem]">

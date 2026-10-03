@@ -73,7 +73,7 @@ watch(() => route.fullPath, () => {
           <div class="grid h-[72px] grid-cols-[1fr_auto] items-center lg:h-20 lg:grid-cols-[1fr_auto_1fr]">
             <!-- Logo -->
             <NuxtLink to="/" class="logo-link justify-self-start" aria-label="Tekfolio — Home">
-              <img src="/img/tekfolio-logo.png" alt="Tekfolio" decoding="async" class="h-11 w-auto lg:h-14">
+              <img src="/img/tekfolio--logo-full.png" alt="Tekfolio" decoding="async" class="h-11 w-auto lg:h-14">
             </NuxtLink>
 
             <!-- Desktop nav (truly centred) -->

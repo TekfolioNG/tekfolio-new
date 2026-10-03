@@ -139,7 +139,7 @@ const nodes = Object.keys(coords).map((name, i) => {
           <h1
             class="display reveal mt-6 text-[2.3rem] font-bold leading-[1.05] tracking-tight text-[#FAFBFC] sm:text-4xl lg:text-5xl xl:text-[3.5rem]"
             style="--d: 100ms">
-            <span class="block">Google-Cloud Certified Architecture.</span>
+            <span class="block">Secure, Scalable Systems.</span>
             <span class="block">Built for African Enterprises.</span>
           </h1>
 

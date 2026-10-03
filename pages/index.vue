@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+
 definePageMeta({
   layout: "home"
 });
@@ -55,5 +56,7 @@ useHead({
   <HomeHero />
   <HomeCredentials />
   <HomeServices />
+  <HomeDifferentiators />
+  <HomeTrainingteaser />
   <HomeBlog />
 </template>
