@@ -17,8 +17,8 @@
                     <p
                         class="mx-auto mt-5 max-w-lg text-center text-base leading-relaxed text-[#E5E8ED]/80 lg:mx-0 lg:text-left">
                         We are a Google Cloud Partner and Gemini Enterprise Certified Partner Specialist (CPS), held
-                        to Google's own standards for technical skill, delivery and reliability. Our trainers hold
-                        verifiable industry credentials from <strong>Google, Cisco and the Linux Foundation</strong>,
+                        to the highest standards of technical skill, delivery and reliability. Our trainers hold
+                        verifiable industry credentials, including from <strong>Cisco and the Linux Foundation</strong>,
                         spanning cloud, data, AI and security — so you're learning from firsthand
                         expertise.
                     </p>

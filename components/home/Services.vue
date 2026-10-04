@@ -41,7 +41,7 @@ const services = [
     {
         id: 'data-bi',
         category: 'Data & Business Intelligence',
-        heading: 'Key business decisions anchored in trusted data. No guessworks.',
+        heading: 'Key business decisions anchored on trusted data. No guessworks.',
         body: 'Data is the definitive boundary between market leaders and struggling operations. We construct trusted intelligence dashboards that replace boardroom guesswork with hard competitor analytics and live market research, giving leadership teams confidence to act.',
         statValue: '19x',
         statLabel: 'More likely to be profitable when decisions are data driven.',
