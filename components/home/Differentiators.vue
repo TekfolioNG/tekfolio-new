@@ -53,17 +53,17 @@ const items = [
         body: 'Multi-certified engineering, delivered by a modern, approachable team rather than a rigid corporate vendor.'
     },
     {
-        title: 'Business first, then build.',
+        title: 'Business before build & deploy.',
         body: 'We start as business analysts and strategists, and design your market position before we deploy a single server. Clients call us a partner, not a vendor.'
     },
     {
         title: 'Certified, Well-Architected delivery.',
-        body: 'Every build follows the Security, Reliability and Cost Optimisation pillars, backed by named Google Cloud credentials, not a badge for show.',
+        body: 'Every development and deployment follows the Security, Reliability and Cost Optimisation pillars, anchored on industry-leading expertise and experience.',
         highlight: true
     },
     {
         title: 'Africa-rooted, global standard.',
-        body: 'Regional cost efficiency with a global engineering standard. The advantage is structural, not a discount.'
+        body: 'Regional cost efficiency with a global engineering standard. The advantage is structural and strategic.'
     }
 ]
 
