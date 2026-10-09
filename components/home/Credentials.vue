@@ -2,8 +2,8 @@
 <script setup>
 const badges = [
     { file: 'pca.png', name: 'Professional Cloud Architect' },
-    { file: 'gail.png', name: 'Generative AI Leader' },
-    { file: 'pde.png', name: 'Professional Data Engineer' }
+    { file: 'pde.png', name: 'Professional Data Engineer' },
+    { file: 'pcse.png', name: 'Professional Cloud Security Engineer' },
 ]
 </script>
 
@@ -55,7 +55,8 @@ const badges = [
                         Our architects and engineers are Google Cloud-certified, including as
                         <strong class="font-medium text-[#FAFBFC]">Professional Cloud Architects (PCA)</strong>,
                         <strong class="font-medium text-[#FAFBFC]">Professional Data Engineers (PDE)</strong>, and
-                        <strong class="font-medium text-[#FAFBFC]">Generative AI Leaders (GAIL)</strong>.
+                        <strong class="font-medium text-[#FAFBFC]">Professional Cloud Security Engineers
+                            (PCSE)</strong>.
                     </p>
                     <NuxtLink to="/about"
                         class="mt-5 flex items-center justify-center gap-2 text-sm font-semibold text-[#FAFBFC]/80 transition-colors hover:text-[#FAFBFC] lg:justify-start">

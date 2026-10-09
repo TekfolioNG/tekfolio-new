@@ -58,5 +58,7 @@ useHead({
   <HomeServices />
   <HomeDifferentiators />
   <HomeTrainingteaser />
+  <HomeClientLogos />
   <HomeBlog />
+  <HomeClosingCta />
 </template>
