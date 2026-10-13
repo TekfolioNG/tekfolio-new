@@ -29,17 +29,8 @@
       "@@/*": [
         "../*"
       ],
-      "@unhead/vue": [
-        "../node_modules/@unhead/vue"
-      ],
       "@nuxt/devtools": [
         "../node_modules/@nuxt/devtools"
-      ],
-      "@vue/runtime-core": [
-        "../node_modules/@vue/runtime-core"
-      ],
-      "@vue/compiler-sfc": [
-        "../node_modules/@vue/compiler-sfc"
       ],
       "@nuxt/schema": [
         "../node_modules/@nuxt/schema"
@@ -47,8 +38,26 @@
       "nuxt": [
         "../node_modules/nuxt"
       ],
+      "@unhead/vue": [
+        "../node_modules/@unhead/vue"
+      ],
+      "@vue/runtime-core": [
+        "../node_modules/@vue/runtime-core"
+      ],
+      "@vue/compiler-sfc": [
+        "../node_modules/@vue/compiler-sfc"
+      ],
       "vite/client": [
         "../node_modules/vite/client"
+      ],
+      "defu": [
+        "../node_modules/defu"
+      ],
+      "consola": [
+        "../node_modules/consola"
+      ],
+      "ofetch": [
+        "../node_modules/ofetch"
       ],
       "nitropack/types": [
         "../node_modules/nitropack/types"
@@ -59,17 +68,8 @@
       "nitropack": [
         "../node_modules/nitropack"
       ],
-      "defu": [
-        "../node_modules/defu"
-      ],
       "h3": [
         "../node_modules/h3"
-      ],
-      "consola": [
-        "../node_modules/consola"
-      ],
-      "ofetch": [
-        "../node_modules/ofetch"
       ],
       "crossws": [
         "../node_modules/crossws"
