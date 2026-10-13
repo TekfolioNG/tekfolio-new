@@ -98,7 +98,7 @@
         "../node_modules/nuxt/dist/head/runtime/composables"
       ],
       "#imports": [
-        "./imports"
+        "./imports.d.ts"
       ],
       "nitropack/types": [
         "../node_modules/nitropack/types.d.ts"

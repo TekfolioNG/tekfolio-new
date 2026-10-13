@@ -98,7 +98,7 @@
         "../node_modules/nuxt/dist/head/runtime/composables"
       ],
       "#imports": [
-        "./imports"
+        "./imports.d.ts"
       ],
       "#app-manifest": [
         "../node_modules/mocked-exports/lib/proxy.d.mts"
@@ -200,6 +200,7 @@
     "../node_modules/dist/runtime/server",
     "../node_modules/*.*",
     "../node_modules/dist/*.*",
+    "dev",
     "../server"
   ],
   "vueCompilerOptions": {
