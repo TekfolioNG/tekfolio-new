@@ -2,6 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/schemas/wrangler.schema.json",
   "name": "tekfolio",
   "compatibility_date": "2025-01-25",
-  "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": ".output/public"
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "pages_build_output_dir": "dist"
 }

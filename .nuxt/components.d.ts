@@ -97,21 +97,76 @@ export const UToast: typeof import("../node_modules/@nuxt/ui/dist/runtime/compon
 export const UToaster: typeof import("../node_modules/@nuxt/ui/dist/runtime/components/Toaster.vue")['default']
 export const UTooltip: typeof import("../node_modules/@nuxt/ui/dist/runtime/components/Tooltip.vue")['default']
 export const UTree: typeof import("../node_modules/@nuxt/ui/dist/runtime/components/Tree.vue")['default']
+/**
+ * Displays the welcome screen used by new Nuxt projects.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-welcome
+ */
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
+/**
+ * Renders the selected layout around pages or error content.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-layout
+ */
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
+/**
+ * Catches client-side errors from its default slot and renders an error slot.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-error-boundary
+ */
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
+/**
+ * Renders its default slot only on the client, with an optional server fallback.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/client-only
+ */
 export const ClientOnly: typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
+/**
+ * Renders its content only during development.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/dev-only
+ */
 export const DevOnly: typeof import("../node_modules/nuxt/dist/app/components/dev-only")['default']
 export const ServerPlaceholder: typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
+/**
+ * A drop-in replacement for Vue Router's `<RouterLink>` and the HTML `<a>` element.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-link
+ */
 export const NuxtLink: typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
+/**
+ * Displays a progress bar during page navigation.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-loading-indicator
+ */
 export const NuxtLoadingIndicator: typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+/**
+ * Formats dates and times consistently across server and client using the user's locale.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-time
+ */
 export const NuxtTime: typeof import("../node_modules/nuxt/dist/app/components/nuxt-time.vue")['default']
+/**
+ * Announces route changes to assistive technologies using the current page title.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-route-announcer
+ */
 export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
+/**
+ * Announces dynamic content changes to assistive technologies.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-announcer
+ */
 export const NuxtAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/nuxt-announcer")['default']
 export const NuxtImg: typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
 export const NuxtPicture: typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
 export const Icon: typeof import("../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
 export const ColorScheme: typeof import("../node_modules/@nuxtjs/color-mode/dist/runtime/component.vue3.vue")['default']
+/**
+ * Renders the current page from the `pages/` directory.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-page
+ */
 export const NuxtPage: typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']
 export const NoScript: typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']
 export const Link: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']
@@ -122,6 +177,11 @@ export const Style: typeof import("../node_modules/nuxt/dist/head/runtime/compon
 export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
+/**
+ * Renders a non-interactive server component without shipping client-side JavaScript.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-island
+ */
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const LazyAppLoading: LazyComponent<typeof import("../components/AppLoading.vue")['default']>
 export const LazyPortableText: LazyComponent<typeof import("../components/PortableText.vue")['default']>
@@ -206,21 +266,98 @@ export const LazyUToast: LazyComponent<typeof import("../node_modules/@nuxt/ui/d
 export const LazyUToaster: LazyComponent<typeof import("../node_modules/@nuxt/ui/dist/runtime/components/Toaster.vue")['default']>
 export const LazyUTooltip: LazyComponent<typeof import("../node_modules/@nuxt/ui/dist/runtime/components/Tooltip.vue")['default']>
 export const LazyUTree: LazyComponent<typeof import("../node_modules/@nuxt/ui/dist/runtime/components/Tree.vue")['default']>
+/**
+ * Lazy-loaded version of `<NuxtWelcome>`.
+ *
+ * Displays the welcome screen used by new Nuxt projects.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-welcome
+ */
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
+/**
+ * Lazy-loaded version of `<NuxtLayout>`.
+ *
+ * Renders the selected layout around pages or error content.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-layout
+ */
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
+/**
+ * Lazy-loaded version of `<NuxtErrorBoundary>`.
+ *
+ * Catches client-side errors from its default slot and renders an error slot.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-error-boundary
+ */
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
+/**
+ * Lazy-loaded version of `<ClientOnly>`.
+ *
+ * Renders its default slot only on the client, with an optional server fallback.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/client-only
+ */
 export const LazyClientOnly: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']>
+/**
+ * Lazy-loaded version of `<DevOnly>`.
+ *
+ * Renders its content only during development.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/dev-only
+ */
 export const LazyDevOnly: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/dev-only")['default']>
 export const LazyServerPlaceholder: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+/**
+ * Lazy-loaded version of `<NuxtLink>`.
+ *
+ * A drop-in replacement for Vue Router's `<RouterLink>` and the HTML `<a>` element.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-link
+ */
 export const LazyNuxtLink: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']>
+/**
+ * Lazy-loaded version of `<NuxtLoadingIndicator>`.
+ *
+ * Displays a progress bar during page navigation.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-loading-indicator
+ */
 export const LazyNuxtLoadingIndicator: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']>
+/**
+ * Lazy-loaded version of `<NuxtTime>`.
+ *
+ * Formats dates and times consistently across server and client using the user's locale.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-time
+ */
 export const LazyNuxtTime: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-time.vue")['default']>
+/**
+ * Lazy-loaded version of `<NuxtRouteAnnouncer>`.
+ *
+ * Announces route changes to assistive technologies using the current page title.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-route-announcer
+ */
 export const LazyNuxtRouteAnnouncer: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
+/**
+ * Lazy-loaded version of `<NuxtAnnouncer>`.
+ *
+ * Announces dynamic content changes to assistive technologies.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-announcer
+ */
 export const LazyNuxtAnnouncer: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-announcer")['default']>
 export const LazyNuxtImg: LazyComponent<typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']>
 export const LazyNuxtPicture: LazyComponent<typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']>
 export const LazyIcon: LazyComponent<typeof import("../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
 export const LazyColorScheme: LazyComponent<typeof import("../node_modules/@nuxtjs/color-mode/dist/runtime/component.vue3.vue")['default']>
+/**
+ * Lazy-loaded version of `<NuxtPage>`.
+ *
+ * Renders the current page from the `pages/` directory.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-page
+ */
 export const LazyNuxtPage: LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']>
 export const LazyNoScript: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
 export const LazyLink: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']>
@@ -231,6 +368,13 @@ export const LazyStyle: LazyComponent<typeof import("../node_modules/nuxt/dist/h
 export const LazyHead: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']>
 export const LazyHtml: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']>
 export const LazyBody: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']>
+/**
+ * Lazy-loaded version of `<NuxtIsland>`.
+ *
+ * Renders a non-interactive server component without shipping client-side JavaScript.
+ *
+ * @see https://nuxt.com/docs/4.x/api/components/nuxt-island
+ */
 export const LazyNuxtIsland: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']>
 
 export const componentNames: string[]
