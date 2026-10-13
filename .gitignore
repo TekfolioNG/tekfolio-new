@@ -1,7 +1,7 @@
 # Nuxt
 .output
 .data
-.nuxt
+.history.nuxt
 .nitro
 .cache
 dist
@@ -37,3 +37,6 @@ tekfolio-blog/dist
 
 # Assets (optional - keep if videos are large)
 assets/video/
+
+# Local history extension files (if using Local History extensions)
+.history/

@@ -1,5 +1,0 @@
-{
-  "$schema": "https://cloudflare.github.io/workers-sdk/schemas/wrangler.schema.json",
-  "compatibility_date": "2025-07-24",
-  "pages_build_output_dir": ".output/public"
-}

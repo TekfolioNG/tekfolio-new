@@ -11,17 +11,16 @@
         <!-- Main Content Container -->
         <div class="flex-1 flex items-center justify-center relative">
             <!-- Large background status code -->
-            <div
-                aria-hidden="true"
+            <div aria-hidden="true"
                 class="absolute inset-0 flex items-center justify-center pointer-events-none transform translate-x-12 -translate-y-16">
-                <span class="status-float text-[12rem] sm:text-[18rem] md:text-[26rem] lg:text-[32rem] font-bold text-white/[0.04] select-none tracking-wider">
+                <span
+                    class="status-float text-[12rem] sm:text-[18rem] md:text-[26rem] lg:text-[32rem] font-bold text-white/[0.04] select-none tracking-wider">
                     {{ statusCode }}
                 </span>
             </div>
 
             <!-- Ambient brand glow, matches the blog hero treatment -->
-            <div
-                aria-hidden="true"
+            <div aria-hidden="true"
                 class="pointer-events-none absolute top-1/3 left-1/4 h-96 w-96 -translate-x-1/2 rounded-full bg-[#6B2A61] opacity-30 blur-[120px]" />
 
             <!-- Content Grid -->
@@ -66,8 +65,7 @@
                         <div class="relative w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
                             <div class="relative z-10 w-full h-full flex items-center justify-center">
                                 <div id="lottie-404" class="w-full h-full"></div>
-                                <div
-                                    aria-hidden="true"
+                                <div aria-hidden="true"
                                     class="absolute inset-0 bg-gradient-to-t from-[#0B0B14]/20 to-transparent pointer-events-none">
                                 </div>
                             </div>
@@ -172,8 +170,15 @@ onMounted(() => {
 }
 
 @keyframes float-slow {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(2deg);
+    }
 }
 
 .status-float {

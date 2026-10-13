@@ -1,0 +1,1 @@
+export { default } from "/home/tekpadi/tekfolio/tekfolio/node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue";
