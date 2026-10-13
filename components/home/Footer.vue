@@ -49,26 +49,6 @@ const socialLinks = [
   { name: 'TikTok', href: '#', iconSvg: 'tiktok' } // TODO: replace with real profile URL
 ]
 
-// Organization structured data, written as plain JSON-LD via core Nuxt's
-// useHead — no schema.org module dependency required. Ties the footer's
-// public contact points and socials into one machine-readable record.
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        name: 'Tekfolio',
-        url: 'https://tekfolio.ng',
-        logo: 'https://tekfolio.ng/img/tekfolio--logo-full.png',
-        telephone: contact.phone,
-        email: contact.email,
-        sameAs: socialLinks.map((s) => s.href).filter((href) => href !== '#')
-      })
-    }
-  ]
-})
 </script>
 
 <template>

@@ -12,9 +12,10 @@ const open = ref(false)
 const isScrolled = ref(false)
 const route = useRoute()
 
-// The whole bar (logo, links, CTA) only exists once the visitor has scrolled,
-// or while the mobile menu is open.
-const showBar = computed(() => isScrolled.value || open.value)
+// Home: the bar stays hidden until the visitor scrolls (or opens the mobile menu).
+// Every other route: the bar is visible immediately.
+const isHome = computed(() => route.path === '/')
+const showBar = computed(() => !isHome.value || isScrolled.value || open.value)
 
 function onScroll() {
   isScrolled.value = window.scrollY > 80
